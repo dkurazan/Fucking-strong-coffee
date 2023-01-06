@@ -1,0 +1,83 @@
+.header__row{
+    justify-content: space-between;
+    padding: 21px 0 14px 0;
+}
+
+.header{
+    background-color: #fff;
+}
+
+.header__navigation, .header__cart{
+    display: flex;
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.header__logo{
+    display: flex;
+    flex: 0 0 50%;
+    max-width: 50%;
+    justify-content: center;
+}
+
+.header__cart{
+    justify-content: end;
+}
+
+.header__navigation nav{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.header__navigation a{
+    font-family: SignPainter;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 24px;
+    color: rgba(14, 11, 7, 1);
+    letter-spacing: 0.08em;
+    white-space: nowrap;
+}
+
+.header__logo-inner{
+    display: flex;
+    align-items: center;
+}
+
+.header__logo-inner img{
+    max-height: 85px;
+}
+
+.header__cart{
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.header__cart-button{
+    display: flex;
+    align-items: end;
+    text-decoration: none;
+}
+
+.header__cart-button svg{
+    margin-right: 17px;
+}
+
+.header__cart-button span{
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+}
+
+.header__side-menu-button{
+    display: flex;
+    align-items: end;
+}
+
+.header__side-menu-button:hover{
+    cursor: pointer;
+}

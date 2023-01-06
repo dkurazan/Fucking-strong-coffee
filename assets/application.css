@@ -1,12 +1,117 @@
-body {
-    background-color: rgb(251, 251, 232);
+*{
+    box-sizing: border-box;
 }
 
-.homepage {
+@font-face {
+    font-family: SignPainter;
+    src: url(SignPainter.ttf);
+  }
+
+.container{
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.container-xl{
+    max-width: 1920px;
+    margin: 0 auto;
+}
+
+.row{
+    display: flex;
+}
+
+/* PRODUCT CARD */
+
+.product-card{
+    flex: 0 0 29.2361111%;
+    max-width: 29.2361111%;
+}
+
+.product-card__inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    max-height: 100%;
+    height: 100%;
+}
+
+.product-card__inner a{
+    display: block;
+    width: 100%;
+    position: relative;
+}
+
+.product-card__img{
+    padding: 0 17.25px;
+}
+
+.product-card__img img{
+    width: 100%;
+}
+
+.rigt_corner_label{
+    position: absolute;
+    width: 113px;
+    height: 113px;
+    background-color: #EB2240;
+    border-radius: 50%;
+    right: 0;
+    top: -30px;
+    font-family: 'SignPainter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 31.5349px;
+    line-height: 110%;
+    text-transform: uppercase;
+    color: #FFFFFF;
     text-align: center;
-    padding-top: 10em;
+    line-height: 113px;
 }
 
-.logo {
-    width: 25%;
+.product-card__text{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.product-card__text h5{
+    margin: 40px 0 12px 0;
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 120%;
+}
+
+.product-card__text p{
+    text-align: center;
+    margin-bottom: 24px;
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+}
+
+.product-card__button{
+    text-align: center;
+    letter-spacing: 0.085em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    background-color: #fff;
+    padding: 22px 0;
+    text-decoration: none;
+    transition: .7s all ease-in-out;
+}
+
+.product-card:hover .product-card__button{
+    background-color: #0E0B07;
+    transition: .7s all ease-in-out;
 }

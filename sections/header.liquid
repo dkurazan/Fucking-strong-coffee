@@ -1,0 +1,51 @@
+{{ 'header.css' | asset_url | stylesheet_tag }}
+<header class="header">
+    <div class="container">
+        <div class="row header__row">
+            <div class="header__navigation">
+                <nav>
+                    {% for link in section.settings.menu.links %}
+                        <a href="{{ link.url }}">{{ link.title }}</a>
+                    {% endfor %}
+                </nav>
+            </div>
+            <div class="header__logo">
+                <a href="/" class="header__logo-inner">
+                    {% if section.settings.logo != blank %}
+                        {{ section.settings.logo | img_url: 'master' | img_tag }}
+                    {% else %}
+                        {% render 'header-logo' %}
+                    {% endif %}
+                </a>
+            </div>
+            <div class="header__cart">
+                <a href="/cart" class="header__cart-button">
+                    {% render 'cart-button-img' %}
+                    <span>1</span>
+                </a>
+                <div class="header__side-menu-button">
+                    {% render 'side-menu-button-img' %}
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+
+{% schema %}
+    {
+        "name": "Header",
+        "settings": [
+            {
+                "type": "link_list",
+                "id": "menu",
+                "default": "main-menu",
+                "label": "Heading Navgation Menu"
+            },
+            {
+                "type": "image_picker",
+                "id": "logo",
+                "label": "Store Logo Image"
+            }
+        ]
+    }
+{% endschema %}

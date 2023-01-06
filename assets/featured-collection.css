@@ -1,0 +1,15 @@
+.featured-collection{
+    padding: 71px 0 75px 0;
+}
+
+.featured-collection_row{
+    justify-content: space-between;
+}
+
+.default_product_image{
+    max-width: 386.5px;
+    max-height: 393.35px;
+    width: 100%;
+    height: 100%;
+}
+
