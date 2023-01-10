@@ -54,11 +54,15 @@
     margin-bottom: 95px;
 }
 
+.banner__content div{
+    display: flex;
+    gap: 24px;
+}
+
 .banner__content a {
     display: block;
-    background-color: #fff;
-    padding: 22px 166px;
-    color: rgba(235, 34, 64, 1);
+
+    padding: 22px 90px;
     font-family: 'Hind Vadodara';
     font-style: normal;
     font-weight: 400;
@@ -66,12 +70,28 @@
     text-decoration: none;
     text-transform: uppercase;
     transition: .5s all ease-in-out;
-    border: 1px solid transparent;
+    border: 1px solid #fff;
 }
 
-.banner__content a:hover{
+.banner__content>div>a:first-child{
+    color: rgba(235, 34, 64, 1);
+    background-color: #fff;
+}
+
+.banner__content>div>a:last-child{
+    color: #fff;
+    background-color: transparent;
+    border: 1px solid white;
+}
+
+.banner__content>div>:first-child:hover{
     color: #fff;
     background-color: rgba(235, 34, 64, 1);
     transition: .5s all ease-in-out;
-    border: 1px solid white;
+}
+
+.banner__content>div>:last-child:hover{
+    color: rgba(235, 34, 64, 1);
+    background-color: #fff;
+    transition: .5s all ease-in-out;
 }

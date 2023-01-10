@@ -14,7 +14,16 @@
         },
         "benefits": {
             "type": "benefits"
+        },
+        "last-added-product": {
+            "type": "last-added-product",
+            "settings": {
+                "collection": "collection-for-last-added-product"
+            }
+        },
+        "reviews": {
+            "type": "reviews"
         }
     },
-    "order": ["image-banner", "featured-collection", "our-story", "benefits"]
+    "order": ["image-banner", "featured-collection", "our-story", "benefits", "last-added-product", "reviews"]
 }

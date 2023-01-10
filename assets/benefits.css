@@ -1,5 +1,5 @@
 .benefits{
-    padding: 58.58px 0 67px;
+    padding: 58.58px 0 54px;
 }
 
 .benefits__inner{
@@ -17,7 +17,7 @@
     max-width: 1150px;
     width: 100%;
     margin-bottom: 58px;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .benefits__item{
@@ -29,7 +29,9 @@
 }
 
 .benefits__item img{
-    max-width: 100%;
+    max-width: 60px;
+    width: 100%;
+    max-height: 60px;
     margin-bottom: 24px;
 }
 
@@ -54,4 +56,28 @@
     line-height: 140%;
     color: rgba(0, 0, 0, 0.6);
     max-width: 302px;
+}
+
+.benefits__button{
+    display: block;
+    padding: 21px 131.5px;
+    text-align: center;
+    letter-spacing: 0.085em;
+    text-transform: uppercase;
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: #FFFFFF;
+    background: #EB2240;
+    text-decoration: none;
+    border: 1px solid #EB2240;
+    transition: .5s all ease-in-out;
+}
+
+.benefits__button:hover {
+    background-color: #fff;
+    color: #EB2240;
+    transition: .5s all ease-in-out;
 }

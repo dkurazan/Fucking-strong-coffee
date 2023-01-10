@@ -1,6 +1,9 @@
 {{ 'featured-collection.css' | asset_url | stylesheet_tag }}
 <div class="featured-collection">
     <div class="container">
+        {% if section.settings.title != blank %}
+            <h2 class="featured-collection__title main__title">{{ section.settings.title }}</h2>
+        {% endif %}
         <div class="row featured-collection_row">
             {% for product in section.settings.featured-collection.products limit: section.settings.number_of_products_to_show %}
                 {% render 'product-card', product: product %}
@@ -19,12 +22,22 @@
                 "label": "Collection"
             },
             {
+                "type": "text",
+                "id": "title",
+                "label": "Title"
+            },
+            {
                 "type": "range",
                 "id": "number_of_products_to_show",
                 "min": 3,
                 "max": 6,
                 "default": 3,
                 "label": "Number of products to show"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Featured Collection"
             }
         ]
     }

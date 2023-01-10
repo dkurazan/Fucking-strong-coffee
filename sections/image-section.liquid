@@ -1,0 +1,23 @@
+<div class="container-xl">
+    <div class="image-section">
+        {{ section.settings.image | img_url: 'master' | img_tag }}
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Image section",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "image",
+                "label": "Image"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Image section"
+            }
+        ]
+    }
+{% endschema %}

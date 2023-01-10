@@ -3,7 +3,7 @@
 }
 
 .featured-collection_row{
-    justify-content: space-around;
+    justify-content: space-between;
     flex-wrap: wrap;
 }
 
@@ -14,3 +14,8 @@
     height: 100%;
 }
 
+.featured-collection__title{
+    text-align-last: left;
+    margin-bottom: 60px;
+    margin-top: -26px;
+}

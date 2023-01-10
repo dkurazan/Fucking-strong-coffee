@@ -12,7 +12,10 @@
             <div class="banner__content">
                 <h1>{{ section.settings.title-xl }}</h1>
                 <h2>{{ section.settings.title-sm }}</h2>
-                <a href="#">{{ section.settings.button-label }}</a>
+                <div>
+                    <a href="#">{{ section.settings.button-label-1 }}</a>
+                    <a href="#">{{ section.settings.button-label-2 }}</a>
+                </div>
             </div>
         </div>
     </div>
@@ -41,9 +44,15 @@
             },
             {
                 "type": "text",
-                "id": "button-label",
-                "label": "Button label",
+                "id": "button-label-1",
+                "label": "First button label",
                 "default": "shop now"
+            },
+            {
+                "type": "text",
+                "id": "button-label-2",
+                "label": "Second button label",
+                "default": "about us"
             }
         ],
         "presets": [
