@@ -1,0 +1,57 @@
+.benefits{
+    padding: 58.58px 0 67px;
+}
+
+.benefits__inner{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.benefits__title{
+    margin-bottom: 32px;
+}
+
+.benefits__items{
+    display: flex;
+    max-width: 1150px;
+    width: 100%;
+    margin-bottom: 58px;
+    justify-content: space-between;
+}
+
+.benefits__item{
+    flex: 0 0 33.33333%;
+    max-width: 33.33333%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.benefits__item img{
+    max-width: 100%;
+    margin-bottom: 24px;
+}
+
+.benefits__item-title{
+    margin-bottom: 24px;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 110%;
+    color: #333333;
+}
+
+.benefits__item-subtitle{
+    text-align: center;
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: rgba(0, 0, 0, 0.6);
+    max-width: 302px;
+}

@@ -26,6 +26,7 @@
 .product-card{
     flex: 0 0 29.2361111%;
     max-width: 29.2361111%;
+    margin-bottom: 35px;
 }
 
 .product-card__inner{
@@ -114,4 +115,15 @@
 .product-card:hover .product-card__button{
     background-color: #0E0B07;
     transition: .7s all ease-in-out;
+}
+
+.main__title{
+    font-family: SignPainter;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 140%;
+    text-align: center;
+    text-transform: uppercase;
+    color: rgba(8, 5, 1, 0.86);
 }

@@ -1,9 +1,10 @@
 .featured-collection{
-    padding: 71px 0 75px 0;
+    padding: 71px 0 31px 0;
 }
 
 .featured-collection_row{
-    justify-content: space-between;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
 .default_product_image{

@@ -13,7 +13,7 @@
     <!-- Header hook for plugins -->
     {{ 'reset.css' | asset_url | stylesheet_tag }}
     {{ 'application.css' | asset_url | stylesheet_tag }}
-    {{ 'application.js' | asset_url | script_tag }}
+    <script src="{{ 'application.js' | asset_url }}" defer></script>
   </head>
   <body>
     {% section 'header' %}

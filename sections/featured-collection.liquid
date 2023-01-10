@@ -2,29 +2,8 @@
 <div class="featured-collection">
     <div class="container">
         <div class="row featured-collection_row">
-            {% for product in section.settings.featured-collection.products %}
-                <div class="product-card">
-                    <div class="product-card__inner">
-                        <a href="{{ product.url }}">
-                            <div class="product-card__img">
-                                {% if product.featured_image %}
-                                    {{ product.featured_image | img_url: 'master' | img_tag }}
-                                {% else %}
-                                    {{ 'product-1' | placeholder_svg_tag }}
-                                {% endif %}
-                            </div>
-                            {% if product.metafields.custom.right_corner_label %}
-                                <div class="rigt_corner_label">{{ product.metafields.custom.right_corner_label }}</div>
-                            {% endif %}
-                            
-                        </a>
-                        <div class="product-card__text">
-                            <h5>{{ product.title }}</h5>
-                            <p>This is where it all started. We visited our partners at Twongerekawa Coko back in 2018.</p>
-                        </div>
-                        <a href="{{ product.url }}" class="product-card__button">{{ 'general.index.product_button_label' | t }}</a>
-                    </div>
-                </div>
+            {% for product in section.settings.featured-collection.products limit: section.settings.number_of_products_to_show %}
+                {% render 'product-card', product: product %}
             {% endfor %}
         </div>
     </div>
@@ -38,6 +17,14 @@
                 "type": "collection",
                 "id": "featured-collection",
                 "label": "Collection"
+            },
+            {
+                "type": "range",
+                "id": "number_of_products_to_show",
+                "min": 3,
+                "max": 6,
+                "default": 3,
+                "label": "Number of products to show"
             }
         ]
     }

@@ -8,7 +8,13 @@
             "settings": {
                 "featured-collection": "all"
             }
+        },
+        "our-story": {
+            "type": "our-story"
+        },
+        "benefits": {
+            "type": "benefits"
         }
     },
-    "order": ["image-banner", "featured-collection"]
+    "order": ["image-banner", "featured-collection", "our-story", "benefits"]
 }
