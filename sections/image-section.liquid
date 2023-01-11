@@ -1,6 +1,11 @@
 <div class="container-xl">
     <div class="image-section">
-        {{ section.settings.image | img_url: 'master' | img_tag }}
+        {% if section.settings.image %}
+            {{ section.settings.image | img_url: 'master' | img_tag }}
+        {% else %}
+            {{ 'main-coffee-image.png' | asset_url | img_tag }}
+        {% endif %}
+        
     </div>
 </div>
 

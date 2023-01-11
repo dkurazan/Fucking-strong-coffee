@@ -1,0 +1,134 @@
+.footer{
+    padding: 190px 0 27px;
+}
+
+.footer__row{
+    justify-content: space-between;
+}
+
+.footer__row:first-child{
+    padding-bottom: 92px;
+}
+
+.footer__row>div{
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer__row>div:first-child{
+    max-width: 324px;
+    width: 100%;
+}
+
+.footer__row>div:last-child{
+    max-width: 857px;
+    width: 100%;
+}
+
+.footer__nav ul{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.footer__title{
+    margin-bottom: 12px;
+    font-family: 'Hind Vadodara';
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 140%;
+    color: rgba(8, 5, 1, 0.86);
+}
+
+.footer__title::after{
+    content: '';
+    display: block;
+    height: 1px;
+    width: 130px;
+    background-color: rgba(8, 5, 1, 0.2);
+    margin-top: 9px;
+}
+
+.footer__col a{
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: rgba(8, 5, 1, 0.7); 
+    text-decoration: none;
+}
+
+.footer__col a:hover{
+    text-decoration: underline;
+}
+
+.footer__about p{
+    max-width: 374px;
+}
+
+.footer__col p{
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: rgba(8, 5, 1, 0.7);
+}
+
+.footer__newsletter p{
+    max-width: 419px;
+}
+
+.footer__newsletter form{
+    margin-top: 104px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer__newsletter input{
+    border: none;
+    border-bottom: 1px solid rgba(8, 5, 1, 0.2);
+    font-family: 'Hind Vadodara';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: rgba(8, 5, 1, 0.5);
+    padding-bottom: 11px;
+    flex: 0 0 100%;
+}
+
+.footer__newsletter input:focus{
+    outline: none;
+    width: 100%;
+}
+
+.footer__newsletter button{
+    margin-top: 23px;
+    border: none;
+    font-family: 'Hind Vadodara';
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: #080501;
+    background-color: #fff;
+    padding-left: 0;
+}
+
+.footer__newsletter button::after{
+    content: '→';
+    margin-left: 10px;
+}
+
+.footer__newsletter button:hover{
+    cursor: pointer;
+}
+
+.footer__row:last-child h6{
+    margin: 0 auto;
+    font-family: 'Hind Vadodara';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 140%;
+    color: rgba(8, 5, 1, 0.5);
+}

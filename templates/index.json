@@ -23,7 +23,16 @@
         },
         "reviews": {
             "type": "reviews"
+        },
+        "featured-collection-2":{
+            "type": "featured-collection",
+            "settings": {
+                "featured-collection": "Bestsellers"
+            }
+        },
+        "image-section": {
+            "type": "image-section"
         }
     },
-    "order": ["image-banner", "featured-collection", "our-story", "benefits", "last-added-product", "reviews"]
+    "order": ["image-banner", "featured-collection", "our-story", "benefits", "last-added-product", "reviews", "featured-collection-2", "image-section"]
 }

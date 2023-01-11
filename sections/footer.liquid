@@ -1,1 +1,43 @@
-footer
+{{ 'footer.css' | asset_url | stylesheet_tag }}
+<div class="container">
+    <div class="row footer__row">
+        <div>
+            <nav class="footer__col footer__nav">
+                <h3 class="footer__title">Menu</h3>
+                <ul>
+                    <a href="/">Home</a>
+                    <a href="/">Categories</a>
+                    <a href="/">About us</a>
+                    <a href="/">Our stores</a>
+                    <a href="/">Recipes</a>
+                    <a href="/">FAQ</a>
+                </ul>
+            </nav>
+            <nav class="footer__col footer__nav">
+                <h3 class="footer__title">Policies</h3>
+                <ul>
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Refund Policy</a>
+                    <a href="#">Terms of Service</a>
+                </ul>
+            </nav>
+        </div>
+        <div>
+            <div class="footer__col footer__about">
+                <h3 class="footer__title">About us</h3>
+                <p>Nunc sed ultricies. Molestie ornare quis, adipiscing lectus sit molestie leo, non interdum imperdiet efficitur vestibulum est. Dapibus non ornare accumsan morbi molestie augue mollis lectus quam, ornare mattis null.</p>
+            </div>
+            <div class="footer__col footer__newsletter">
+                <h3 class="footer__title">Newsletter</h3>
+                <p>Enter your email address below to join our mailing list and have our latest news and member-only deals delivered straight to your inbox.</p>
+                <form>
+                    <input type="text" placeholder="Your mail">
+                    <button>Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="row footer__row">
+        <h6>Nunc sed ultricies. Molestie ornare quis, adipiscing lectus sit molestie leo, non interdum imperdiet efficitur vestibulum est. Dapibus non ornare accumsan morbi molestie augue mollis lectus quam, ornare mattis null.</h6>
+    </div>
+</div>
