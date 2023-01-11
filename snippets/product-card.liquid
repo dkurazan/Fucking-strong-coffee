@@ -17,6 +17,34 @@
             <h5>{{ product.title }}</h5>
             <p>This is where it all started. We visited our partners at Twongerekawa Coko back in 2018.</p>
         </div>
+        <div class="product-card__icons">
+            <ul>
+                <li>
+                    {% if product.metafields.custom.coffee_beans_icon_label %}
+                        {{ product.metafields.custom.coffee_beans_icon_label }}
+                    {% else %}
+                        Grinder for espresso
+                    {% endif %}
+                    {% render 'coffee-beans-icon' %}
+                </li>
+                <li>
+                    {% if product.metafields.custom.cup_of_coffee_icon_label %}
+                        {{ product.metafields.custom.cup_of_coffee_icon_label }}
+                    {% else %}
+                        40 cups
+                    {% endif %}
+                    {% render 'cup-of-coffee-icon' %}
+                </li>
+                <li>
+                    {% if product.metafields.custom.glass_icon_label %}
+                        {{ product.metafields.custom.glass_icon_label }}
+                    {% else %}
+                        12%
+                    {% endif %}
+                    {% render 'glass-icon' %}
+                </li>
+            </ul>
+        </div>
         <a href="{{ product.url }}" class="product-card__button">{{ 'general.index.product_button_label' | t }}</a>
     </div>
 </div>
