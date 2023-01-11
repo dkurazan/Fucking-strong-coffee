@@ -25,7 +25,7 @@
         <div>
             <div class="footer__col footer__about">
                 <h3 class="footer__title">About us</h3>
-                <p>Nunc sed ultricies. Molestie ornare quis, adipiscing lectus sit molestie leo, non interdum imperdiet efficitur vestibulum est. Dapibus non ornare accumsan morbi molestie augue mollis lectus quam, ornare mattis null.</p>
+                <p>{{ section.settings.about-us-text }}</p>
             </div>
             <div class="footer__col footer__newsletter">
                 <h3 class="footer__title">Newsletter</h3>
@@ -41,3 +41,17 @@
         <h6>Nunc sed ultricies. Molestie ornare quis, adipiscing lectus sit molestie leo, non interdum imperdiet efficitur vestibulum est. Dapibus non ornare accumsan morbi molestie augue mollis lectus quam, ornare mattis null.</h6>
     </div>
 </div>
+
+{% schema %}
+    {
+        "name": "Footer",
+        "settings": [
+            {
+                "type": "textarea",
+                "id": "about-us-text",
+                "label": "About us text",
+                "default": "Nunc sed ultricies. Molestie ornare quis, adipiscing lectus sit molestie leo, non interdum imperdiet efficitur vestibulum est. Dapibus non ornare accumsan morbi molestie augue mollis lectus quam, ornare mattis null."
+            }
+        ]
+    }
+{% endschema %}
