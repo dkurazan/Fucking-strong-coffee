@@ -1,38 +1,175 @@
 {
-    "sections": {
-        "image-banner":{
-            "type": "image-banner"
-        },
-        "featured-collection":{
-            "type": "featured-collection",
-            "settings": {
-                "featured-collection": "all"
-            }
-        },
-        "our-story": {
-            "type": "our-story"
-        },
-        "benefits": {
-            "type": "benefits"
-        },
-        "last-added-product": {
-            "type": "last-added-product",
-            "settings": {
-                "collection": "collection-for-last-added-product"
-            }
-        },
-        "reviews": {
-            "type": "reviews"
-        },
-        "featured-collection-2":{
-            "type": "featured-collection",
-            "settings": {
-                "featured-collection": "Bestsellers"
-            }
-        },
-        "image-section": {
-            "type": "image-section"
-        }
+  "sections": {
+    "image-banner": {
+      "type": "image-banner",
+      "settings": {
+        "title-xl": "Stay awake",
+        "title-sm": "Fucking strong coffee",
+        "button-label-1": "shop now",
+        "button-label-2": "about us"
+      }
     },
-    "order": ["image-banner", "featured-collection", "our-story", "benefits", "last-added-product", "reviews", "featured-collection-2", "image-section"]
+    "featured-collection": {
+      "type": "featured-collection",
+      "settings": {
+        "featured-collection": "all",
+        "title": "",
+        "number_of_products_to_show": 3
+      }
+    },
+    "our-story": {
+      "type": "our-story",
+      "settings": {
+        "title": "Our story",
+        "subtitle": "Good Beans is run by a chatty American and a steady Norwegian. We were drawn first to a tiny shop in Amsterdam, and we stuck around to develop, deepen and spread a much bigger mission: making ethically-sourced coffee more approachable. Here’s a bit more about us.",
+        "button-label": "read OUR story"
+      }
+    },
+    "benefits": {
+      "type": "benefits",
+      "blocks": {
+        "371f12d1-f817-470e-acc3-7f24ad89ea10": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/benefits-item-icon.png",
+            "title": "lorem ipsum",
+            "subtitle": "This is where it all started. We visited our partners at Twongerekawa Coko back in 2018."
+          }
+        },
+        "c993d799-10c9-4e63-8c3d-a1f856b83a3c": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/benefits-item-icon-2.png",
+            "title": "lorem ipsum",
+            "subtitle": "This is where it all started. We visited our partners at Twongerekawa Coko back in 2018."
+          }
+        },
+        "415acff4-3e08-499f-b474-8459da35f84d": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/benefits-item-icon-3.png",
+            "title": "lorem ipsum",
+            "subtitle": "This is where it all started. We visited our partners at Twongerekawa Coko back in 2018."
+          }
+        }
+      },
+      "block_order": [
+        "371f12d1-f817-470e-acc3-7f24ad89ea10",
+        "c993d799-10c9-4e63-8c3d-a1f856b83a3c",
+        "415acff4-3e08-499f-b474-8459da35f84d"
+      ],
+      "settings": {
+        "title": "WHAT MAKES US BETTER THAN STAR BUCKS",
+        "button-label": "Go to our coffee"
+      }
+    },
+    "last-added-product": {
+      "type": "last-added-product",
+      "blocks": {
+        "c7d40584-72c9-44f7-aad3-3d8764633257": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/benefits-item-icon.png",
+            "title": "LOREM IPSUM DOLOREM"
+          }
+        },
+        "b41d4e0f-4660-4ccf-af1a-0b84b4a30122": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/benefits-item-icon-2.png",
+            "title": "LOREM IPSUM DOLOREM"
+          }
+        },
+        "afdaf59a-e72f-4031-8204-a5b99215695f": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/coffee-filter_1.png",
+            "title": "LOREM IPSUM DOLOREM"
+          }
+        },
+        "30024cbf-a4b9-45f6-ae57-33e98ec2d594": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/benefits-item-icon-3.png",
+            "title": "LOREM IPSUM DOLOREM"
+          }
+        }
+      },
+      "block_order": [
+        "c7d40584-72c9-44f7-aad3-3d8764633257",
+        "b41d4e0f-4660-4ccf-af1a-0b84b4a30122",
+        "afdaf59a-e72f-4031-8204-a5b99215695f",
+        "30024cbf-a4b9-45f6-ae57-33e98ec2d594"
+      ],
+      "settings": {
+        "collection": "collection-for-last-added-product"
+      }
+    },
+    "reviews": {
+      "type": "reviews",
+      "blocks": {
+        "e15aaff5-2390-4afc-8fe1-816034e9ce55": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/review-icon.png",
+            "rating": 4,
+            "review-title": "Amazing coffee!",
+            "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+            "author-name": "Name Surname"
+          }
+        },
+        "3cc2f54f-ca20-4536-95bf-f60027c21fbe": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/review-icon.png",
+            "rating": 4,
+            "review-title": "Amazing coffee!",
+            "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+            "author-name": "Name Surname"
+          }
+        },
+        "c6edc363-5fa3-4378-bead-e244ac007e60": {
+          "type": "block",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/review-icon.png",
+            "rating": 4,
+            "review-title": "Amazing coffee!",
+            "text": "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.",
+            "author-name": "Name Surname"
+          }
+        }
+      },
+      "block_order": [
+        "e15aaff5-2390-4afc-8fe1-816034e9ce55",
+        "3cc2f54f-ca20-4536-95bf-f60027c21fbe",
+        "c6edc363-5fa3-4378-bead-e244ac007e60"
+      ],
+      "settings": {
+        "title": "SOME OF OUR FRIENDS"
+      }
+    },
+    "featured-collection-2": {
+      "type": "featured-collection",
+      "settings": {
+        "featured-collection": "bestsellers",
+        "title": "",
+        "number_of_products_to_show": 3
+      }
+    },
+    "image-section": {
+      "type": "image-section",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "image-banner",
+    "featured-collection",
+    "our-story",
+    "benefits",
+    "last-added-product",
+    "reviews",
+    "featured-collection-2",
+    "image-section"
+  ]
 }
