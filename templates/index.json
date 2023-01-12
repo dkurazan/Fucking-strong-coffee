@@ -152,7 +152,7 @@
       "type": "featured-collection",
       "settings": {
         "featured-collection": "bestsellers",
-        "title": "",
+        "title": "Our bestsellers",
         "number_of_products_to_show": 3
       }
     },
