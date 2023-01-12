@@ -39,6 +39,7 @@
     text-align: center;
     text-transform: uppercase;
     color: #FFFFFF;
+    white-space: nowrap;
 }
 
 .banner__content h2{
@@ -52,6 +53,7 @@
     letter-spacing: 3px;
     line-height: 140%;
     margin-bottom: 95px;
+    white-space: nowrap;
 }
 
 .banner__content div{
@@ -94,4 +96,84 @@
     color: rgba(235, 34, 64, 1);
     background-color: #fff;
     transition: .5s all ease-in-out;
+}
+
+@media(max-width: 1200px){
+    
+    .banner__content h1{
+        font-size: 150px;
+    }
+
+    .banner__content h2{
+        font-size: 70px;
+    }
+
+    .banner__content a{
+        padding: 18px 80px;
+    }
+}
+
+@media(max-width: 950px){
+    .banner__content h1{
+        font-size: 138px;
+    }
+
+    .banner__content h2{
+        font-size: 50px;
+    }
+
+    .banner__content div{
+        flex-direction: column;
+    }
+
+    .banner__content a{
+        padding: 21px 128px;
+        white-space: nowrap;
+    }
+}
+
+@media(max-width: 950px){
+    .banner__content h1{
+        white-space: break-spaces;
+    }
+
+}
+
+@media(max-width: 510px){
+    .banner__content h2{
+        white-space: break-spaces;
+        min-width: 348px;
+    }
+
+    .banner__background{
+        height: 777px;
+    }
+}
+
+@media(max-width: 370px){
+    .banner__content{
+        width: 100%;
+        padding: 0 17px;
+    }
+
+    .banner__content h1{
+        font-size: 110px;
+    }
+
+    .banner__content h2{
+        font-size: 40px;
+    }
+
+    .banner__content div, .banner__content div a{
+        width: 100%;
+    }
+
+    .banner__content div a{
+        padding: 21px 0;
+        text-align: center;
+    }
+
+    .banner__content h2{
+        min-width: 0;
+    }
 }

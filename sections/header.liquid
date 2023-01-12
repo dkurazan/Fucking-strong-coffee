@@ -28,6 +28,27 @@
                 </div>
             </div>
         </div>
+        <div class="header__row-mobile">
+            <div class="header-mobile__menu">
+                {% render 'side-menu-button-icon' %}
+            </div>
+            <div class="header-mobile__logo">
+                <a href="/" class="header__logo-inner">
+                    {% if section.settings.logo != blank %}
+                        {{ section.settings.logo | img_url: 'master' | img_tag }}
+                    {% else %}
+                        {% render 'header-logo-mobile' %}
+                    {% endif %}
+                </a>
+            </div>
+            <div class="header-mobile__cart">
+                <a href="/cart">
+                    <span>$ 0.00</span>
+                    <span>(0)</span>
+                    {% render 'cart-button-icon' %}
+                </a>
+            </div>
+        </div>
     </div>
 </header>
 

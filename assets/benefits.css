@@ -74,10 +74,55 @@
     text-decoration: none;
     border: 1px solid #EB2240;
     transition: .5s all ease-in-out;
+    white-space: nowrap;
 }
 
 .benefits__button:hover {
     background-color: #fff;
     color: #EB2240;
     transition: .5s all ease-in-out;
+}
+
+
+@media(max-width: 1200px){
+    .benefits__item-title{
+        font-size: 16px;
+    }
+
+    .benefits__item-subtitle{
+        font-size: 12px;
+    }
+}
+
+@media(max-width: 1200px){
+    .benefits__inner{
+        padding: 0 30px;
+    }
+}
+
+@media(max-width: 600px){
+    .benefits__items{
+        flex-wrap: wrap;
+    }
+
+    .benefits__item{
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 40px;
+    }
+
+    .benefits{
+        padding-top: 30px;
+    }
+}
+
+@media(max-width: 420px){
+    .benefits__inner{
+        padding: 0 20px;
+    }
+
+    .benefits__button{
+        padding: 22px 0;
+        width: 100%;
+    }
 }

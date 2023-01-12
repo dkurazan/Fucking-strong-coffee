@@ -10,6 +10,9 @@
 .story__inner{
     background: url(our-story-bg.png);
     width: 100%;
+    background-repeat:no-repeat;
+    background-size:contain;
+    background-position:center;
 }
 
 .story__text{
@@ -46,4 +49,44 @@
     text-decoration-line: underline;
     text-transform: uppercase;
     color: #EB2240;
+}
+
+
+@media(max-width: 1200px){
+    .story__text p{
+        font-size: 24px;
+    }
+
+}
+
+@media(max-width: 1100px){
+    .story__inner{
+        padding: 0 30px;
+    }
+}
+
+@media(max-width: 1000px){
+    .story__inner{
+        background-size: cover;
+    }
+}
+
+@media(max-width: 600px){
+    .story__inner{
+        padding: 0 5px;
+    }
+
+    .story__container{
+        padding: 0 30px;
+    }
+
+    .story{
+        padding-bottom: 25px;
+    }
+}
+
+@media(max-width: 400px){
+    .story__container{
+        padding: 0 12px;
+    }
 }

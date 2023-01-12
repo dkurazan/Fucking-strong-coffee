@@ -131,4 +131,53 @@
     font-size: 14px;
     line-height: 140%;
     color: rgba(8, 5, 1, 0.5);
+    text-align: center;
+}
+
+@media( max-width: 1500px ){
+    .footer .container{
+        padding: 0 30px;
+    }
+}
+
+@media(max-width: 1176px){
+    .footer__row>div:last-child{
+        flex-wrap: wrap;
+    }
+
+    .footer__row:first-child{
+        gap: 20%;
+    }
+
+    .footer__about{
+        padding-bottom: 30px;
+    }
+
+    .footer__newsletter form {
+        margin-top: 48px;
+    }
+}
+
+@media(max-width: 650px){
+    .footer__row{
+        flex-wrap: wrap;
+    }
+}
+
+@media(max-width: 600px){
+    .footer{
+        padding-top: 38px;
+    }
+
+    .footer .container{
+        padding: 0 16px;
+    }
+
+    .footer__about{
+        padding: 48px 0;
+    }
+
+    .footer__row:first-child {
+        padding-bottom: 62px;
+    }
 }

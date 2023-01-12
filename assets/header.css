@@ -7,13 +7,13 @@
     background-color: #fff;
 }
 
-.header__navigation, .header__cart{
+.header__navigation, .header__cart, .header-mobile__menu, .header-mobile__cart{
     display: flex;
     flex: 0 0 25%;
     max-width: 25%;
 }
 
-.header__logo{
+.header__logo, .header-mobile__logo{
     display: flex;
     flex: 0 0 50%;
     max-width: 50%;
@@ -80,4 +80,62 @@
 
 .header__side-menu-button:hover{
     cursor: pointer;
+}
+
+.header__row-mobile{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px 0 19px;
+    display: none;
+}
+
+.header-mobile__cart{
+    justify-content: end;
+}
+
+
+.header-mobile__menu svg{
+    transform: scale( -1, 1);
+}
+
+.header-mobile__cart a{
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.header-mobile__cart span{
+    padding-right: 5px;
+    font-family: 'Hind Vadodara';
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: 0.06em;
+    color: rgba(8, 5, 1, 0.75);
+    white-space: nowrap;
+}
+
+@media(max-width: 1480px){
+    .header{
+        padding: 0 15px;
+    }
+}
+
+@media(max-width: 900px){
+    .header__row{
+        display: none;
+    }
+
+    .header{
+        padding: 0;
+    }
+
+    .header .container{
+        padding: 0 20px;
+    }
+
+    .header__row-mobile{
+        display: flex;
+    }
 }

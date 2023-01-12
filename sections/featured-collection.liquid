@@ -3,6 +3,7 @@
     <div class="container">
         {% if section.settings.title != blank %}
             <h2 class="featured-collection__title main__title">{{ section.settings.title }}</h2>
+            <a href="#" class="featured-collection__subtitle"> view all</a>
         {% endif %}
         <div class="row featured-collection_row">
             {% for product in section.settings.featured-collection.products limit: section.settings.number_of_products_to_show %}

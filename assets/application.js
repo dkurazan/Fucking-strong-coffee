@@ -1,1 +1,7 @@
-// Put your application javascript here
+$('.reviews__items-mobile').slick({
+    dots: true,
+    infinite: true,
+    slidesToShow: 1,
+    dots: true,
+  });
+      

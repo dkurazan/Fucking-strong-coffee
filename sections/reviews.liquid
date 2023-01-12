@@ -5,7 +5,60 @@
             <div class="container">
                 <div class="reviews__info">
                     <h2 class="reviews__title main__title">{{ section.settings.title }}</h2>
-                    <div class="reviews__items">
+                    <div class="reviews__items" >
+                        {% for block in section.blocks %}
+                            <div class="reviews__item">
+                                {% if block.settings.image != blank %}
+                                    <div class="review__img">
+                                        {{ block.settings.image | img_url: 'master' | img_tag }}
+                                    </div>
+                                {% endif %}
+                                <div class="review__rating">
+                                    {% if block.settings.rating == 0 %}
+                                        {% render 'empty-star-icon' %}
+                                        {% render 'empty-star-icon' %}
+                                        {% render 'empty-star-icon' %}
+                                        {% render 'empty-star-icon' %}
+                                        {% render 'empty-star-icon' %}
+                                    {% elsif block.settings.rating == 1 %}
+                                        {% render 'filled-star-icon' %}
+                                        {% render 'empty-star-icon' %}
+                                        {% render 'empty-star-icon' %}
+                                        {% render 'empty-star-icon' %}
+                                        {% render 'empty-star-icon' %}
+                                    {% elsif block.settings.rating == 2 %}
+                                        {% render 'filled-star-icon' %}
+                                        {% render 'filled-star-icon' %}
+                                        {% render 'empty-star-icon' %}
+                                        {% render 'empty-star-icon' %}
+                                        {% render 'empty-star-icon' %}
+                                    {% elsif block.settings.rating == 3 %}
+                                        {% render 'filled-star-icon' %}
+                                        {% render 'filled-star-icon' %}
+                                        {% render 'filled-star-icon' %}
+                                        {% render 'empty-star-icon' %}
+                                        {% render 'empty-star-icon' %}
+                                    {% elsif block.settings.rating == 4 %}
+                                        {% render 'filled-star-icon' %}
+                                        {% render 'filled-star-icon' %}
+                                        {% render 'filled-star-icon' %}
+                                        {% render 'filled-star-icon' %}
+                                        {% render 'empty-star-icon' %}
+                                    {% elsif block.settings.rating == 5 %}
+                                        {% render 'filled-star-icon' %}
+                                        {% render 'filled-star-icon' %}
+                                        {% render 'filled-star-icon' %}
+                                        {% render 'filled-star-icon' %}
+                                        {% render 'filled-star-icon' %}
+                                    {% endif %}
+                                </div>
+                                <h4>{{ block.settings.review-title }}</h4>
+                                <p>{{ block.settings.text }}</p>
+                                <h6>{{ block.settings.author-name }}</h6>
+                            </div>
+                        {% endfor %}
+                    </div>
+                    <div class="reviews__items-mobile" >
                         {% for block in section.blocks %}
                             <div class="reviews__item">
                                 {% if block.settings.image != blank %}
