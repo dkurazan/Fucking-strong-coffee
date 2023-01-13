@@ -14,7 +14,7 @@
 .reviews__items{
     display: flex;
     width: 100%;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 
 .reviews__items-mobile{
@@ -94,6 +94,7 @@
 @media(max-width: 1100px){
     .reviews__items{
         flex-wrap: wrap;
+        justify-content: space-around;
     }
 
     .reviews__item {

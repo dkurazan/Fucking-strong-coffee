@@ -33,7 +33,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: start;
     max-height: 100%;
     height: 100%;
 }
@@ -47,6 +47,7 @@
 .product-card__img{
     padding: 0 17.25px;
     overflow: hidden;
+    height: 371px;
 }
 
 .product-card__img img{
