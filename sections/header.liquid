@@ -33,7 +33,7 @@
                 {% render 'side-menu-button-icon' %}
             </div>
             <div class="header-mobile__logo">
-                <a href="/" class="header__logo-inner">
+                <a href="/" class="header__logo-inner" loading="lazy">
                     {% if section.settings.logo != blank %}
                         {{ section.settings.logo | img_url: 'master' | img_tag }}
                     {% else %}
