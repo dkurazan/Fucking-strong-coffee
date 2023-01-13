@@ -19,8 +19,7 @@
     {{ 'reset.css' | asset_url | stylesheet_tag }}
     {{ 'application.css' | asset_url | stylesheet_tag }}
     <script src="{{ 'application.js' | asset_url }}" defer></script>
-    <script src="{{ 'application.js' | asset_url }}" defer></script>
-    {{ '//cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js' | script_tag }}
+    <script src="{{ 'https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js' | asset_url }}" defer></script>
   </head>
   <body>
     <header class="header">
