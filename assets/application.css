@@ -2,13 +2,6 @@
     box-sizing: border-box;
 }
 
-.header__logo, .header-mobile__logo {
-    display: flex;
-    flex: 0 0 50%;
-    max-width: 50%;
-    justify-content: center;
-}
-
 @font-face {
     font-family: SignPainter;
     src: url(SignPainter.ttf);

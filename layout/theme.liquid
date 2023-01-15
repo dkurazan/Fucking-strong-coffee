@@ -16,6 +16,14 @@
     <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
     {{ content_for_header }}
     <!-- Header hook for plugins -->
+    <style>   
+      .header__logo, .header-mobile__logo {
+        display: flex;
+        flex: 0 0 50%;
+        max-width: 50%;
+        justify-content: center;
+      }
+    </style>
     {{ 'reset.css' | asset_url | stylesheet_tag }}
     {{ 'application.css' | asset_url | stylesheet_tag }}
     <script src="{{ 'application.js' | asset_url }}" defer></script>
