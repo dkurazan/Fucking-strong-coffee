@@ -68,9 +68,11 @@
 
 .header__cart-button span{
     font-family: 'Hind Vadodara';
-    font-style: normal;
     font-weight: 400;
-    font-size: 18px;
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: 0.06em;
+    color: rgba(8, 5, 1, 0.75);
 }
 
 .header__side-menu-button{

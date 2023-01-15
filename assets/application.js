@@ -1,3 +1,4 @@
+// slider
 $('.reviews__items-mobile').slick({
     dots: true,
     infinite: true,
@@ -5,3 +6,9 @@ $('.reviews__items-mobile').slick({
     dots: true,
   });
       
+// mobile menu
+const mobileMenuBtn = document.querySelector(".header-mobile__menu svg");
+
+mobileMenuBtn.addEventListener('click', () => {
+    console.log("afaf")
+})
