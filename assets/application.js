@@ -8,7 +8,8 @@ $('.reviews__items-mobile').slick({
       
 // mobile menu
 const mobileMenuBtn = document.querySelector(".header-mobile__menu svg");
+const popupMobile = document.querySelector(".popup-mobile");
 
 mobileMenuBtn.addEventListener('click', () => {
-    console.log("afaf")
+    popupMobile.classList.toggle("popup-mobile__active")
 })

@@ -5,6 +5,7 @@
 
 .header{
     background-color: #fff;
+    position: relative;
 }
 
 .header__navigation, .header__cart, .header-mobile__menu, .header-mobile__cart{
@@ -117,6 +118,63 @@
     color: rgba(8, 5, 1, 0.75);
     white-space: nowrap;
 }
+
+.popup-mobile{
+    position: absolute;
+    top: 91px;
+    left: -100%;
+    width: 100%;
+    z-index: 10;
+    background: #EB2240;
+    height: calc( 100vh - 91px );
+}
+
+.popup-mobile__active{
+    left: 0;
+}
+
+.popup-mobile__inner{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    justify-content: end;
+}
+
+.popup-mobile__nav-top{
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 32px;
+}
+
+.popup-mobile__nav-top a{
+    font-family: 'SignPainter';
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 120%;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    text-decoration: none;
+}
+
+.popup-mobile__nav-bottom{
+    padding: 0 20px 45px 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.popup-mobile__nav-bottom a{
+    text-decoration: none;
+    font-family: 'Hind Vadodara';
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    color: rgba(255, 255, 255, 0.7);
+}
+
 
 @media(max-width: 1480px){
     .header{

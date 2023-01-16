@@ -53,6 +53,20 @@
             </div>
         </div>
     </div>
+    <div class="popup-mobile">
+        <nav class="popup-mobile__inner">
+            <div class="popup-mobile__nav-top">
+                {% for link in section.settings.menu-mobile.links %}
+                    <a href="{{ link.url }}">{{ link.title }}</a>
+                {% endfor %}
+            </div>
+            <div class="popup-mobile__nav-bottom">
+                <a href="#">Privacy Policy</a>
+                <a href="#">Currency</a>
+                <a href="#">Shipping</a>
+            </div>
+        </nav>
+    </div>
 </header>
 
 {% schema %}
@@ -64,6 +78,12 @@
                 "id": "menu",
                 "default": "main-menu",
                 "label": "Heading Navgation Menu"
+            },
+            {
+                "type": "link_list",
+                "id": "menu-mobile",
+                "label": "Mobile Navgation Menu",
+                "default": "mobile-menu"
             },
             {
                 "type": "image_picker",
