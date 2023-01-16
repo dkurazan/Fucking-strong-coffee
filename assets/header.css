@@ -6,12 +6,23 @@
 .header{
     background-color: #fff;
     position: relative;
+    transition: .5s all ease-in-out;
+}
+
+.header__popup-mobile-active{
+    background-color: #EB2240;
+    transition: .5s all ease-in-out;
 }
 
 .header__navigation, .header__cart, .header-mobile__menu, .header-mobile__cart{
     display: flex;
     flex: 0 0 25%;
     max-width: 25%;
+}
+
+.header-mobile__menu{
+    align-items: center;
+    position: relative;
 }
 
 .header__logo, .header-mobile__logo{
@@ -102,6 +113,27 @@
     transform: scale( -1, 1);
 }
 
+.side-menu-button{
+    transition: .5s all ease-in-out;
+}
+
+.side-menu-active-button{
+    position: absolute;
+    left: -5px;
+    transition: .5s all ease-in-out;
+    opacity: 1;
+    visibility: visible;
+    padding: 9.5px 13px;
+    background-color: #fff;
+    border-radius: 15px;
+}
+
+.side-menu-button-hidden{
+    opacity: 0;
+    visibility: hidden;
+    transition: .5s all ease-in-out;
+}
+
 .header-mobile__cart a{
     display: flex;
     align-items: center;
@@ -117,6 +149,17 @@
     letter-spacing: 0.06em;
     color: rgba(8, 5, 1, 0.75);
     white-space: nowrap;
+    transition: .5s all ease-in-out;
+}
+
+.header-mobile__cart path, .header-mobile-logo path{
+    transition: .5s all ease-in-out;
+}
+
+.side-menu-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .popup-mobile{
@@ -127,10 +170,31 @@
     z-index: 10;
     background: #EB2240;
     height: calc( 100vh - 91px );
+    transition: .5s all ease-in-out;
 }
 
 .popup-mobile__active{
     left: 0;
+    transition: .5s all ease-in-out;
+}
+
+.body_mobile-menu-active{
+    overflow: hidden;
+}
+
+.mobile-logo-active{
+    fill: white;
+    transition: .5s all ease-in-out;
+}
+
+.mobile-cart-logo-active{
+    stroke: white;
+    transition: .5s all ease-in-out;
+}
+
+span.mobile-cart-label-active{
+    color: rgba(255, 255, 255, 0.75);
+    transition: .5s all ease-in-out;
 }
 
 .popup-mobile__inner{
