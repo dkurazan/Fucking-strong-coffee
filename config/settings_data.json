@@ -5,7 +5,7 @@
         "type": "header",
         "settings": {
           "menu": "main-menu",
-          "menu-mobile": "mobile-menu"
+          "menu-mobile": "popup-mobile"
         }
       },
       "footer": {
