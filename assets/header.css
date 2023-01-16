@@ -122,7 +122,7 @@
 .popup-mobile{
     position: absolute;
     top: 91px;
-    left: -100%;
+    left: -110%;
     width: 100%;
     z-index: 10;
     background: #EB2240;
