@@ -1,5 +1,23 @@
 {
   "current": {
+    "sections": {
+      "header": {
+        "type": "header",
+        "settings": {
+          "menu": "main-menu",
+          "menu-mobile": "mobile-menu"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "settings": {
+          "about-us-text": "Nunc sed ultricies. Molestie ornare quis, adipiscing lectus sit molestie leo, non interdum imperdiet efficitur vestibulum est. Dapibus non ornare accumsan morbi molestie augue mollis lectus quam, ornare mattis null."
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
   },
   "presets": {
     "Default": {
