@@ -113,4 +113,16 @@
     .featured-collection_row{
         padding: 0 14px;
     }
+
+    .product-card__icons li{
+        gap: 5px;
+        padding-right: 10px;
+        font-size: 10px;
+    }
+
+    .product-card__icons li:first-child{
+        min-width: 0;
+        max-width: 103px;
+    }
 }
+

@@ -1,0 +1,41 @@
+{{ 'banner-2.css' | asset_url | stylesheet_tag }}
+<div class="banner">
+    <div class="container-xl">
+        <div class="banner__inner">
+            <div class="banner__background">
+                {% if section.settings.background-image != blank %}
+                    {{ section.settings.background-image | img_url: 'master' | img_tag }}
+                {% else %}
+                    <div class="banner_bg-red"></div>
+                {% endif %}
+            </div>
+            <div class="banner__content">
+                <h1>{{ section.settings.title-xl }}</h1>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Image banner",
+        "settings": [
+            {
+                "type": "image_picker",
+                "id": "background-image",
+                "label": "Background image"
+            },
+            {
+                "type": "text",
+                "id": "title-xl",
+                "label": "Title",
+                "default": "Stay awake"
+            }
+        ],
+        "presets": [
+            {
+                "name": "Image banner"
+            }
+        ]
+    }
+{% endschema %}

@@ -1,0 +1,27 @@
+{
+    "sections": {
+        "template": {
+            "type": "template-collection"
+        },
+        "image-banner": {
+            "type": "image-banner-2",
+            "settings": {
+              "title-xl": "OUR FUCKING COFFEE"
+            }
+          },
+          "image-section": {
+            "type": "image-section",
+            "settings": {
+            }
+          },
+          "featured-collection": {
+            "type": "featured-collection",
+            "settings": {
+              "featured-collection": "bestsellers",
+              "title": "Our bestsellers",
+              "number_of_products_to_show": 3
+            }
+          }
+    },
+    "order": ["image-banner", "template", "image-section", "featured-collection"]
+}

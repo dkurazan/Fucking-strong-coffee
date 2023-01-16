@@ -1,0 +1,21 @@
+{{ 'collection.css' | asset_url | stylesheet_tag }}
+<div class="collection">
+    <div class="container">
+        <div class="row">
+            <div class="collection__filter">
+                filter
+            </div>
+            <div class="collection__products">
+                {% paginate collection.products by 9 %}
+                        <div class="collection__products-inner">
+                            {% for product in collection.products %}
+                                    {%  render 'product-card', product: product %}
+                                {% endfor %}
+                        </div>
+                        {{- paginate | default_pagination -}}
+                    {% endpaginate %}
+                
+            </div>
+        </div>
+    </div>
+</div>

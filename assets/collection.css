@@ -1,0 +1,37 @@
+.collection{
+    padding: 143px 0 55px;
+}
+
+.collection__filter{
+    flex: 0 0 18.81944%;
+    max-width: 18.81944%;
+}
+
+.collection__products{
+    width: 100%;
+}
+
+.collection__products-inner{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.collection .product-card__icons ul{
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.collection .product-card__inner a:nth-child(4){
+    width: 91.40401%;
+}
+
+.collection .product-card__img{
+    height: 355px;
+    padding: 0;
+}
+
+.collection .product-card{
+    margin-bottom: 90px;
+}
