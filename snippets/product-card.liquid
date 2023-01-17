@@ -15,7 +15,9 @@
         </a>
         <div class="product-card__text">
             <h5>{{ product.title }}</h5>
-            <p>This is where it all started. We visited our partners at Twongerekawa Coko back in 2018.</p>
+            {% unless section.settings.hide-product-subtitle %}
+                <p>This is where it all started. We visited our partners at Twongerekawa Coko back in 2018.</p>
+            {% endunless %}
         </div>
         <div class="product-card__icons">
             <ul>

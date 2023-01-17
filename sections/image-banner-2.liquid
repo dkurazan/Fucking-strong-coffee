@@ -1,6 +1,6 @@
 {{ 'banner-2.css' | asset_url | stylesheet_tag }}
 <style>
-    {% if section.settings.background-image != blank %}
+    {% if section.settings.background-image != blank and section.settings.video_link == blank %}
         .banner__background::before{
             content: '';
             position: absolute;
@@ -17,10 +17,16 @@
     <div class="container-xl">
         <div class="banner__inner">
             <div class="banner__background">
-                {% if section.settings.background-image != blank %}
-                    {{ section.settings.background-image | img_url: 'master' | img_tag }}
+                {% if section.settings.video_link != blank %}
+                    <video class="video-background" loop autoplay preload="none" muted playsinline>
+                        <source src="{{ section.settings.video_link }}" type="video/mp4">
+                    </video>
                 {% else %}
-                    <div class="banner_bg-red"></div>
+                    {% if section.settings.background-image != blank %}
+                        {{ section.settings.background-image | img_url: 'master' | img_tag }}
+                    {% else %}
+                        <div class="banner_bg-red"></div>
+                    {% endif %}
                 {% endif %}
             </div>
             <div class="banner__content">
@@ -39,6 +45,11 @@
                 "id": "background-image",
                 "label": "Background image"
             },
+            {
+				"type": "url",
+				"id": "video_link",
+				"label": "Video link"
+			},
             {
                 "type": "text",
                 "id": "title-xl",
