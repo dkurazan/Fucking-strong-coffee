@@ -39,3 +39,24 @@ mobileMenuBtn.forEach( item => {
     })
   })
 })
+
+
+// collection filter
+const filterBtn = document.querySelectorAll(".filter__button");
+
+filterBtn.forEach( item => {
+  item.parentElement.addEventListener('click', () => {
+    item.parentElement.nextElementSibling.classList.toggle('filter__checkbox-hidden');
+    if(item.parentElement.nextElementSibling.classList.contains('filter__checkbox-hidden')){
+      item.innerHTML = `<svg width="9" height="9" viewBox="0 0 9 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <line y1="4.5" x2="9" y2="4.5" stroke="#6C7175"/>
+                          <line x1="4.5" x2="4.5" y2="9" stroke="#6C7175"/>
+                        </svg>
+                        `
+    } else{
+      item.innerHTML = `<svg width="9" height="2" viewBox="0 0 9 2" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <line y1="1" x2="9" y2="1" stroke="#6C7175"/>
+                        </svg>`
+    }
+  })
+})

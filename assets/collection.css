@@ -1,5 +1,5 @@
 .collection{
-    padding: 143px 0 55px;
+    padding: 59px 0 55px;
 }
 
 .collection__filter{
@@ -34,4 +34,122 @@
 
 .collection .product-card{
     margin-bottom: 90px;
+}
+
+/* filter */
+
+.collection__filter-inner{
+    padding-right: 86px;
+}
+
+.filter__title{
+    padding-bottom: 65px;
+    display: flex;
+}
+
+.filter__title h4{
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #EB2240;
+    margin-left: 4px;
+}
+
+.filter__block-title{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 24px;
+}
+
+.filter__block-title h6{
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 120%;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #333333;
+    user-select: none;
+}
+
+.filter__button{
+    width: 16px;
+    height: 16px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+
+.filter__button span{
+    display: block;
+    width: 9px;
+    height: 1px;
+    background-color: rgba(108, 113, 117, 1);
+}
+
+.filter__button-closed{
+    position: relative;
+    left: -6px;
+}
+
+.filter__button:hover{
+    cursor: pointer;
+}
+
+
+
+.filter__checkbox{
+    padding-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter__checkbox:last-child{
+    padding-bottom: 27px;
+}
+
+.filter__checkbox input{
+    display: none;
+}
+
+.filter__checkbox label, .filter__checkbox span{
+    user-select: none;
+    display: flex;
+    align-items: center;
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 120%;
+    color: #6C7175;
+}
+
+.filter__checkbox label:before{
+    content: '';
+    display: inline-block;
+    width: 17px;
+    height: 17px;
+    border: 1px solid #E0E0E0;
+    margin-right: 8px;
+}
+
+.filter__checkbox input:checked + label:before{
+    background-color: #E0E0E0;
+}
+
+.filter__checkboxes{
+    border-bottom: 1px solid #ECE8DF;
+    margin-bottom: 27px;
+    display: block;
+}
+
+.filter__checkbox-hidden{
+    display: none;
 }

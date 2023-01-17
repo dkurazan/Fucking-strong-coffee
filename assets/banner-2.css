@@ -15,16 +15,7 @@
     height: 100%;
 }
 
-.banner__background::before{
-    content: '';
-    position: absolute;
-    top: 0;
-    display: block;
-    left: 0;
-    right: 0;
-    height: 674px;
-    background: linear-gradient(180deg, rgba(14, 11, 7, 0.85) 7.34%, rgba(14, 11, 7, 0) 123.66%);
-}
+
 
 .banner_bg-red{
     height: 100%;
