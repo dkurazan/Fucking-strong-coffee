@@ -1,0 +1,11 @@
+{
+    "sections": {
+        "banner": {
+            "type": "image-banner-2",
+            "settings": {
+              "title-xl": "THIS IS OUR STORY"
+            }
+          }
+    },
+    "order": []
+}
