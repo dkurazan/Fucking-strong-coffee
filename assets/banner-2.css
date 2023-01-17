@@ -46,6 +46,7 @@
     text-transform: uppercase;
     color: #FFFFFF;
     white-space: nowrap;
+    user-select: none;
 }
 
 .banner__content div{
