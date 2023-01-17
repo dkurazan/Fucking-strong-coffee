@@ -1,27 +1,36 @@
 {
-    "sections": {
-        "template": {
-            "type": "template-collection"
-        },
-        "image-banner": {
-            "type": "image-banner-2",
-            "settings": {
-              "title-xl": "OUR FUCKING COFFEE"
-            }
-          },
-          "image-section": {
-            "type": "image-section",
-            "settings": {
-            }
-          },
-          "featured-collection": {
-            "type": "featured-collection",
-            "settings": {
-              "featured-collection": "bestsellers",
-              "title": "Our bestsellers",
-              "number_of_products_to_show": 3
-            }
-          }
+  "sections": {
+    "image-banner": {
+      "type": "image-banner-2",
+      "settings": {
+        "background-image": "shopify:\/\/shop_images\/Rectangle_3.png",
+        "title-xl": "OUR FUCKING COFFEE"
+      }
     },
-    "order": ["image-banner", "template", "image-section", "featured-collection"]
+    "template": {
+      "type": "template-collection",
+      "settings": {
+      }
+    },
+    "image-section": {
+      "type": "image-section",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/Rectangle_7.png"
+      }
+    },
+    "featured-collection": {
+      "type": "featured-collection",
+      "settings": {
+        "featured-collection": "bestsellers",
+        "title": "Our bestsellers",
+        "number_of_products_to_show": 3
+      }
+    }
+  },
+  "order": [
+    "image-banner",
+    "template",
+    "image-section",
+    "featured-collection"
+  ]
 }
