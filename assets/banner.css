@@ -55,6 +55,7 @@
     line-height: 140%;
     margin-bottom: 95px;
     white-space: nowrap;
+    user-select: none;
 }
 
 .banner__content div{
