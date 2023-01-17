@@ -1,0 +1,120 @@
+.about{
+    padding: 143px 0 0;
+}
+
+
+.about__block{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 216px;
+}
+
+.about__block:last-child{
+    padding-bottom: 312px;
+}
+
+.about__block-reverse{
+    flex-direction: row-reverse;
+}
+
+.about__block-title{
+    margin-bottom: 30px;
+    font-family: 'SignPainter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 110%;
+    color: #2D2B27;
+    text-transform: uppercase;
+}
+
+.about__block-text{
+    max-width: 724px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.about__block-text p{
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 140%;
+    color: rgba(0, 0, 0, 0.7);
+}
+
+.about__block-text p:nth-child(2){
+    padding-bottom: 20px;
+}
+
+.about__block-image{
+    flex: 0 0 35.27778%;
+    max-width: 35.27778%;
+}
+
+.about__block-image-bg{
+    max-width: 100%;
+    width: 100%;
+    height: 637px;
+    background-image: url(review-icon.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+
+.about__block-image-bg>img{
+    width: 100%;
+    height: fit-content;
+    padding: 53px 30px 0 30px;
+}
+
+.about__block-image-bg div{
+    position: absolute;
+    top: -55px;
+}
+
+.about__block-reverse .about__block-image{
+    margin-left: 50px;
+}
+
+.about__big-image{
+    max-width: 1521px;
+    margin: 0 auto;
+}
+
+.about__big-image-inner{
+    width: 100%;
+    position: relative;
+}
+
+.about__big-image-inner>img{
+    width: 100%;
+}
+
+.about__big-image-inner div{
+    position: absolute;
+}
+
+.big-image-patch-1{
+    top: -110px;
+    left: -110px;
+}
+
+.big-image-patch-2{
+    bottom: -120px;
+    right: -120px;
+}
+
+.about__big-image-title{
+    margin-top: 24px;
+    text-align: center;
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 140%;
+}

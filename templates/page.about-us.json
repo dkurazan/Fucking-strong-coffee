@@ -5,7 +5,10 @@
             "settings": {
               "title-xl": "THIS IS OUR STORY"
             }
+          },
+          "about-us": {
+            "type": "template-about-us"
           }
     },
-    "order": ["banner"]
+    "order": ["banner", "about-us"]
 }
