@@ -1,0 +1,113 @@
+{{ 'product.css' | asset_url | stylesheet_tag }}
+<div class="product-template">
+    <div class="container">
+            <div class="product">
+                <div class="row">
+                    <div class="product__images">
+                        <a href="{{ product.url }}" class="product__image">
+                            {% if product.featured_image %}
+                                {{ product.featured_image | img_url: 'master' | img_tag }}
+                            {% else %}
+                                {{ 'product-1' | placeholder_svg_tag }}
+                            {% endif %}
+                        </a>
+                        <div class="product__small-images">
+                            {% for image in product.images %}
+                                <a href="{{ image.src | img_url: 'large' }}">
+                                    {{ image | img_tag }}
+                                </a>
+                            {% endfor %}
+                        </div>
+                        {% render 'new-product-arrow-icon' %}
+                        {% render 'new-product-mobile-arrow-icon' %}
+                    </div>
+                    <div class="product__info">
+                        <div class="product__info-inner">
+                            <h4 class="product__title-sm">So fucking strong coffee from...</h4>
+                            <h3 class="product__title-xl">{{ product.title | upcase | remove: 'FUCKING STRONG COFFEE FROM'  }}</h3>
+                            <div class="product__price">{{ product.price | money }}</div>
+                            <div class="product__tax">Tax included</div>
+                            <div class="product__usp">
+                                <ul>
+                                    {% for block in section.blocks %}
+                                        <li>
+                                            {{ block.settings.image | img_url: 'master' | img_tag }}
+                                            {{ block.settings.title }}
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            </div>
+                            <a href="{{ product.url }}" class="product__button">add to cart</a>
+                            <div class="product__description">
+                                <p>The return of our much-loved, super special edition single estate Kenyan coffee.</p>
+                                <p>Our origin partner Gloria and the folks at Sakami Coffee in Kenya have been churning out beautiful harvests from the slopes of Mt. Elgon for over a decade, tirelessly building one of the most sustainable specialty coffee farms in the country.</p>
+                                <p>Bright and bold, this may just be our most indulgent coffee yet. Features beautifully as a filter coffee or cold brew.</p>
+                                <p>For the nerds: this is a Washed AA from Batian cultivars intercropped with Macadamia shade trees. The Sakami wet mill is powered entirely by solar energy.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="product__tabs">
+                    <ul class="product__tabs-titles">
+                        <li class="product-tab-1 product-tab-active">About this product</li>
+                        <li class="product-tab-2">About the producer</li>
+                        <li class="product-tab-3">About Fucking Strong Coffee</li>
+                    </ul>
+                    <div class="product__tabs-content product__tabs-content-1">
+                        <p>While we've made huge leaps in sourcing and roasting coffee over the years, minimalist branding and snobby attitudes have slowed our spread. New-age coffee bars and monotonous design snarkily whisper the same thing: good coffee is for the few. Our polite response? Fuck that. Inspired by our first origin partners at the female-run Twongerekawa Coko Cooperative Society in the rolling hills of Rwanda, we're determined to share our beans and their story with anyone and everyone who likes good products made by good people.</p>
+                        <p>You can be a coffee nerd or novice and still agree on one thing: the grooviest of days starts with a Fucking Strong Coffee.</p>
+                    </div>
+                    <div class="product__tabs-content product__tabs-content-2">
+                        <div class="tabs__welcome-block">
+                            <div class="tabs__welcome-image">
+                                <div class="tabs__welcome-image-bg">
+                                    {{ 'product-welcome-img.png' | asset_url | img_tag }}
+                                    <div>
+                                        {{ 'patch-icon.png' | asset_url | img_tag }}
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tabs__welcome-text">
+                                <h3>Hello, my name is Chaia</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Product",
+        "settings": [
+        ],
+        "max_blocks": 4,
+        "blocks": [
+            {
+                "name": "USP item",
+                "type": "block",
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "image",
+                        "label": "Item icon"
+                    },
+                    {
+                        "type": "text",
+                        "id": "title",
+                        "label": "Item title",
+                        "default": "LOREM IPSUM DOLOREM"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Last added product"
+            }
+        ]
+    }
+{% endschema %}

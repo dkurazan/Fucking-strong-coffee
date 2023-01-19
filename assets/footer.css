@@ -162,6 +162,10 @@
     .footer__row{
         flex-wrap: wrap;
     }
+    
+    .footer__row>div:first-child{
+        max-width: 100%;
+    }
 }
 
 @media(max-width: 600px){
@@ -180,4 +184,5 @@
     .footer__row:first-child {
         padding-bottom: 62px;
     }
+
 }

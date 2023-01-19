@@ -201,6 +201,54 @@
     display: none;
 }
 
+
+.scroll-down{
+    position: fixed;
+    top: 55%;
+    transform: rotate(-90deg);
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 140%;
+    color: rgba(8, 5, 1, 0.5);
+    user-select: none;
+}
+
+.scroll-down:hover{
+    cursor: pointer;
+}
+
+.social-networks{
+    position: fixed;
+    top: 50%;
+    right: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.social-networks a{
+    text-decoration: none;
+    display: block;
+}
+
+.social-networksr path{
+    transition: .5s all ease-in-out;
+}
+
+.social-networks a:hover path{
+    fill: #EB2240;
+    transition: .2s all ease-in-out;
+}
+
+
+@media (max-width: 1600px) {
+    .social-networks, .scroll-down{
+        display: none;
+    }
+}
+
 @media (max-width: 1400px) {
     .product-card__img{
         height: 400px;
