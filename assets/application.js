@@ -141,14 +141,14 @@ const filterOverlay = document.querySelector('.overlay');
 
 filterOpenBtn.addEventListener('click', () => {
   filterPopup.classList.add('active');
-  document.body.style.overflow = 'hidden';
+  document.body.classList.add('overflow-hidden');
   filterOverlay.classList.add('active');
 })
 
 function closeFilterPopup(item) {
   item.addEventListener('click', () => {
     filterPopup.classList.remove('active');
-    document.body.style.overflow = 'visible';
+    document.body.classList.remove('overflow-hidden');
     filterOverlay.classList.remove('active');
   })
 }

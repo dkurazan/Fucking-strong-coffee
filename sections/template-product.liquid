@@ -4,7 +4,7 @@
             <div class="product">
                 <div class="row">
                     <div class="product__images">
-                        <a href="{{ product.url }}" class="product__image">
+                        <a href="{{ product.featured_image.src | img_url: 'large' }}" class="product__image">
                             {% if product.featured_image %}
                                 {{ product.featured_image | img_url: 'master' | img_tag }}
                             {% else %}
@@ -37,7 +37,7 @@
                                     {% endfor %}
                                 </ul>
                             </div>
-                            <a href="{{ product.url }}" class="product__button">add to cart</a>
+                            <a href="/cart" class="product__button">add to cart</a>
                             <div class="product__description">
                                 <p>The return of our much-loved, super special edition single estate Kenyan coffee.</p>
                                 <p>Our origin partner Gloria and the folks at Sakami Coffee in Kenya have been churning out beautiful harvests from the slopes of Mt. Elgon for over a decade, tirelessly building one of the most sustainable specialty coffee farms in the country.</p>
