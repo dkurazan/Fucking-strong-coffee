@@ -60,3 +60,31 @@ filterBtn.forEach( item => {
     }
   })
 })
+
+// scroll down button
+const scrollDownButton = document.querySelector('.scroll-down');
+
+if(scrollDownButton){
+  scrollDownButton.addEventListener('click', () => {
+    window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" });
+  })
+}
+
+
+
+// product tabs
+const allTabs = document.querySelectorAll('.product__tabs-titles li');
+
+allTabs.forEach(function(el) {
+  el.addEventListener("click", openTabs);
+});
+
+function openTabs(el) {
+  var btnTarget = el.currentTarget;
+
+  allTabs.forEach(function(el) {
+     el.classList.remove("product-tab-active");
+  });
+  
+  btnTarget.classList.add("product-tab-active");
+}
