@@ -66,7 +66,7 @@ const scrollDownButton = document.querySelector('.scroll-down');
 
 if(scrollDownButton){
   scrollDownButton.addEventListener('click', () => {
-    window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth" });
+    window.scrollTo({ left: 0, top: (document.body.scrollHeight - 652), behavior: "smooth" });
   })
 }
 
@@ -74,6 +74,7 @@ if(scrollDownButton){
 
 // product tabs
 const allTabs = document.querySelectorAll('.product__tabs-titles li');
+const tabContent = document.querySelectorAll(".product__tabs-content");
 
 allTabs.forEach(function(el) {
   el.addEventListener("click", openTabs);
@@ -81,10 +82,76 @@ allTabs.forEach(function(el) {
 
 function openTabs(el) {
   var btnTarget = el.currentTarget;
+  var tabBtn = btnTarget.dataset.title;
+
+  tabContent.forEach(function(el) {
+    el.classList.remove("active");
+  });
 
   allTabs.forEach(function(el) {
      el.classList.remove("product-tab-active");
   });
+
+  document.querySelector("#" + tabBtn).classList.add("active");
   
   btnTarget.classList.add("product-tab-active");
 }
+
+
+//product video button
+const videoPlayBtn = () => {
+  if( document.querySelector('.video-play-button') ){
+    const playBtn = document.querySelector('.video-play-button');
+    const pauseBtn = playBtn.nextElementSibling;
+    const video = playBtn.previousElementSibling;
+
+    function playVideo (item) {
+      item.addEventListener('click', () => {
+        video.play();
+        playBtn.style.display = "none";
+        pauseBtn.style.display = "block";
+        setTimeout( () => {
+          pauseBtn.classList.add('video-pause-button-enabled')
+        }, 1500 )
+      });
+    }
+
+    function pauseVideo (item) {
+      item.addEventListener('click', () => {
+        video.pause();
+        playBtn.style.display = "block";
+        pauseBtn.style.display = "none";
+        pauseBtn.classList.remove('video-pause-button-enabled')
+      });
+    }
+
+    playVideo(playBtn);
+    pauseVideo(video);
+    pauseVideo(pauseBtn);
+  }
+}
+
+videoPlayBtn();
+
+// collection filter
+const filterOpenBtn = document.querySelector('#filter-open-button');
+const filterCloseBtn = document.querySelector('#filter-close-button');
+const filterPopup = document.querySelector('.filter__popup');
+const filterOverlay = document.querySelector('.overlay');
+
+filterOpenBtn.addEventListener('click', () => {
+  filterPopup.classList.add('active');
+  document.body.style.overflow = 'hidden';
+  filterOverlay.classList.add('active');
+})
+
+function closeFilterPopup(item) {
+  item.addEventListener('click', () => {
+    filterPopup.classList.remove('active');
+    document.body.style.overflow = 'visible';
+    filterOverlay.classList.remove('active');
+  })
+}
+
+closeFilterPopup(filterOverlay);
+closeFilterPopup(filterCloseBtn);

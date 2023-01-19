@@ -53,6 +53,7 @@
 .product-card__img img{
     width: 100%;
     transition: 1s all ease-in-out;
+    mix-blend-mode: darken;
 }
 
 .product-card__img svg{
@@ -152,13 +153,13 @@
     text-align: center;
     letter-spacing: 0.085em;
     text-transform: uppercase;
-    color: #FFFFFF;
+    color: transparent;
     font-family: 'Hind Vadodara';
     font-style: normal;
     font-weight: 400;
     font-size: 16px;
     line-height: 140%;
-    background-color: #fff;
+    background-color: transparent;
     padding: 22px 0;
     text-decoration: none;
     transition: .7s all ease-in-out;
@@ -167,6 +168,7 @@
 .product-card:hover .product-card__button{
     background-color: #0E0B07;
     transition: .7s all ease-in-out;
+    color: white;
 }
 
 .product-card:hover .product-card__img>svg, .product-card:hover img{
@@ -240,6 +242,24 @@
 .social-networks a:hover path{
     fill: #EB2240;
     transition: .2s all ease-in-out;
+}
+
+.overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100vh;
+    z-index: 20;
+    display: none;
+    background-color: transparent;
+    transition: .5s all ease-in-out;
+}
+
+.overlay.active{
+    display: block;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: .5s all ease-in-out;
 }
 
 

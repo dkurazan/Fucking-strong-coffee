@@ -1,5 +1,4 @@
 {
-<<<<<<< HEAD
     "sections": {
         "template-product":{
             "type": "template-product",
@@ -42,6 +41,7 @@
         },
         "featured-collection":{
             "type": "featured-collection",
+            "wrapper": "div#div_id.div_class[attribute-one=value]",
             "settings": {
                 "featured-collection": "bestsellers",
                 "title": "Fans also like this",
@@ -51,61 +51,3 @@
     },
     "order": ["template-product", "featured-collection"]
 }
-=======
-  "sections": {
-    "template-product": {
-      "type": "template-product",
-      "blocks": {
-        "c7d40584-72c9-44f7-aad3-3d8764633257": {
-          "type": "block",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/benefits-item-icon.png",
-            "title": "LOREM IPSUM DOLOREM"
-          }
-        },
-        "b41d4e0f-4660-4ccf-af1a-0b84b4a30122": {
-          "type": "block",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/benefits-item-icon-2.png",
-            "title": "LOREM IPSUM DOLOREM"
-          }
-        },
-        "afdaf59a-e72f-4031-8204-a5b99215695f": {
-          "type": "block",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/coffee-filter_1.png",
-            "title": "LOREM IPSUM DOLOREM"
-          }
-        },
-        "30024cbf-a4b9-45f6-ae57-33e98ec2d594": {
-          "type": "block",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/benefits-item-icon-3.png",
-            "title": "LOREM IPSUM DOLOREM"
-          }
-        }
-      },
-      "block_order": [
-        "c7d40584-72c9-44f7-aad3-3d8764633257",
-        "b41d4e0f-4660-4ccf-af1a-0b84b4a30122",
-        "afdaf59a-e72f-4031-8204-a5b99215695f",
-        "30024cbf-a4b9-45f6-ae57-33e98ec2d594"
-      ],
-      "settings": {
-      }
-    },
-    "featured-collection": {
-      "type": "featured-collection",
-      "settings": {
-        "featured-collection": "bestsellers",
-        "title": "Fans also like this",
-        "number_of_products_to_show": 3
-      }
-    }
-  },
-  "order": [
-    "template-product",
-    "featured-collection"
-  ]
-}
->>>>>>> 8a5bf58d17bc7f53e7dc50d2c3cae9a4a254e860

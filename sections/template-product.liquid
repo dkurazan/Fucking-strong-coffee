@@ -49,15 +49,15 @@
                 </div>
                 <div class="product__tabs">
                     <ul class="product__tabs-titles">
-                        <li class="product-tab-1 product-tab-active">About this product</li>
-                        <li class="product-tab-2">About the producer</li>
-                        <li class="product-tab-3">About Fucking Strong Coffee</li>
+                        <li class="product-tab-1 product-tab-active" data-title="tab-1">About this product</li>
+                        <li class="product-tab-2" data-title="tab-2">About the producer</li>
+                        <li class="product-tab-3" data-title="tab-3">About Fucking Strong Coffee</li>
                     </ul>
-                    <div class="product__tabs-content product__tabs-content-1">
+                    <div class="product__tabs-content product__tabs-content-1 active" id="tab-1">
                         <p>While we've made huge leaps in sourcing and roasting coffee over the years, minimalist branding and snobby attitudes have slowed our spread. New-age coffee bars and monotonous design snarkily whisper the same thing: good coffee is for the few. Our polite response? Fuck that. Inspired by our first origin partners at the female-run Twongerekawa Coko Cooperative Society in the rolling hills of Rwanda, we're determined to share our beans and their story with anyone and everyone who likes good products made by good people.</p>
                         <p>You can be a coffee nerd or novice and still agree on one thing: the grooviest of days starts with a Fucking Strong Coffee.</p>
                     </div>
-                    <div class="product__tabs-content product__tabs-content-2">
+                    <div class="product__tabs-content product__tabs-content-2" id="tab-2">
                         <div class="tabs__welcome-block">
                             <div class="tabs__welcome-image">
                                 <div class="tabs__welcome-image-bg">
@@ -73,11 +73,50 @@
                                 <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                             </div>
                         </div>
+                        <div class="tabs__video">
+                            <video poster="https://cdn.shopify.com/s/files/1/0701/1755/6519/files/Rectangle_9.png?v=1674119199">
+                                <source src="https://cdn.shopify.com/videos/c/o/v/bfae7e74ecd54690a5d4aace6642c96b.mp4" type="video/mp4">
+                            </video>
+                            <div class="video-play-button">
+                                {% render 'video-play-button-icon' %}
+                            </div>
+                            <div class="video-pause-button" style="display: none;">
+                                {% render 'video-pause-button-icon' %}
+                            </div>
+                            <div class="video-patch-1">
+                                {{ 'patch-icon-2.png' | asset_url | img_tag }}
+                            </div>
+                            <div class="video-patch-2">
+                                {{ 'patch-icon-2.png' | asset_url | img_tag }}
+                            </div>
+                        </div>
+                        <div class="tabs__info-block">
+                            <div class="tabs__info-text">
+                                <h3>Hello, my name is Chaia</h3>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                            </div>
+                            <div class="tabs__welcome-image">
+                                {{ 'product-info-block-img.png' | asset_url | img_tag }}
+                            </div>
+                        </div>
+                        <div class="tabs__map">
+                            <h4>THIS IS WHERE I WORK</h4>
+                            <iframe width="100%" height="493" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=493&amp;hl=en&amp;q=NewYork+(My%20Business%20Name)&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                        </div>
                     </div>
+                    <div class="product__tabs-content product__tabs-content-3" id="tab-3">
+                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus voluptatum laborum modi harum maiores nihil mollitia odit illo eius, at nesciunt placeat repellendus? Autem iusto, nemo eum amet aperiam atque.</p>
+                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis recusandae, et vitae eaque mollitia assumenda delectus minima a accusantium. Tempore saepe perspiciatis dolorum amet vero, repellendus ad beatae. Enim, repudiandae!
+                        Nam magnam quis atque deserunt iure, vel modi labore voluptatum inventore voluptates, molestiae neque accusantium. Dolores est asperiores ducimus optio? Cumque praesentium molestiae vel, natus cupiditate reiciendis deleniti quia ad?</p>
+                    </div>
+
                 </div>
             </div>
     </div>
 </div>
+
+{% render 'scroll-down' %}
 
 {% schema %}
     {

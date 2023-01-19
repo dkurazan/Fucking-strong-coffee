@@ -23,7 +23,7 @@
 }
 
 .featured-collection__title{
-    text-align-last: left;
+    text-align: left;
 
 }
 
@@ -86,14 +86,16 @@
 
 }
 
+@media (max-width: 850px){
+    .product-card__button{
+        color: white;
+    }
+}
+
 @media(max-width: 600px){
     .product-card {
         flex: 0 0 100%;
         max-width: 100%;
-    }
-
-    .featured-collection__subtitle{
-        display: block;
     }
 
     .featured-collection__title{
@@ -106,6 +108,9 @@
 
     .featured-collection_row, .featured-collection__header{
         padding: 0 14px;
+    }
+    footer.footer{
+        padding-top: 208px;
     }
 }
 
