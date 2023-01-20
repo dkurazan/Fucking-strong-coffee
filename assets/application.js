@@ -228,13 +228,3 @@ fatherElement.forEach(item => {
     
     let counter1 = new Counter(incrementButtons, decrementButtons, quantityValue)
 })
-
-// let arr = [];
-
-// quantityValue.forEach( item => {
-//   arr.push(+item.value)
-// })
-
-// var productsQuantity = arr.reduce((a, b) => a + b, 0)
-
-// headerCartLabel.innerHTML = productsQuantity;
