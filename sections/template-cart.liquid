@@ -51,10 +51,9 @@
                     {% endfor %}
                 </tbody>
             </table>
-            <div>
-            <p>sub total : {{ cart.total_price | money }}</p>
-            <button type="submit" name="update">Update</button>
-            <button type="submit" name="checkout">Checkout</button>
+            <div class="cart__checkout">
+                <p>subtotal: {{ cart.total_price | money }}</p>
+                <button type="submit" name="checkout">Checkout</button>
             </div>
         </form>
         {% else %}

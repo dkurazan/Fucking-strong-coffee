@@ -116,10 +116,71 @@
 }
 
 .cart__counter-father button:first-child{
-    background-image: url();
-    padding-bottom: 5px;
+    padding-bottom: 7px;
 }
 
 .cart__counter-father button:hover{
     cursor: pointer;
+}
+
+.cart__product-blocks td:nth-child(5){
+    padding-left: 75px;
+    font-family: 'SignPainter';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: 0.085em;
+    text-transform: uppercase;
+    color: #000000;
+}
+
+.cart__form-titles th:last-child{
+    text-align: end;
+    padding-right: 10px;
+}
+
+.cart__checkout{
+    margin-top: 28px;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+}
+
+.cart__checkout p{
+    margin-bottom: 28px;
+    font-family: 'SignPainter';
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 140%;
+    text-align: right;
+    letter-spacing: 0.085em;
+    text-transform: uppercase;
+
+    color: #000000;
+}
+
+
+.cart__checkout button{
+    border: 1px solid #2D2B27;
+    background-color: #2D2B27;
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: 0.085em;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    padding: 22px 89px;
+    transition: .5s all ease-in-out;
+}
+
+.cart__checkout button:hover{
+    cursor: pointer;
+    color: #2D2B27;
+    background-color: transparent;
+    transition: .5s all ease-in-out;
 }
