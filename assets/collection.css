@@ -163,6 +163,10 @@
     justify-content: space-between;
 }
 
+#sort-by:hover{
+    cursor: pointer;
+}
+
 .product-sort__inner span{
     font-family: 'Hind Vadodara';
     font-style: normal;
