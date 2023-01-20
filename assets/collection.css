@@ -65,6 +65,10 @@
     padding-bottom: 24px;
 }
 
+.filter__block-title:hover{
+    cursor: pointer;
+}
+
 .filter__block-title h6{
     font-family: 'Hind Vadodara';
     font-style: normal;
@@ -200,6 +204,7 @@
     transition: .5s all ease-in-out;
     height: 100vh;
     z-index: 30;
+    overflow: scroll;
 }
 
 .filter__popup .filter__title{
