@@ -134,48 +134,107 @@ const videoPlayBtn = () => {
 videoPlayBtn();
 
 // collection filter
-const filterOpenBtn = document.querySelector('#filter-open-button');
-const filterCloseBtn = document.querySelector('#filter-close-button');
-const filterPopup = document.querySelector('.filter__popup');
-const filterOverlay = document.querySelector('.overlay');
+function collectionFilter(){
+  const filterOpenBtn = document.querySelector('#filter-open-button');
+  const filterCloseBtn = document.querySelector('#filter-close-button');
+  const filterPopup = document.querySelector('.filter__popup');
+  const filterOverlay = document.querySelector('.overlay');
 
-filterOpenBtn.addEventListener('click', () => {
-  filterPopup.classList.add('active');
-  document.body.classList.add('overflow-hidden');
-  filterOverlay.classList.add('active');
-})
-
-function closeFilterPopup(item) {
-  item.addEventListener('click', () => {
-    filterPopup.classList.remove('active');
-    document.body.classList.remove('overflow-hidden');
-    filterOverlay.classList.remove('active');
+  filterOpenBtn.addEventListener('click', () => {
+    filterPopup.classList.add('active');
+    document.body.classList.add('overflow-hidden');
+    filterOverlay.classList.add('active');
   })
+
+  function closeFilterPopup(item) {
+    item.addEventListener('click', () => {
+      filterPopup.classList.remove('active');
+      document.body.classList.remove('overflow-hidden');
+      filterOverlay.classList.remove('active');
+    })
+  }
+
+  closeFilterPopup(filterOverlay);
+  closeFilterPopup(filterCloseBtn);
 }
 
-closeFilterPopup(filterOverlay);
-closeFilterPopup(filterCloseBtn);
+if( document.querySelector('#filter-open-button') ){
+  collectionFilter()
+}
 
 
 // product collection sorting
-Shopify.queryParams = {};
+function collectionSorting() {
+  Shopify.queryParams = {};
 
-if (location.search.length) {
-  var params = location.search.substr(1).split('&');
+  if (location.search.length) {
+    var params = location.search.substr(1).split('&');
 
-  for (var i = 0; i < params.length; i++) {
-    var keyValue = params[i].split('=');
+    for (var i = 0; i < params.length; i++) {
+      var keyValue = params[i].split('=');
 
-    if (keyValue.length) {
-      Shopify.queryParams[decodeURIComponent(keyValue[0])] = decodeURIComponent(keyValue[1]);
+      if (keyValue.length) {
+        Shopify.queryParams[decodeURIComponent(keyValue[0])] = decodeURIComponent(keyValue[1]);
+      }
     }
   }
+
+  // Update sort_by query parameter on select change
+  document.querySelector('#sort-by').addEventListener('change', function(e) {
+    var value = e.target.value;
+
+    Shopify.queryParams.sort_by = value;
+    location.search = new URLSearchParams(Shopify.queryParams).toString();
+  });
 }
 
-// Update sort_by query parameter on select change
-document.querySelector('#sort-by').addEventListener('change', function(e) {
-  var value = e.target.value;
+if(  document.querySelector('#sort-by') ) {
+  collectionSorting()
+}
 
-  Shopify.queryParams.sort_by = value;
-  location.search = new URLSearchParams(Shopify.queryParams).toString();
-});
+
+
+//cart counter
+const quantityValue = document.querySelectorAll(".cart__counter-father input");
+const fatherElement = document.querySelectorAll(".cart__counter-father");
+const headerCartLabel = document.querySelector('.headerCartLabel');
+
+function Counter(incrementButton, decrementButton, inputField){
+    this.domRefs = {
+        incrementButton,
+        decrementButton,
+        inputField
+    }
+
+    this.increment = function(){
+        if(this.domRefs.inputField.value < 10){
+            this.domRefs.inputField.value = +this.domRefs.inputField.value + 1;
+        } 
+    }
+
+    this.decrement = function(){
+        if(this.domRefs.inputField.value > 1){
+            this.domRefs.inputField.value = +this.domRefs.inputField.value - 1;
+        } 
+    }
+
+    this.domRefs.incrementButton.addEventListener("click", this.increment.bind(this))
+    this.domRefs.decrementButton.addEventListener("click", this.decrement.bind(this))
+}
+fatherElement.forEach(item => {
+    let decrementButtons = item.firstElementChild;
+    var quantityValue = item.firstElementChild.nextElementSibling;
+    let incrementButtons = item.lastElementChild;
+    
+    let counter1 = new Counter(incrementButtons, decrementButtons, quantityValue)
+})
+
+// let arr = [];
+
+// quantityValue.forEach( item => {
+//   arr.push(+item.value)
+// })
+
+// var productsQuantity = arr.reduce((a, b) => a + b, 0)
+
+// headerCartLabel.innerHTML = productsQuantity;

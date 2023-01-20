@@ -19,6 +19,40 @@
     <!-- Header hook for plugins -->
     {{ 'reset.css' | asset_url | stylesheet_tag }}
     {{ 'application.css' | asset_url | stylesheet_tag }}
+    <style>
+      
+      .shopify-challenge__message{
+        font-family: 'Hind Vadodara';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 110%;
+        letter-spacing: 0.09em;
+        text-transform: uppercase;
+        color: #333333;
+        margin-top: 150px;
+        margin-bottom: 50px;
+      }
+
+      .shopify-challenge__button.btn{
+        border: 1px solid rgba(45, 43, 39, 1);
+        padding: 22px 150px;
+        font-family: 'Hind Vadodara';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        letter-spacing: 0.085em;
+        text-transform: uppercase;
+        background-color: #2D2B27;
+        color: #FFFFFF;
+        transition: .5s all ease-in-out;
+        margin-top: 40px;
+      }
+    </style>
     <script src="{{ 'application.js' | asset_url }}" defer></script>
     <script src="{{ 'https://cdnjs.cloudflare.com/ajax/libs/jquery.lazyload/1.9.1/jquery.lazyload.min.js' | asset_url }}" defer></script>
   </head>

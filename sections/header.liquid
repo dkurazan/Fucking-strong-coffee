@@ -21,7 +21,11 @@
             <div class="header__cart">
                 <a href="/cart" class="header__cart-button">
                     {% render 'cart-button-icon' %}
-                    <span>1</span>
+                    <span class="headerCartLabel">
+                        {% for item in cart.items %}
+                            {{ item.quantity }}
+                        {% endfor %}
+                    </span>
                 </a>
             </div>
         </div>
