@@ -1,14 +1,20 @@
 {
-    "sections": {
-        "banner": {
-            "type": "image-banner-2",
-            "settings": {
-              "title-xl": "privacy policy"
-            }
-          },
-          "privacy-policy": {
-            "type": "template-privacy-policy"
-          }
+  "sections": {
+    "banner": {
+      "type": "image-banner-2",
+      "settings": {
+        "video_link": "",
+        "title-xl": "Currency"
+      }
     },
-    "order": ["banner", "privacy-policy"]
+    "privacy-policy": {
+      "type": "template-privacy-policy",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "privacy-policy"
+  ]
 }
