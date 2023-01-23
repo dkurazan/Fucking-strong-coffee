@@ -8,7 +8,9 @@
           },
           "privacy-policy": {
             "type": "template-privacy-policy",
-            "name": "Shipping"
+            "settings": {
+              "name": "Shipping"
+            }
           }
     },
     "order": ["banner", "privacy-policy"]

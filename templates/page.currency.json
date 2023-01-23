@@ -8,7 +8,9 @@
           },
           "privacy-policy": {
             "type": "template-privacy-policy",
-            "name": "Currency"
+            "settings": {
+              "name": "Currency"
+            }
           }
     },
     "order": ["banner", "privacy-policy"]
