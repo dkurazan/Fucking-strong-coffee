@@ -1,0 +1,15 @@
+{
+    "sections": {
+        "banner": {
+            "type": "image-banner-2",
+            "settings": {
+              "title-xl": "Currency"
+            }
+          },
+          "privacy-policy": {
+            "type": "template-privacy-policy",
+            "name": "Currency"
+          }
+    },
+    "order": ["banner", "privacy-policy"]
+}
