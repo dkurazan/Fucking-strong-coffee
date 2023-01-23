@@ -1,4 +1,3 @@
-
 <header class="header">
     <div class="container">
         <div class="row header__row">
@@ -11,11 +10,7 @@
             </div>
             <div class="header__logo">
                 <a href="/" class="header__logo-inner">
-                    {% if section.settings.logo != blank %}
-                        {{ section.settings.logo | img_url: 'master' | img_tag }}
-                    {% else %}
-                        {% render 'header-logo' %}
-                    {% endif %}
+                {% render 'header-logo' %}
                 </a>
             </div>
             <div class="header__cart">
