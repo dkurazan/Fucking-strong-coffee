@@ -61,9 +61,9 @@
                 {% endfor %}
             </div>
             <div class="popup-mobile__nav-bottom">
-                <a href="#">Privacy Policy</a>
-                <a href="#">Currency</a>
-                <a href="#">Shipping</a>
+                {% for link in section.settings.policies.links %}
+                    <a href="{{ link.url }}">{{ link.title }}</a>
+                {% endfor %}
             </div>
         </nav>
     </div>
@@ -82,8 +82,12 @@
             {
                 "type": "link_list",
                 "id": "menu-mobile",
-                "label": "Mobile Navgation Menu",
-                "default": "main-menu"
+                "label": "Mobile Navgation Menu"
+            },
+            {
+                "type": "link_list",
+                "id": "policies",
+                "label": "Mobile Bottom Menu"
             },
             {
                 "type": "image_picker",

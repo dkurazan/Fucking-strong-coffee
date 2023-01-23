@@ -5,20 +5,17 @@
             <nav class="footer__col footer__nav">
                 <h3 class="footer__title">Menu</h3>
                 <ul>
-                    <a href="/">Home</a>
-                    <a href="/">Categories</a>
-                    <a href="/">About us</a>
-                    <a href="/">Our stores</a>
-                    <a href="/">Recipes</a>
-                    <a href="/">FAQ</a>
+                    {% for link in section.settings.menu-footer.links %}
+                        <a href="{{ link.url }}">{{ link.title }}</a>
+                    {% endfor %}
                 </ul>
             </nav>
             <nav class="footer__col footer__nav">
                 <h3 class="footer__title">Policies</h3>
                 <ul>
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Refund Policy</a>
-                    <a href="#">Terms of Service</a>
+                    {% for link in section.settings.policies.links %}
+                        <a href="{{ link.url }}">{{ link.title }}</a>
+                    {% endfor %}
                 </ul>
             </nav>
         </div>
@@ -51,6 +48,16 @@
                 "id": "about-us-text",
                 "label": "About us text",
                 "default": "Nunc sed ultricies. Molestie ornare quis, adipiscing lectus sit molestie leo, non interdum imperdiet efficitur vestibulum est. Dapibus non ornare accumsan morbi molestie augue mollis lectus quam, ornare mattis null."
+            },
+            {
+                "type": "link_list",
+                "id": "menu-footer",
+                "label": "Footer Menu"
+            },
+            {
+                "type": "link_list",
+                "id": "policies",
+                "label": "Policies Menu"
             }
         ]
     }
