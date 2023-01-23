@@ -7,7 +7,8 @@
             }
           },
           "privacy-policy": {
-            "type": "template-privacy-policy"
+            "type": "template-privacy-policy",
+            "name": "Currency"
           }
     },
     "order": ["banner", "privacy-policy"]
