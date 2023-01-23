@@ -326,6 +326,10 @@ li.product-tab-active{
     opacity: 1;
 }
 
+.video-play-button:hover, .video-pause-button:hover{
+    cursor: pointer;
+}
+
 .video-pause-button-enabled{
     visibility: hidden;
     opacity: 0;

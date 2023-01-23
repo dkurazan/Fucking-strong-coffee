@@ -10,7 +10,11 @@
             </div>
             <div class="header__logo">
                 <a href="/" class="header__logo-inner">
-                {% render 'header-logo' %}
+                    {% if section.settings.logo != blank %}
+                        {{ section.settings.logo | img_url: 'master' | img_tag }}
+                    {% else %}
+                        {% render 'header-logo' %}
+                    {% endif %}
                 </a>
             </div>
             <div class="header__cart">

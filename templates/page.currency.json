@@ -1,0 +1,14 @@
+{
+    "sections": {
+        "banner": {
+            "type": "image-banner-2",
+            "settings": {
+              "title-xl": "privacy policy"
+            }
+          },
+          "privacy-policy": {
+            "type": "template-privacy-policy"
+          }
+    },
+    "order": ["banner", "privacy-policy"]
+}

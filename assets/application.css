@@ -245,7 +245,9 @@
     transition: .2s all ease-in-out;
 }
 
-
+.shopify-product-form input{
+    display: none;
+}
 
 
 @media (max-width: 1600px) {
