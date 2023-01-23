@@ -148,6 +148,7 @@
                             {%  render 'product-card', product: product %}
                         {% endfor %}
                     </div>
+                {{ paginate | default_pagination }}
                 {% endpaginate %}
             </div>
         </div>

@@ -6,7 +6,7 @@
     <div class="contact__content-block">
       {% form 'contact' %}
         {{ form.errors | default_errors }}
-        <h4>Have a question? Send us a message</h4>
+        <h4>{{ section.settings.title }}</h4>
         <input type="text" id="ContactFormName" name="contact[name]" placeholder="Your name">
         <input type="email" id="ContactFormEmail" name="contact[email]" placeholder="Your Email">
         <textarea rows="10" id="ContactFormMessage" name="contact[body]" placeholder="Your message"></textarea>
@@ -17,14 +17,51 @@
       {% endform %}
       <div class="contact__info">
         <ul class="contact__info-inner">
-          <li>email@gmail.com</li>
-          <li>+1 518-842-0844</li>
-          <li>4643 West Virginia Avenue <br>
-            Amsterdam <br>
-            12010</li>
+          <li>{{ section.settings.email }}</li>
+          <li>{{ section.settings.number }}</li>
+          <li>
+            {% if section.settings.address != blank %}
+              {{ section.settings.address }}
+            {% else %}
+              4643 West Virginia Avenue <br>
+              Amsterdam <br>
+              12010
+            {% endif %}
+          </li>
         </ul>
       </div>
     </div>
   </div>
 </div>
 {% render 'social-networks' %}
+
+{% schema %}
+  {
+    "name": "Contact",
+    "settings": [
+      {
+        "type": "text",
+        "id": "title",
+        "label": "Title",
+        "default": "Have a question? Send us a message"
+      },
+      {
+        "type": "text",
+        "id": "email",
+        "label": "Email",
+        "default": "email@gmail.com"
+      },
+      {
+        "type": "text",
+        "id": "number",
+        "label": "Phone number",
+        "default": "+1 518-842-0844"
+      },
+      {
+        "type": "richtext",
+        "id": "address",
+        "label": "Address"
+      }
+    ]
+  }
+{% endschema %}
