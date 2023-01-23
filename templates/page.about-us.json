@@ -1,14 +1,30 @@
 {
-    "sections": {
-        "banner": {
-            "type": "image-banner-2",
-            "settings": {
-              "title-xl": "THIS IS OUR STORY"
-            }
-          },
-          "about-us": {
-            "type": "template-about-us"
-          }
+  "sections": {
+    "banner": {
+      "type": "image-banner-2",
+      "settings": {
+        "video_link": "",
+        "title-xl": "THIS IS OUR STORY"
+      }
     },
-    "order": ["banner", "about-us"]
+    "about-us": {
+      "type": "template-about-us",
+      "settings": {
+        "title-1": "WHERE IT STARTED",
+        "description-1": "<p>Good Beans is run by a chatty American and a steady Norwegian. We were drawn first to a tiny shop in Amsterdam, and we stuck around to develop, deepen and spread a much bigger mission: making ethically-sourced coffee more approachable. Here’s a bit more about us.<\/p><p>Cody runs our coffee programming and keeps our branding fresh. He is determined to spread the resilient energy and progressive vision of the origin partners behind your delicious morning cup. Reach out to him for brand collaborations or guest roasting opportunities. The stoic Norwegian, Harald is our operator. He handles all things finances, sales, and logistics. In other words, he keeps us marching, nay, cross-country skiing, towards peak efficiency. Reach out to him for order questions or wholesale enquiries.<\/p>",
+        "img-1": "shopify:\/\/shop_images\/Rectangle_7.png",
+        "title-2": "The story of our store",
+        "description-2": "",
+        "title-3": "The trip to Rwanda",
+        "description-3": "",
+        "title-4": "Yes we can!",
+        "description-4": "",
+        "big-image-subtitle": "Cody in Amsterdam with our first cans, August 2019"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "about-us"
+  ]
 }
