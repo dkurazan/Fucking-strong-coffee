@@ -9,7 +9,7 @@
             <div class="about__block-image">
                 <div class="about__block-image-bg">
                     {% if section.settings.img-1 %}
-                        {{ section.settings.img-1| img_url: 'master' | img_tag }}
+                        {{ section.settings.img-1 | img_url: 'master' | img_tag }}
                     {% else %}
                         {{ 'about-us-icon.png' | asset_url | img_tag }}
                     {% endif %}
@@ -27,7 +27,7 @@
             <div class="about__block-image">
                 <div class="about__block-image-bg">
                     {% if section.settings.img-2 %}
-                        {{ section.settings.img-2| img_url: 'master' | img_tag }}
+                        {{ section.settings.img-2 | img_url: 'master' | img_tag }}
                     {% else %}
                         {{ 'about-us-icon.png' | asset_url | img_tag }}
                     {% endif %}
@@ -45,7 +45,7 @@
             <div class="about__block-image">
                 <div class="about__block-image-bg">
                     {% if section.settings.img-3 %}
-                        {{ section.settings.img-3| img_url: 'master' | img_tag }}
+                        {{ section.settings.img-3 | img_url: 'master' | img_tag }}
                     {% else %}
                         {{ 'about-us-icon.png' | asset_url | img_tag }}
                     {% endif %}
@@ -63,7 +63,7 @@
             <div class="about__block-image">
                 <div class="about__block-image-bg">
                     {% if section.settings.img-4 %}
-                        {{ section.settings.img-4| img_url: 'master' | img_tag }}
+                        {{ section.settings.img-4 | img_url: 'master' | img_tag }}
                     {% else %}
                         {{ 'about-us-icon.png' | asset_url | img_tag }}
                     {% endif %}
