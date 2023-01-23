@@ -69,8 +69,9 @@
 
 .about__block-image-bg>img{
     width: 100%;
-    height: fit-content;
+    height: 510px;
     padding: 53px 30px 0 30px;
+    object-fit: cover;
 }
 
 .about__block-image-bg div{
@@ -341,6 +342,7 @@
 
     .about__block-image-bg>img {
         padding: 35px 22px 0 22px;
+        height: 340px;
     }
 
     .about{
@@ -400,6 +402,7 @@
 
     .about__block-image-bg>img, .producers__img img{
         padding: 29px 17px 0 17px;
+        height: 277px;
     }
 
     .about .container{
