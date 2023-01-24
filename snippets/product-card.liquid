@@ -27,7 +27,11 @@
                     {% else %}
                         Grinder for espresso
                     {% endif %}
-                    {% render 'coffee-beans-icon' %}
+                    {% if product.metafields.custom.first_icon %}
+                        {{ product.metafields.custom.first_icon | img_tag }}
+                    {% else %}
+                        {% render 'coffee-beans-icon' %}
+                    {% endif %}
                 </li>
                 <li>
                     {% if product.metafields.custom.cup_of_coffee_icon_label %}
@@ -35,7 +39,11 @@
                     {% else %}
                         40 cups
                     {% endif %}
-                    {% render 'cup-of-coffee-icon' %}
+                    {% if product.metafields.custom.second_icon %}
+                        {{ product.metafields.custom.second_icon | img_tag  }}
+                    {% else %}
+                        {% render 'cup-of-coffee-icon' %}
+                    {% endif %}
                 </li>
                 <li>
                     {% if product.metafields.custom.glass_icon_label %}
@@ -43,7 +51,11 @@
                     {% else %}
                         12%
                     {% endif %}
-                    {% render 'glass-icon' %}
+                    {% if product.metafields.custom.third_icon %}
+                        {{ product.metafields.custom.third_icon | img_tag  }}
+                    {% else %}
+                        {% render 'glass-icon' %}
+                    {% endif %}
                 </li>
             </ul>
         </div>

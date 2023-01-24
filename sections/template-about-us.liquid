@@ -136,7 +136,7 @@
                             </div>
                             <h4 class="producers__block-title">{{ block.settings.producer-title }}</h4>
                             <p>{{ block.settings.producer-subtitle }}</p>
-                            <a href="{{ block.settings.producer-link }}">{{ block.settings.producer-btn }}</a>
+                            <a href="{{ section.settings.collection.url }}">{{ block.settings.producer-btn }}</a>
                         </div>
                     </div>
                 {% endfor %}
@@ -288,10 +288,9 @@
                         "default": "Go to Simon’s coffee"
                     },
                     {
-                        "type": "text",
-                        "id": "producer-link",
-                        "label": "Button link",
-                        "default": "#"
+                        "type": "collection",
+                        "id": "collection",
+                        "label": "A collection that will open when you click on the button"
                     }
                 ]
             }

@@ -172,9 +172,13 @@
     color: white;
 }
 
-.product-card:hover .product-card__img>svg, .product-card:hover img{
+.product-card:hover .product-card__img>svg, .product-card:hover .product-card__img>img{
     transform: scale(1.1);
     transition: 1s all ease-in-out;
+}
+
+.product-card__icons img{
+    max-width: 24px;
 }
 
 .main__title{
@@ -249,6 +253,36 @@
     display: none;
 }
 
+.page-404{
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 40px;
+}
+
+.page-404 h1{
+    font-family: SignPainter;
+    font-style: normal;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 7vw;
+    line-height: 140%;
+    color: rgba(8, 5, 1);
+}
+
+.page-404 p{
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 0.9vw;
+    line-height: 140%;
+    color: #EB2240;
+}
+
 
 @media (max-width: 1600px) {
     .social-networks, .scroll-down{
@@ -320,6 +354,14 @@
     .product-card{
         margin-bottom: 50px;
     }
+
+    .page-404 h1{
+        font-size: 15vw;
+    }
+
+    .page-404 p{
+        font-size: 2vw;
+    }
 }
 
 @media(max-width: 600px){
@@ -329,6 +371,16 @@
 
     .image-section img:last-child{
         display: block;
+    }
+}
+
+@media(max-width: 450px){
+    .page-404 h1{
+        font-size: 20vw;
+    }
+
+    .page-404 p{
+        font-size: 3vw;
     }
 }
 

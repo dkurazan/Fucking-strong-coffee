@@ -20,8 +20,10 @@
                             </a>
                         {% endfor %}
                     </div>
-                    {% render 'new-product-arrow-icon' %}
-                    {% render 'new-product-mobile-arrow-icon' %}
+                    {% if product.metafields.custom.show_arrow %}
+                        {% render 'new-product-arrow-icon' %}
+                        {% render 'new-product-mobile-arrow-icon' %}
+                    {% endif %}
                 </div>
                 <div class="product__info">
                     <div class="product__info-inner">

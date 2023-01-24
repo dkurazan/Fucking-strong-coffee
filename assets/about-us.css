@@ -171,7 +171,8 @@
 
 .producers__img img{
     width: 100%;
-    height: fit-content;
+    height: 400px;
+    object-fit: cover;
     padding: 40px 22px 0 25px;
 }
 
@@ -391,6 +392,7 @@
 
     .producers__img img{
         padding: 34px 20px 0 20px;
+        height: 343px;
     }
 }
 
@@ -402,7 +404,7 @@
 
     .about__block-image-bg>img, .producers__img img{
         padding: 29px 17px 0 17px;
-        height: 277px;
+        height: 280px;
     }
 
     .about .container{
