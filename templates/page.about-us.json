@@ -61,10 +61,15 @@
         "big-image-subtitle": "Cody in Amsterdam with our first cans, August 2019",
         "img-patch-5": false
       }
+    },
+    "social-networks":{
+      "type": "social-networks",
+      "settings": {}
     }
   },
   "order": [
     "banner",
-    "about-us"
+    "about-us",
+    "social-networks"
   ]
 }
