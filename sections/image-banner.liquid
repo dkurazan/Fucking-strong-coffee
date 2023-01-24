@@ -13,8 +13,8 @@
                 <h1>{{ section.settings.title-xl }}</h1>
                 <h2>{{ section.settings.title-sm }}</h2>
                 <div>
-                    <a href="/collections/bestsellers">{{ section.settings.button-label-1 }}</a>
-                    <a href="/pages/about-us">{{ section.settings.button-label-2 }}</a>
+                    <a href="{{ section.settings.button-link-1 }}">{{ section.settings.button-label-1 }}</a>
+                    <a href="{{ section.settings.button-link-2 }}">{{ section.settings.button-label-2 }}</a>
                 </div>
             </div>
         </div>
@@ -50,9 +50,21 @@
             },
             {
                 "type": "text",
+                "id": "button-link-1",
+                "label": "First button link",
+                "default": "/collections/all-products"
+            },
+            {
+                "type": "text",
                 "id": "button-label-2",
                 "label": "Second button label",
                 "default": "about us"
+            },
+            {
+                "type": "text",
+                "id": "button-link-2",
+                "label": "Second button link",
+                "default": "/pages/about-us"
             }
         ],
         "presets": [

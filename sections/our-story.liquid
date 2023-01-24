@@ -5,7 +5,7 @@
             <div class="story__text">
                 <h2 class="story__title main__title">{{ section.settings.title }}</h2>
                 <p>{{ section.settings.subtitle }}</p>
-                <a href="#">{{ section.settings.button-label }}</a>
+                <a href="{{ section.settings.button-link }}">{{ section.settings.button-label }}</a>
             </div>
         </div>
     </div>
@@ -32,6 +32,12 @@
                 "id": "button-label",
                 "label": "Button label",
                 "default": "read OUR story"
+            },
+            {
+                "type": "text",
+                "id": "button-link",
+                "label": "Button url",
+                "default": "/pages/about-us"
             }
         ],
         "presets": [

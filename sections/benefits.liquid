@@ -12,7 +12,7 @@
                     </div>
                 {% endfor %}
             </div>
-            <a href="#" class="benefits__button">{{ section.settings.button-label }}</a>
+            <a href="{{ section.settings.collection.url }}" class="benefits__button">{{ section.settings.button-label }}</a>
         </div>
     </div>
 </div>
@@ -32,6 +32,11 @@
                 "id": "button-label",
                 "label": "Button label",
                 "default": "Go to our coffee"
+            },
+            {
+                "type": "collection",
+                "id": "collection",
+                "label": "A collection that will open when you click on the button"
             }
         ],
         "max_blocks": 3,
