@@ -13,7 +13,7 @@
                     {% if section.settings.logo != blank %}
                         {{ section.settings.logo | img_url: 'master' | img_tag }}
                     {% else %}
-                        {% render 'header-logo' %}
+                        {{ 'store-logo.png' | asset_url | img_tag }}
                     {% endif %}
                 </a>
             </div>
@@ -93,30 +93,6 @@
                 "type": "image_picker",
                 "id": "logo",
                 "label": "Store Logo Image"
-            },
-            {
-                "type": "text",
-                "id": "twitter",
-                "label": "Twitter account link",
-                "default": "https://twitter.com"
-            },
-            {
-                "type": "text",
-                "id": "facebook",
-                "label": "Facebook account link",
-                "default": "https://facebook.com"
-            },
-            {
-                "type": "text",
-                "id": "instagram",
-                "label": "Instagram account link",
-                "default": "https://instagram.com"
-            },
-            {
-                "type": "text",
-                "id": "youtube",
-                "label": "Youtube account link",
-                "default": "https://youtube.com"
             }
         ]
     }

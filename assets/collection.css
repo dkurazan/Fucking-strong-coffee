@@ -255,6 +255,53 @@
     padding: 0;
 }
 
+.collection__pagination{
+    display: flex;
+    justify-content: center;
+}
+
+.collection__pagination a{
+    text-align: center;
+    letter-spacing: 0.085em;
+    text-transform: uppercase;
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    padding: 14px 21.14px;
+    text-decoration: none;
+    background-color: #0E0B07;
+    transition: .7s all ease-in-out;
+    color: white;
+    margin-left: 10px;
+    border: 1px solid #0E0B07;
+}
+
+.collection__pagination a:hover{
+    background-color: transparent;
+    color: #0E0B07;
+    transition: .7s all ease-in-out;
+}
+
+.collection__pagination span {
+    text-align: center;
+    letter-spacing: 0.085em;
+    text-transform: uppercase;
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 140%;
+    padding: 14px 22.5px;
+    text-decoration: none;
+    border: 1px solid #0E0B07;
+    transition: .7s all ease-in-out;
+    color: #0E0B07;
+    margin-left: 10px;
+    user-select: none;
+}
+
 
 @media (max-width:1450px) {
     .collection{

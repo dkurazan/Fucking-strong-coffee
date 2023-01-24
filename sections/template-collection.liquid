@@ -148,7 +148,27 @@
                             {%  render 'product-card', product: product %}
                         {% endfor %}
                     </div>
-                {{ paginate | default_pagination }}
+                    <div class="collection__pagination">
+                        {% if paginate.pages > 1 %}
+                            <nav>
+                                {% if paginate.previous.url %}
+                                    <a href="{{ paginate.previous.url }}">{{ paginate.previous.title }}</a>
+                                {% endif %}
+                                
+                                {% for part in paginate.parts %}
+                                     {% if part.is_link %}
+                                        <a href="{{ part.url }}">{{ part.title }}</a>
+                                    {% else %}
+                                        <span>{{ part.title }}</span>
+                                     {% endif %}
+                                {% endfor %}
+
+                                {% if paginate.next.url %}
+                                    <a href="{{ paginate.next.url }}">{{ paginate.next.title }}</a>
+                                {% endif %}
+                            </nav>
+                        {% endif %}
+                    </div>
                 {% endpaginate %}
             </div>
         </div>
