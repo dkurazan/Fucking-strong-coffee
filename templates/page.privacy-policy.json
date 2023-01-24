@@ -11,10 +11,17 @@
       "type": "template-privacy-policy",
       "settings": {
       }
+    },
+    "social-networks":{
+      "type": "social-networks",
+      "settings": {
+        "social-networks": "social-networks"
+      }
     }
   },
   "order": [
     "banner",
-    "privacy-policy"
+    "privacy-policy", 
+    "social-networks"
   ]
 }

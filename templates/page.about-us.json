@@ -64,7 +64,9 @@
     },
     "social-networks":{
       "type": "social-networks",
-      "settings": {}
+      "settings": {
+        "social-networks": "social-networks"
+      }
     }
   },
   "order": [

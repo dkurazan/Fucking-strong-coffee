@@ -6,7 +6,7 @@
         "settings": {
           "menu": "main-menu",
           "menu-mobile": "mobile-popup",
-          "policies": "mobile-popup"
+          "policies": "policices"
         }
       },
       "footer": {

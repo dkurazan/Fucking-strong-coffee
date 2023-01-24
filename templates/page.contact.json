@@ -2,7 +2,13 @@
     "sections": {
           "contact": {
             "type": "template-contact"
+          },
+          "social-networks":{
+            "type": "social-networks",
+            "settings": {
+              "social-networks": "social-networks"
+            }
           }
     },
-    "order": ["contact"]
+    "order": ["contact", "social-networks"]
 }

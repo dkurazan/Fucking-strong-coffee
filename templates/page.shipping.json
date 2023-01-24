@@ -11,7 +11,13 @@
             "settings": {
               "name": "Shipping"
             }
+          },
+          "social-networks":{
+            "type": "social-networks",
+            "settings": {
+              "social-networks": "social-networks"
+            }
           }
     },
-    "order": ["banner", "privacy-policy"]
+    "order": ["banner", "privacy-policy", "social-networks"]
 }
