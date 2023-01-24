@@ -1,14 +1,19 @@
 {
-    "sections": {
-          "contact": {
-            "type": "template-contact"
-          },
-          "social-networks":{
-            "type": "social-networks",
-            "settings": {
-              "social-networks": "social-networks"
-            }
-          }
+  "sections": {
+    "contact": {
+      "type": "template-contact",
+      "settings": {
+      }
     },
-    "order": ["contact", "social-networks"]
+    "social-networks": {
+      "type": "social-networks",
+      "settings": {
+        "social-networks": "social-networks"
+      }
+    }
+  },
+  "order": [
+    "contact",
+    "social-networks"
+  ]
 }
