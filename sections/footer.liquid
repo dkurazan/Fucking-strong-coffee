@@ -27,10 +27,22 @@
             <div class="footer__col footer__newsletter">
                 <h3 class="footer__title">Newsletter</h3>
                 <p>Enter your email address below to join our mailing list and have our latest news and member-only deals delivered straight to your inbox.</p>
-                <form>
-                    <input type="text" placeholder="Your mail">
-                    <button>Subscribe</button>
-                </form>
+                
+                {%- assign formId = 'Contact_' | append: section.id -%}
+                {% form 'customer', id: formId, novalidate: 'novalidate' %}
+                    <input type="hidden" name="contact[tags]" value="newsletter">
+                    <input 
+                    type="email"
+                        name="contact[email]"
+                        id="{{ formId }}-email"
+                        class="input-group__field{% if form.errors %} input--error{% endif %}"
+                        value="{{ form.email }}"
+                        placeholder="Your mail"
+                        aria-required="true"
+                        autocorrect="off"
+                        autocapitalize="off">
+                    <button type="submit" name="commit" >Subscribe</button>
+                {% endform %}
             </div>
         </div>
     </div>

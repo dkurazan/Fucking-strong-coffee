@@ -118,10 +118,17 @@
 .footer__newsletter button::after{
     content: '→';
     margin-left: 10px;
+    transition: .5s all ease-in-out;
 }
 
 .footer__newsletter button:hover{
     cursor: pointer;
+}
+
+.footer__newsletter button:hover::after{
+    cursor: pointer;
+    margin-left: 17px;
+    transition: .5s all ease-in-out;
 }
 
 .footer__row:last-child h6{
