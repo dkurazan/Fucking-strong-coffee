@@ -5,13 +5,16 @@
         "type": "header",
         "settings": {
           "menu": "main-menu",
-          "menu-mobile": "mobile-popup"
+          "menu-mobile": "mobile-popup",
+          "policies": "mobile-popup"
         }
       },
       "footer": {
         "type": "footer",
         "settings": {
-          "about-us-text": "Nunc sed ultricies. Molestie ornare quis, adipiscing lectus sit molestie leo, non interdum imperdiet efficitur vestibulum est. Dapibus non ornare accumsan morbi molestie augue mollis lectus quam, ornare mattis null."
+          "about-us-text": "Nunc sed ultricies. Molestie ornare quis, adipiscing lectus sit molestie leo, non interdum imperdiet efficitur vestibulum est. Dapibus non ornare accumsan morbi molestie augue mollis lectus quam, ornare mattis null.",
+          "menu-footer": "footer-menu",
+          "policies": "policies"
         }
       }
     },
