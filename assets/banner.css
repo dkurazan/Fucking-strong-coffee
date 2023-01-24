@@ -145,10 +145,17 @@
     .banner__content h2{
         white-space: break-spaces;
         min-width: 348px;
+        font-size: 90px;
+        line-height: 100%;
     }
 
     .banner__background{
         height: 777px;
+    }
+
+    .banner__content h1{
+        font-size: 52px;
+        margin-bottom: 24px;
     }
 }
 
@@ -159,11 +166,11 @@
     }
 
     .banner__content h1{
-        font-size: 110px;
+        font-size: 45px;
     }
 
     .banner__content h2{
-        font-size: 40px;
+        font-size: 71px;
     }
 
     .banner__content div, .banner__content div a{

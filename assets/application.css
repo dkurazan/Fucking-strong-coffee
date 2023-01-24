@@ -278,7 +278,7 @@
     display: none;
 }
 
-.page-404{
+.page-404, .cart__empty{
     max-width: 1440px;
     margin: 0 auto;
     height: 60vh;
@@ -289,7 +289,11 @@
     padding-top: 40px;
 }
 
-.page-404 h1{
+.cart__empty{
+    justify-content: space-around;
+}
+
+.page-404 h1, .cart__empty h2{
     font-family: SignPainter;
     font-style: normal;
     text-transform: uppercase;
@@ -307,7 +311,6 @@
     line-height: 140%;
     color: #EB2240;
 }
-
 
 @media (max-width: 1600px) {
     .social-networks, .scroll-down{
@@ -384,6 +387,10 @@
         font-size: 15vw;
     }
 
+    .cart__empty h2{
+        font-size: 15vw;
+    }
+
     .page-404 p{
         font-size: 2vw;
     }
@@ -402,6 +409,10 @@
 @media(max-width: 450px){
     .page-404 h1{
         font-size: 20vw;
+    }
+
+    .cart__empty h2{
+        font-size: 17vw;
     }
 
     .page-404 p{

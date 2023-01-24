@@ -145,6 +145,9 @@
 }
 
 .filter__checkbox input:checked + label:before{
+    background-image: url(checkbox-bg.svg);
+    background-position: center left 3px;
+    background-repeat: no-repeat;
     background-color: #E0E0E0;
 }
 
@@ -251,6 +254,33 @@
     display: none;
 }
 
+.filter__apply-button{
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 140%;
+    text-align: center;
+    letter-spacing: 0.085em;
+    text-transform: uppercase;
+    padding: 18px 0;
+    width: 100%;
+    color: #FFFFFF;
+    white-space: nowrap;
+    border: none;
+    background: #0E0B07;
+    margin-bottom: 30px;
+    border: 1px solid #0E0B07;
+    transition: .5s all ease-in-out;
+}
+
+.filter__apply-button:hover{
+    background-color: transparent;
+    color: #0E0B07;
+    transition: .5s all ease-in-out;
+    cursor: pointer;
+}
+
 @media (max-width:1450px) {
     .collection{
         padding: 59px 30px 55px;
@@ -323,22 +353,6 @@
         padding-bottom: 25px;
     }
 
-    .filter__apply-button{
-        font-family: 'Hind Vadodara';
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 140%;
-        text-align: center;
-        letter-spacing: 0.085em;
-        text-transform: uppercase;
-        padding: 22px 103px;
-        color: #FFFFFF;
-        white-space: nowrap;
-        border: none;
-        background: #0E0B07;
-        margin-bottom: 30px;
-    }
 
     .filter__popup .filter__title>div{
         display: flex;
@@ -356,10 +370,13 @@
     .filter__popup .collection__filter-inner{
         padding: 0;
     }
-
     
+    .filter__apply-button{
+        font-size: 16px;
+        padding: 22px 103px;
 
-    
+    }
+
     #filter-open-button:hover, #filter-close-button:hover{
         cursor: pointer;
         user-select: none;
