@@ -9,17 +9,57 @@
     },
     "about-us": {
       "type": "template-about-us",
+      "blocks": {
+        "48c6315f-53f0-4648-a37f-3435c5b343e4": {
+          "type": "block",
+          "settings": {
+            "producer-title": "Simon Albers",
+            "producer-subtitle": "We aim to connect food producers and consumers in the same geographic region, to develop more self-reliant and resilient food networks; improve local economies; or to affect the health, environment, community.",
+            "producer-btn": "Go to Simon’s coffee",
+            "producer-link": "#"
+          }
+        },
+        "95af9fc3-fb37-459b-8a70-c54fc59e4783": {
+          "type": "block",
+          "settings": {
+            "producer-image": "shopify:\/\/shop_images\/main-coffee-image.png",
+            "producer-title": "Chaia van de Gronden",
+            "producer-subtitle": "We aim to connect food producers and consumers in the same geographic region, to develop more self-reliant and resilient food networks; improve local economies; or to affect the health, environment, community.",
+            "producer-btn": "Go to Simon’s coffee",
+            "producer-link": "#"
+          }
+        },
+        "429fb6d5-559a-4a2f-b675-1fbf820b758f": {
+          "type": "block",
+          "settings": {
+            "producer-title": "Marien Viehoff",
+            "producer-subtitle": "We aim to connect food producers and consumers in the same geographic region, to develop more self-reliant and resilient food networks; improve local economies; or to affect the health, environment, community!",
+            "producer-btn": "Go to Simon’s coffee",
+            "producer-link": "#"
+          }
+        }
+      },
+      "block_order": [
+        "48c6315f-53f0-4648-a37f-3435c5b343e4",
+        "95af9fc3-fb37-459b-8a70-c54fc59e4783",
+        "429fb6d5-559a-4a2f-b675-1fbf820b758f"
+      ],
       "settings": {
         "title-1": "WHERE IT STARTED",
         "description-1": "<p>Good Beans is run by a chatty American and a steady Norwegian. We were drawn first to a tiny shop in Amsterdam, and we stuck around to develop, deepen and spread a much bigger mission: making ethically-sourced coffee more approachable. Here’s a bit more about us.<\/p><p>Cody runs our coffee programming and keeps our branding fresh. He is determined to spread the resilient energy and progressive vision of the origin partners behind your delicious morning cup. Reach out to him for brand collaborations or guest roasting opportunities. The stoic Norwegian, Harald is our operator. He handles all things finances, sales, and logistics. In other words, he keeps us marching, nay, cross-country skiing, towards peak efficiency. Reach out to him for order questions or wholesale enquiries.<\/p>",
         "img-1": "shopify:\/\/shop_images\/Rectangle_7.png",
+        "img-patch-1": false,
         "title-2": "The story of our store",
         "description-2": "",
+        "img-patch-2": false,
         "title-3": "The trip to Rwanda",
         "description-3": "",
+        "img-patch-3": false,
         "title-4": "Yes we can!",
         "description-4": "",
-        "big-image-subtitle": "Cody in Amsterdam with our first cans, August 2019"
+        "img-patch-4": false,
+        "big-image-subtitle": "Cody in Amsterdam with our first cans, August 2019",
+        "img-patch-5": false
       }
     }
   },
