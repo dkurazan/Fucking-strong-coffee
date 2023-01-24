@@ -62,7 +62,7 @@
         "img-patch-5": false
       }
     },
-    "social-networks":{
+    "social-networks": {
       "type": "social-networks",
       "settings": {
         "social-networks": "social-networks"
