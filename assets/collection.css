@@ -42,11 +42,12 @@
     padding-right: 86px;
 }
 
-.filter__title{
+.filter__title, .filter-popup-title{
     display: flex;
 }
 
-.filter__title h4{
+
+.filter__title h4, .filter-popup-title h4{
     font-family: 'Hind Vadodara';
     font-style: normal;
     font-weight: 500;
@@ -185,6 +186,7 @@
     font-size: 16px;
     line-height: 120%;
     color: #353535;
+    width: 7rem;
 }
 
 .product-sort__inner select:focus{
@@ -197,63 +199,6 @@
 
 /* filter popup */
 
-.filter__popup{
-    position: fixed;
-    background-color: #fff;
-    top: 0;
-    width: 359px;
-    padding: 23px 16px 0 16px;
-    display: none;
-    left: -100%;
-    transition: .5s all ease-in-out;
-    height: 100vh;
-    z-index: 30;
-    overflow: scroll;
-}
-
-.filter__popup .filter__title{
-    padding-bottom: 25px;
-    margin-bottom: 30px;
-    border-bottom: 1px solid #ECE8DF;
-}
-
-.filter__popup .filter__block:last-child{
-    padding-bottom: 25px;
-}
-
-.filter__apply-button{
-    font-family: 'Hind Vadodara';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 140%;
-    text-align: center;
-    letter-spacing: 0.085em;
-    text-transform: uppercase;
-    padding: 22px 103px;
-    color: #FFFFFF;
-    white-space: nowrap;
-    border: none;
-    background: #0E0B07;
-    margin-bottom: 30px;
-}
-
-.filter__popup .filter__title>div{
-    display: flex;
-}
-
-.filter__popup .filter__title{
-    justify-content: space-between;
-    align-items: center;
-}
-
-.filter__popup .filter__block{
-    max-width: 185px;
-}
-
-.filter__popup .collection__filter-inner{
-    padding: 0;
-}
 
 .collection__pagination{
     display: flex;
@@ -302,6 +247,9 @@
     user-select: none;
 }
 
+.filter-popup-title, .filter__title span{
+    display: none;
+}
 
 @media (max-width:1450px) {
     .collection{
@@ -322,12 +270,27 @@
 }
 
 @media (max-width:1200px) {
+    
     .filter__popup{
-        display: block;
+        position: fixed;
+        background-color: #fff;
+        top: 0;
+        max-width: 100%;
+        width: 359px;
+        padding: 23px 16px 0 16px;
+        left: -100%;
+        transition: .5s all ease-in-out;
+        height: 100vh;
+        z-index: 30;
+        overflow: scroll;
     }
 
-    .collection__filter{
-        display: none;
+    .filter__title span {
+        display: inline;
+    }
+
+    .filter-popup-title{
+        display: flex;
     }
 
     .filter__popup.active{
@@ -335,12 +298,95 @@
         transition: .5s all ease-in-out;
     }
 
+    .filter__block-title{
+        padding-top: 30px;
+    }
+
+    .filter-popup-title{
+        justify-content: space-between;
+        align-items: center;
+        padding-bottom: 25px;
+        border-bottom: 1px solid rgba(236, 232, 223, 1);
+    }
+
+    .filter-popup-title>div{
+        display: flex;
+    }
+
+    .filter__popup .filter__title{
+        padding-bottom: 25px;
+        margin-bottom: 30px;
+        border-bottom: 1px solid #ECE8DF;
+    }
+
+    .filter__popup .filter__block:last-child{
+        padding-bottom: 25px;
+    }
+
+    .filter__apply-button{
+        font-family: 'Hind Vadodara';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 140%;
+        text-align: center;
+        letter-spacing: 0.085em;
+        text-transform: uppercase;
+        padding: 22px 103px;
+        color: #FFFFFF;
+        white-space: nowrap;
+        border: none;
+        background: #0E0B07;
+        margin-bottom: 30px;
+    }
+
+    .filter__popup .filter__title>div{
+        display: flex;
+    }
+
+    .filter__popup .filter__title{
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .filter__popup .filter__block{
+        max-width: 185px;
+    }
+
+    .filter__popup .collection__filter-inner{
+        padding: 0;
+    }
+
+    
+
     
     #filter-open-button:hover, #filter-close-button:hover{
         cursor: pointer;
         user-select: none;
     }
 
+    .collection .product-card__img{
+        height: 400px;
+    }
+
+}
+
+@media (max-width: 1100px){
+    .collection .product-card__img {
+        height: 370px;
+    } 
+}
+
+@media (max-width: 1000px){
+    .collection .product-card__img {
+        height: 320px;
+    } 
+}
+
+@media (max-width: 900px){
+    .collection .product-card__img{
+        height: 100%;
+    }
 }
 
 @media (max-width:600px) {

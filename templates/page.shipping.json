@@ -1,23 +1,26 @@
 {
-    "sections": {
-        "banner": {
-            "type": "image-banner-2",
-            "settings": {
-              "title-xl": "Shipping"
-            }
-          },
-          "privacy-policy": {
-            "type": "template-privacy-policy",
-            "settings": {
-              "name": "Shipping"
-            }
-          },
-          "social-networks":{
-            "type": "social-networks",
-            "settings": {
-              "social-networks": "social-networks"
-            }
-          }
+  "sections": {
+    "banner": {
+      "type": "image-banner-2",
+      "settings": {
+        "title-xl": "Shipping"
+      }
     },
-    "order": ["banner", "privacy-policy", "social-networks"]
+    "privacy-policy": {
+      "type": "template-privacy-policy",
+      "settings": {
+      }
+    },
+    "social-networks": {
+      "type": "social-networks",
+      "settings": {
+        "social-networks": "social-networks"
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "privacy-policy",
+    "social-networks"
+  ]
 }
