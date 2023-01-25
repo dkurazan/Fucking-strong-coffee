@@ -227,6 +227,10 @@
     transition: .5s all ease-in-out;
 }
 
+.banner__content h1{
+    max-width: 800px;
+}
+
 @media (max-width: 1700px) {
     
     .about__big-image{

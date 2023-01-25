@@ -281,6 +281,10 @@
     cursor: pointer;
 }
 
+.collection .rigt_corner_label {
+    right: -30px;
+}
+
 @media (max-width:1450px) {
     .collection{
         padding: 59px 30px 55px;

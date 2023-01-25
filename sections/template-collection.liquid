@@ -10,7 +10,14 @@
                 </svg>
                 <h4>
                     Filter
-                    <span>(0)</span>
+                    <span>
+                        {% assign sum = 0 %}
+                        {%- for filter in collection.filters -%}
+                            {% assign values_size = filter.active_values.size %}
+                            {% assign sum = sum | plus: values_size %}
+                        {% endfor %}
+                        ({{ sum }})
+                    </span>
                 </h4>
             </div>
             <div class="product-sort__inner">
@@ -20,7 +27,7 @@
 
                     {% for option in collection.sort_options %}
                         <option value="{{ option.value }}" {% if option.value == sort_by %}selected="selected"{% endif %}>
-                        {{ option.name }}
+                            {{ option.name }}
                         </option>
                     {% endfor %}
                 </select>
@@ -67,7 +74,7 @@
                                                 <label for="Filter-{{ filter.param_name }}-{{ forloop.index }}">{{ filter_value.label }}</label>
                                             </div>
                                             <span>
-                                                {{ filter_value.count }}
+                                               {{ filter_value.count }}
                                             </span>
                                         </div>
                                     {% endfor %}
