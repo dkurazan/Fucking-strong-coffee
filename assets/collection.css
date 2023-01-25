@@ -281,12 +281,6 @@
     cursor: pointer;
 }
 
-@media (max-height: 500px ) {
-    .popup-mobile__nav-top{
-        overflow: scroll;
-    }
-}
-
 @media (max-width:1450px) {
     .collection{
         padding: 59px 30px 55px;
@@ -444,5 +438,11 @@
 
     div.banner__content h1{
         font-size: 90px;
+    }
+}
+
+@media (max-height: 500px ) {
+    .popup-mobile__nav-top{
+        overflow: scroll;
     }
 }
