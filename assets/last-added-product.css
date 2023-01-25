@@ -29,8 +29,8 @@
 
 .new-product__image svg{
     position: absolute;
-    left: 0;
-    top: -15px;
+    left: 20px;
+    top: 70px;
     z-index: 1;
 }
 
@@ -116,15 +116,7 @@
     letter-spacing: 0.09em;
     text-transform: uppercase;
     color: #333333;
-}
-
-.new-product__usp img {
-    content: '';
-    display: inline-block;
-    width: 32px;
-    height: 32px;
-    object-fit: cover;
-    margin-right: 32px;
+    padding-left: 64px;
 }
 
 .new-product__button{
