@@ -281,11 +281,12 @@
     cursor: pointer;
 }
 
-.collection .rigt_corner_label {
-    right: -30px;
+@media (max-height: 870px ) {
+    .popup-mobile__nav-top{
+        justify-content: start;
+        overflow: scroll;
+    }
 }
-
-
 
 @media (max-width:1450px) {
     .collection{
