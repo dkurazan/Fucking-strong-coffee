@@ -87,14 +87,6 @@
 
 @media(max-width: 1200px){
     
-    .banner-analog__content h1{
-        font-size: 150px;
-    }
-
-    .banner-analog__content h2{
-        font-size: 70px;
-    }
-
     .banner-analog__content a{
         padding: 18px 80px;
     }
@@ -102,11 +94,7 @@
 
 @media(max-width: 950px){
     .banner-analog__content h1{
-        font-size: 138px;
-    }
-
-    .banner-analog__content h2{
-        font-size: 50px;
+        font-size: 90px;
     }
 
     .banner-analog__content div{
@@ -117,23 +105,29 @@
         padding: 21px 128px;
         white-space: nowrap;
     }
-}
 
-@media(max-width: 950px){
     .banner-analog__content h1{
         white-space: break-spaces;
     }
+}
+
+@media(max-width: 800px){
+    .banner-analog__content h1{
+        font-size: 71px;
+    }
+
 
 }
 
-@media(max-width: 510px){
-    .banner-analog__content h2{
-        white-space: break-spaces;
-        min-width: 348px;
-        font-size: 90px;
-        line-height: 100%;
+@media(max-width: 580px){
+    .banner-analog__content h1{
+        max-width: 341px;
+        margin: 31px 0 20px;
     }
+    
+}
 
+@media(max-width: 510px){
     .banner-analog__background{
         height: 777px;
     }
@@ -141,6 +135,10 @@
     .banner-analog__content h1{
         font-size: 52px;
         margin-bottom: 24px;
+    }
+    
+    .banner-analog__background img{
+        object-position: -570px 0px;
     }
 }
 
@@ -154,9 +152,7 @@
         font-size: 45px;
     }
 
-    .banner-analog__content h2{
-        font-size: 71px;
-    }
+    
 
     .banner-analog__content div, .banner-analog__content div a{
         width: 100%;
@@ -167,7 +163,5 @@
         text-align: center;
     }
 
-    .banner-analog__content h2{
-        min-width: 0;
-    }
+    
 }
