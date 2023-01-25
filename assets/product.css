@@ -280,8 +280,9 @@ li.product-tab-active{
 
 .tabs__welcome-image-bg>img{
     width: 100%;
-    height: fit-content;
+    height: 390px;
     padding: 40px 25px 0 25px;
+    object-fit: cover;
 }
 
 .tabs__welcome-image-bg div{
@@ -430,6 +431,7 @@ h2.featured-collection__title{
 
     .tabs__welcome-image-bg>img{
         padding: 33px 21px 0 21px;
+        height: 317px;
     }
 
     .product__tabs{
@@ -626,5 +628,15 @@ h2.featured-collection__title{
     .product-card__icons li:first-child{
         min-width: 0;
         max-width: 103px;
+    }
+
+    .tabs__welcome-image-bg{
+        max-width: 290px;
+        height: 360px;
+    }
+
+    .tabs__welcome-image-bg>img{
+        padding: 28px 18px 0 19px;
+        height: 285px;
     }
 }

@@ -226,7 +226,7 @@ input.contact__button:hover{
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 400px) {
     .contact__info-inner{
         width: 290px;
     }
