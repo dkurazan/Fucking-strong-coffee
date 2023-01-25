@@ -285,6 +285,8 @@
     right: -30px;
 }
 
+
+
 @media (max-width:1450px) {
     .collection{
         padding: 59px 30px 55px;
@@ -388,6 +390,10 @@
 
     .collection .product-card__img{
         height: 400px;
+    }
+
+    .filter-form{
+        padding-bottom: 40px;
     }
 
 }
