@@ -10,7 +10,7 @@ $('.reviews__items-mobile').slick({
 const mobileMenuBtn = document.querySelectorAll(".header-mobile__menu div");
 const popupMobile = document.querySelector(".popup-mobile");
 const header = document.querySelectorAll(".header");
-const headerMobileLogo = document.querySelectorAll(".header-mobile-logo path");
+const headerMobileLogo = document.querySelectorAll(".header__logo-inner img");
 const cartIcon = document.querySelectorAll(".cart-button-icon path");
 const cartLabel = document.querySelectorAll(".header-mobile__cart span");
 const sideMenuBtn = document.querySelectorAll('.side-menu-button');

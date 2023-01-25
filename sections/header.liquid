@@ -36,11 +36,12 @@
                 </div>
             </div>
             <div class="header-mobile__logo">
-                <a href="/" class="header__logo-inner" loading="lazy">
+                <a href="/" class="header__logo-inner" loading="lazy" >
                     {% if section.settings.logo != blank %}
                         {{ section.settings.logo | img_url: 'master' | img_tag }}
                     {% else %}
-                        {% render 'header-logo-mobile' %}
+                        {{ 'header-logo-mobile.png' | asset_url | img_tag }}
+                        {{ 'header-logo-mobile-white.png' | asset_url | img_tag }}
                     {% endif %}
                 </a>
             </div>
