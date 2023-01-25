@@ -46,8 +46,8 @@
             </div>
             <div class="header-mobile__cart">
                 <a href="/cart">
-                    <span>$ 0.00</span>
-                    <span>(0)</span>
+                    <span>{{ cart.total_price | money }}</span>
+                    <span>({{ cart.item_count }})</span>
                     {% render 'cart-button-icon' %}
                 </a>
             </div>
