@@ -169,7 +169,7 @@
     width: 100%;
     z-index: 10;
     background: #EB2240;
-    height: calc( 100vh - 91px );
+    height: 100vh;
     transition: .5s all ease-in-out;
 }
 
@@ -225,7 +225,7 @@ span.mobile-cart-label-active{
 }
 
 .popup-mobile__nav-bottom{
-    padding: 0 20px 45px 20px;
+    padding: 0 20px 136px 20px;
     display: flex;
     justify-content: space-between;
 }
