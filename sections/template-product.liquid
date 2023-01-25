@@ -34,8 +34,7 @@
                         <div class="product__usp">
                             <ul>
                                 {% for block in section.blocks %}
-                                    <li>
-                                        {{ block.settings.image | img_url: 'master' | img_tag }}
+                                    <li style="background-image: url({{ block.settings.image | img_url: 'mmaster' }})">
                                         {{ block.settings.title }}
                                     </li>
                                 {% endfor %}

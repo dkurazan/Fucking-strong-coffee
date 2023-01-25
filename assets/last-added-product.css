@@ -117,6 +117,10 @@
     text-transform: uppercase;
     color: #333333;
     padding-left: 64px;
+    background-repeat: no-repeat;
+    background-position: center left;
+    background-size: 32px 32px;
+    height: 32px;
 }
 
 .new-product__button{
@@ -211,6 +215,14 @@
 
     .last-added{
         padding-bottom: 100px;
+    }
+}
+
+@media(max-width: 450px){
+    .new-product__usp li{
+        height: 24px;
+        background-size: 24px;
+        padding-left: 40px;
     }
 }
 
