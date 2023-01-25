@@ -281,7 +281,7 @@
     cursor: pointer;
 }
 
-@media (max-height: 870px ) {
+@media (max-height: 500px ) {
     .popup-mobile__nav-top{
         justify-content: start;
         overflow: scroll;
