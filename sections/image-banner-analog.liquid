@@ -1,29 +1,29 @@
-{{ 'banner.css' | asset_url | stylesheet_tag }}
-<div class="banner">
+{{ 'banner-analog.css' | asset_url | stylesheet_tag }}
+<div class="banner-analog">
     <div class="container-xl">
-        <div class="banner__inner">
-            <div class="banner__background">
+        <div class="banner-analog__inner">
+            <div class="banner-analog__background">
                 {% if section.settings.background-image != blank %}
                     {{ section.settings.background-image | img_url: 'master' | img_tag }}
                 {% else %}
-                    <div class="banner_bg-red"></div>
+                    <div class="banner-analog_bg-red"></div>
                 {% endif %}
-            </div>
-            <div class="banner__content">
+                <div class="banner-analog__content">
                 <h1>{{ section.settings.title-xl }}</h1>
-                <h2>{{ section.settings.title-sm }}</h2>
                 <div>
-                    <a href="{{ section.settings.button-link-1 }}">{{ section.settings.button-label-1 }}</a>
-                    <a href="{{ section.settings.button-link-2 }}">{{ section.settings.button-label-2 }}</a>
+                        <a href="{{ section.settings.button-link-1 }}">{{ section.settings.button-label-1 }}</a>
+                        <a href="{{ section.settings.button-link-2 }}">{{ section.settings.button-label-2 }}</a>
+                    </div>
                 </div>
             </div>
+            
         </div>
     </div>
 </div>
 
 {% schema %}
     {
-        "name": "Image banner",
+        "name": "Image banner analog",
         "settings": [
             {
                 "type": "image_picker",
@@ -34,13 +34,7 @@
                 "type": "text",
                 "id": "title-xl",
                 "label": "Big title",
-                "default": "Stay awake"
-            },
-            {
-                "type": "text",
-                "id": "title-sm",
-                "label": "Small title",
-                "default": "Fucking strong coffee"
+                "default": "It’s coffe not caviar"
             },
             {
                 "type": "text",
