@@ -284,7 +284,6 @@
 @media (max-height: 500px ) {
     .popup-mobile__nav-top{
         overflow: scroll;
-        justify-content: start;
     }
 }
 
