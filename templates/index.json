@@ -6,7 +6,20 @@
         "title-xl": "Stay awake",
         "title-sm": "Fucking strong coffee",
         "button-label-1": "shop now",
-        "button-label-2": "about us"
+        "button-link-1": "\/collections\/all-products",
+        "button-label-2": "about us",
+        "button-link-2": "\/pages\/about-us"
+      }
+    },
+    "89ff0a29-22ff-42e7-8a01-eb3bfefcef1a": {
+      "type": "image-banner-analog",
+      "settings": {
+        "title-xl": "Stay awake",
+        "title-sm": "Fucking strong coffee",
+        "button-label-1": "shop now",
+        "button-link-1": "\/collections\/all-products",
+        "button-label-2": "about us",
+        "button-link-2": "\/pages\/about-us"
       }
     },
     "featured-collection": {
@@ -22,7 +35,8 @@
       "settings": {
         "title": "Our story",
         "subtitle": "Good Beans is run by a chatty American and a steady Norwegian. We were drawn first to a tiny shop in Amsterdam, and we stuck around to develop, deepen and spread a much bigger mission: making ethically-sourced coffee more approachable. Here’s a bit more about us.",
-        "button-label": "read OUR story"
+        "button-label": "read OUR story",
+        "button-link": "\/pages\/about-us"
       }
     },
     "benefits": {
@@ -165,6 +179,7 @@
   },
   "order": [
     "image-banner",
+    "89ff0a29-22ff-42e7-8a01-eb3bfefcef1a",
     "featured-collection",
     "our-story",
     "benefits",
