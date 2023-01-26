@@ -89,6 +89,28 @@
             <div class="collection__products">
                 {% paginate collection.products by 9 %}
                     <div class="collection__products-inner">
+                        <style>
+                            {% if section.settings.icnons-and-labels == 1 %}
+                                .product-card__icons li:last-child, .product-card__icons li:nth-child(2) {
+                                    display: none;
+                                }
+
+                                .product-card__icons ul{
+                                    justify-content: center;
+                                }
+                            {% elsif section.settings.icnons-and-labels == 2 %}
+                                .product-card__icons li:last-child{
+                                    display: none;
+                                }
+
+                                .product-card__icons li{
+                                    min-width: auto;
+                                    max-width: 50%;
+                                }
+                            {% elsif section.settings.icnons-and-labels == 3 %}
+
+                            {% endif %}
+                        </style>
                         {% for product in collection.products %}
                             {%  render 'product-card', product: product %}
                         {% endfor %}
@@ -130,6 +152,15 @@
                 "id": "hide-product-subtitle",
                 "label": "Hide product subtitle",
                 "default": false
+            },
+            {
+                "type": "range",
+                "id": "icnons-and-labels",
+                "min": 1,
+                "max": 3,
+                "step": 1,
+                "default": 3,
+                "label": "How many icons and labels you want to display under title?"
             }
         ]
     }
