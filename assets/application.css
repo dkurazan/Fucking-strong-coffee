@@ -220,10 +220,13 @@
     line-height: 140%;
     color: rgba(8, 5, 1, 0.5);
     user-select: none;
+    transition: .5s all ease-in-out;
 }
 
 .scroll-down:hover{
     cursor: pointer;
+    color: red;
+    transition: .5s all ease-in-out;
 }
 
 .social-networks{
