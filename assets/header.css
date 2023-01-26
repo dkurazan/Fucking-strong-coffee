@@ -69,6 +69,23 @@
     max-height: 85px;
 }
 
+.header__logo-inner-mob{
+    position: relative;
+}
+
+.header__logo-inner-mob img:last-child{
+    position: absolute;
+    visibility: 0;
+    opacity: 0;
+    transition: .5s all ease-in-out;
+}
+
+.header__popup-mobile-active .header__logo-inner-mob img:last-child{
+    visibility: visible;
+    opacity: 1;
+    transition: .5s all ease-in-out;
+}
+
 .header__cart{
     display: flex;
     align-items: center;
