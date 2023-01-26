@@ -49,7 +49,7 @@
                 <a href="/cart">
                     <span>{{ cart.total_price | money }}</span>
                     <span>({{ cart.item_count }})</span>
-                    {% render 'cart-button-icon' %}
+                    {{ 'cart-button-icon.svg' | asset_url | img_tag }}
                 </a>
             </div>
         </div>
