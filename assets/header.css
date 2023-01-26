@@ -51,6 +51,12 @@
     color: rgba(14, 11, 7, 1);
     letter-spacing: 0.08em;
     white-space: nowrap;
+    transition: .5s all ease-in-out;
+}
+
+.header__navigation a:hover{
+    color: #EB2240;
+    transition: .5s all ease-in-out;
 }
 
 .header__logo-inner{
@@ -73,6 +79,15 @@
     display: flex;
     align-items: end;
     text-decoration: none;
+}
+
+.header__cart-button path{
+    transition: .5s all ease-in-out;
+}
+
+.header__cart-button:hover path{
+    stroke: #EB2240;
+    transition: .5s all ease-in-out;
 }
 
 .header__cart-button svg{
