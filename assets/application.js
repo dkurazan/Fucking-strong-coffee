@@ -267,7 +267,7 @@ if( lazyLoadLogo.innerHTML = `<img src="//cdn.shopify.com/s/files/1/0701/1755/65
     </svg>
     
     `
-  }, 10000 )
+  }, 30000 )
 }
 
 if( lazyLoadLogoMobile.innerHTML = `<img src="//cdn.shopify.com/s/files/1/0701/1755/6519/t/2/assets/header-logo-mobile.png?v=133607844509736024611674647736" alt="">`){
