@@ -21,7 +21,7 @@
         </div>
         <div class="product-card__icons">
             <ul>
-              {% if product.metafields.custom.coffee_beans_icon_label != blank and product.metafields.custom.first_icon != blank and product.metafields.custom.cup_of_coffee_icon_label != blank and product.metafields.custom.second_icon != blank and product.metafields.custom.glass_icon_label != blank and product.metafields.custom.third_icon != blank %}
+              {% unless product.metafields.custom.coffee_beans_icon_label or product.metafields.custom.first_icon or product.metafields.custom.cup_of_coffee_icon_label or product.metafields.custom.second_icon or product.metafields.custom.glass_icon_label or product.metafields.custom.third_icon %}
                 <li>
                     Grinder for espresso
                     {% render 'coffee-beans-icon' %}
@@ -71,7 +71,7 @@
                          
                     {% endif %}
                 </li>
-              {% endif %}
+              {% endunless %}
             </ul>
         </div>
         <a href="{{ product.url }}" class="product-card__button">{{ 'general.index.product_button_label' | t }}</a>
