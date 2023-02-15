@@ -691,4 +691,8 @@ h2.featured-collection__title{
         padding: 28px 18px 0 19px;
         height: 285px;
     }
+
+    .product .scroll-down{
+        left: -40px;
+    }
 }
