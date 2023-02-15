@@ -228,3 +228,16 @@ fatherElement.forEach(item => {
     
     let counter1 = new Counter(incrementButtons, decrementButtons, quantityValue)
 })
+
+
+//product slider
+const productImagesSm = document.querySelectorAll('.product__image-sm');
+const productBigImage = document.querySelector('.product__image-big');
+
+console.log(productBigImage);
+
+productImagesSm.forEach(pic => {
+  pic.addEventListener('click', () => {
+    productBigImage.setAttribute("src", `${pic.getAttribute('src')}`); 
+  })
+});
