@@ -66,7 +66,7 @@ const scrollDownButton = document.querySelector('.scroll-down');
 
 if(scrollDownButton){
   scrollDownButton.addEventListener('click', () => {
-    window.scrollTo({ left: 0, top: (document.body.scrollHeight - 652), behavior: "smooth" });
+    window.scrollTo({ left: 0, top: (document.body.scrollHeight ), behavior: "smooth" });
   })
 }
 

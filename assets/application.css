@@ -320,12 +320,18 @@
     .social-networks, .scroll-down{
         display: none;
     }
+    
+    .product .scroll-down{
+        display: block;
+    }
 }
 
 @media (max-width: 1400px) {
     .product-card__img{
         height: 400px;
     }
+
+
 }
 
 @media (max-width: 1300px) {
@@ -400,6 +406,7 @@
     }
 }
 
+
 @media(max-width: 600px){
     .image-section img{
         min-height: 327px;
@@ -408,6 +415,8 @@
     .image-section img:last-child{
         display: block;
     }
+
+    
 }
 
 @media(max-width: 450px){
