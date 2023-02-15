@@ -6,18 +6,18 @@
         <div class="product">
             <div class="row">
                 <div class="product__images">
-                    <a href="{{ product.featured_image.src | img_url: 'large' }}" class="product__image">
+                    <div class="product__image">
                         {% if product.featured_image %}
                             {{ product.featured_image | img_url: 'master' | img_tag }}
                         {% else %}
                             {{ 'product-1' | placeholder_svg_tag }}
                         {% endif %}
-                    </a>
+                    </div>
                     <div class="product__small-images">
                         {% for image in product.images %}
-                            <a href="{{ image.src | img_url: 'large' }}">
+                            <div>
                                 {{ image | img_tag }}
-                            </a>
+                            </div>
                         {% endfor %}
                     </div>
                     {% if product.metafields.custom.show_arrow %}
