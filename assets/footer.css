@@ -96,6 +96,16 @@
     color: rgba(8, 5, 1, 0.5);
     padding-bottom: 11px;
     flex: 0 0 100%;
+    
+    
+}
+
+.footer__newsletter input.active{
+    background-image: url(email-subscribed.svg);
+    background-position: right center;
+    background-size: 20px;
+    background-repeat: no-repeat;
+    transition: .5s ease;
 }
 
 .footer__newsletter input:focus{

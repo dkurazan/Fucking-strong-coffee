@@ -5,13 +5,12 @@
     <h1 class="contact__title">{{ page.title }}</h1>
     <div class="contact__content-block">
       {% form 'contact' %}
-        {{ form.errors | default_errors }}
         <h4>{{ section.settings.title }}</h4>
         <input type="text" id="ContactFormName" name="contact[name]" placeholder="Your name">
         <input type="email" id="ContactFormEmail" name="contact[email]" placeholder="Your Email">
         <textarea rows="10" id="ContactFormMessage" name="contact[body]" placeholder="Your message"></textarea>
         <input class="contact__button" type="submit" value="Send message">
-        {% if form.posted_successfully? %} 
+        {% if form.posted_successfully %} 
           <h3 class="contact__finish-message">Thank you for your contact</h3>
         {% endif %}
       {% endform %}

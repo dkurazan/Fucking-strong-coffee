@@ -234,10 +234,16 @@ fatherElement.forEach(item => {
 const productImagesSm = document.querySelectorAll('.product__image-sm');
 const productBigImage = document.querySelector('.product__image-big');
 
-console.log(productBigImage);
-
 productImagesSm.forEach(pic => {
   pic.addEventListener('click', () => {
     productBigImage.setAttribute("src", `${pic.getAttribute('src')}`); 
   })
 });
+
+//footer email subscribtion completed
+
+const footerInput = document.querySelector('#Contact_footer-email');
+console.log(footerInput)
+if(window.location.href.includes('?customer_posted=true#Contact_footer')){
+  footerInput.classList.add('active');
+}
