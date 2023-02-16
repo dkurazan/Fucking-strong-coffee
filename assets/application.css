@@ -278,7 +278,7 @@
     transition: .2s all ease-in-out;
 }
 
-.shopify-product-form input{
+.shopify-product-form>input{
     display: none;
 }
 

@@ -18,7 +18,7 @@
                     <div class="product__small-images">
                         {% for image in product.images %}
                             <div>
-                                <img src="{{ image | img_url: 'master' }}" alt="#" class="product__image-sm">
+                                <img src="{{ image | img_url: 'master' }}" alt="#" class="product__image-sm" id="{{ variant.id }}">
                             </div>
                         {% endfor %}
                     </div>
@@ -58,6 +58,31 @@
                             </ul>
                         </div>
                         <form action="{{ routes.cart_add_url }}" method="post" id="AddToCart">
+                            <div class="product_variants">
+                                {% for variant in product.variants %}
+                                    {% if variant.available %}
+                                        <input type="radio" value="{{ variant.id }}" id="{{ variant.id }}" name="product_variant">
+                                        <label for="{{ variant.id }}">{{ variant.title }}</label>
+                                    {% else %}
+                                        <option disabled="disabled">
+                                        {{ variant.title }} - sold out
+                                        </option>
+                                    {% endif %}
+                                {% endfor %}
+                            </div>
+                            <select name="id" id="productSelect">
+                                {% for variant in product.variants %}
+                                {% if variant.available %}
+                                    <option value="{{ variant.id }}">
+                                    {{ variant.title }}
+                                    </option>
+                                {% else %}
+                                    <option disabled="disabled">
+                                    {{ variant.title }} - sold out
+                                    </option>
+                                {% endif %}
+                                {% endfor %}
+                            </select>
                             <button type="submit" name="add" class="product__button" id="AddToCart">add to cart</button>
                         </form>
                         <div class="product__description">

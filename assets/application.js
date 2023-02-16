@@ -243,7 +243,24 @@ productImagesSm.forEach(pic => {
 //footer email subscribtion completed
 
 const footerInput = document.querySelector('#Contact_footer-email');
-console.log(footerInput)
+
 if(window.location.href.includes('?customer_posted=true#Contact_footer')){
   footerInput.classList.add('active');
+}
+
+//product variants
+const productRadio = document.querySelectorAll('.product_variants input');
+  const productSelect = document.querySelector('#productSelect');
+
+function selectProductVariant(btns) {
+  btns.forEach(item => {
+    item.addEventListener('click', () => {
+      productSelect.value = item.value
+    })
+  })
+}
+
+if(productRadio){
+  selectProductVariant(productRadio);
+  productRadio[0].checked = true;
 }

@@ -166,6 +166,16 @@
     margin-right: 32px;
 }
 
+.product_variants{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 48px;
+}
+
+.product select{
+    display: none;
+}
+
 .product__button{
     font-family: 'Hind Vadodara';
     font-style: normal;
