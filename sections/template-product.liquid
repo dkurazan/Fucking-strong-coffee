@@ -118,12 +118,7 @@
                 </ul>
                 <div class="product__tabs-content product__tabs-content-1 active" id="tab-1">
                     {% if product.metafields.tab.first_tab_common_text != blank %}
-                                <p>While we've made huge leaps in sourcing and roasting coffee over the years, minimalist branding and snobby attitudes have slowed our spread. New-age coffee bars and monotonous design snarkily whisper the same thing: good coffee is for the few. Our polite response? Fuck that. Inspired by our first origin partners at the female-run Twongerekawa Coko Cooperative Society in the rolling hills of Rwanda, we're determined to share our beans and their story with anyone and everyone who likes good products made by good people.</p>
-                    {% endif %}
-                    {% if product.metafields.tab.first_tab_bold_text != blank %}
-                       <p>{{ product.metafields.tab.first_tab_bold_text | newline_to_br }}</p>
-                    {% else %}
-                        <p>While we've made huge leaps in sourcing and roasting coffee over the years, minimalist branding and snobby attitudes have slowed our spread. New-age coffee bars and monotonous design snarkily whisper the same thing: good coffee is for the few. Our polite response? Fuck that. Inspired by our first origin partners at the female-run Twongerekawa Coko Cooperative Society in the rolling hills of Rwanda, we're determined to share our beans and their story with anyone and everyone who likes good products made by good people.</p>
+                                <p>While we've made huge leaps in sourcing and roasting coffee over the years, minimalist brandi                        {{ section.settings.tab-text-1 }}
                     {% endif %}
                 </div>
                 <div class="product__tabs-content product__tabs-content-2" id="tab-2">
@@ -150,13 +145,13 @@
                                     {% if product.metafields.tab.second_tab_first_image != blank %}
                                         {{ product.metafields.tab.second_tab_first_image | img_url: 'master' | img_tag }}
                                     {% else %}
-                                        {{ 'product-welcome-img.png' | asset_url | img_tag }}
+                                        {{ section.settings.tab-2-img-1 | img_url: 'master' | img_tag }}
                                     {% endif %}
                                 {% else %}
                                     {% if product.metafields.tab.second_tab_first_image != blank %}
                                         {{ product.metafields.tab.second_tab_first_image | img_url: 'master' | img_tag }}
                                     {% else %}
-                                        {{ 'product-welcome-img.png' | asset_url | img_tag }}
+                                        {{ section.settings.tab-2-img-1 | img_url: 'master' | img_tag }}
                                     {% endif %}
                                     <div>
                                         {{ 'patch-icon.png' | asset_url | img_tag }}
@@ -169,14 +164,13 @@
                                 {% if product.metafields.tab.second_tab_first_title %}
                                     {{ product.metafields.tab.second_tab_first_title }}
                                 {% else %}
-                                    HELLO, MY NAME IS CHAIA
+                                    {{ section.settings.tab-2-title-1 }}
                                 {% endif %}
                             </h3>
                             {% if product.metafields.tab.second_tab_first_text != blank %}
                                 <p>{{ product.metafields.tab.second_tab_first_text | newline_to_br }}</p>
                             {% else %}
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                {{ section.settings.tab-2-text-1 }}
                             {% endif %}
                         </div>
                     </div>
@@ -185,7 +179,7 @@
                         {% if product.metafields.tab.second_tab_video != blank %}
                             <source src="{{ product.metafields.tab.second_tab_video | file_url }}" type="video/mp4">
                         {% else %}
-                            <source src="https://cdn.shopify.com/videos/c/o/v/bfae7e74ecd54690a5d4aace6642c96b.mp4" type="video/mp4">
+                            <source src="{{ section.settings.video-link }}" type="video/mp4">
                         {% endif %}
                             
                         </video>
@@ -210,21 +204,20 @@
                                 {% if product.metafields.tab.second_tab_second_title %}
                                     {{ product.metafields.tab.second_tab_second_title }}
                                 {% else %}
-                                    HELLO, MY NAME IS CHAIA
+                                    {{ section.settings.tab-2-title-2 }}
                                 {% endif %}
                             </h3>
                             {% if product.metafields.tab.second_tab_second_text != blank %}
                                 <p>{{ product.metafields.tab.second_tab_second_text | newline_to_br }}</p>
                             {% else %}
-                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-                                <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                {{ section.settings.tab-2-text-2 }}
                             {% endif %}
                         </div>
                         <div class="tabs__welcome-image">
                             {% if product.metafields.tab.tab.second_tab_second_image != blank %}
                                 {{ product.metafields.tab.tab.second_tab_second_image | img_url: 'master' | img_tag }}
                             {% else %}
-                                {{ 'product-welcome-img.png' | asset_url | img_tag }}
+                                {{ section.settings.tab-2-img-2 | img_url: 'master' | img_tag }}
                             {% endif %}
                         </div>
                     </div>
@@ -233,27 +226,21 @@
                             {% if product.metafields.tab.second_tab_map_title %}
                                 {{ product.metafields.tab.second_tab_map_title }}
                             {% else %}
-                                THIS IS WHERE I WORK
+                                {{ section.settings.map-title }}
                             {% endif %}
                         </h4>
                         {% if product.metafields.tab.second_tab_map_iframe %}
-                                {{ product.metafields.tab.second_tab_map_iframe }}
-                            {% else %}
-                                <iframe width="100%" height="493" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=493&amp;hl=en&amp;q=NewYork+(My%20Business%20Name)&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
-                            {% endif %}
+                            {{ product.metafields.tab.second_tab_map_iframe }}
+                        {% else %}
+                            <iframe width="100%" height="493" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=493&amp;hl=en&amp;q=NewYork+(My%20Business%20Name)&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                        {% endif %}
                     </div>
                 </div>
                 <div class="product__tabs-content product__tabs-content-3" id="tab-3">
                     {% if product.metafields.tab.third_tab_common_text != blank %}
                         <p>{{ product.metafields.tab.third_tab_common_text | newline_to_br }}</p>
                     {% else %}
-                        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Accusamus voluptatum laborum modi harum maiores nihil mollitia odit illo eius, at nesciunt placeat repellendus? Autem iusto, nemo eum amet aperiam atque.</p>
-                    {% endif %}
-                    {% if product.metafields.tab.third_tab_bold_text != blank %}
-                        <p>{{ product.metafields.tab.third_tab_bold_text | newline_to_br }}</p>
-                    {% else %}
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Debitis recusandae, et vitae eaque mollitia assumenda delectus minima a accusantium. Tempore saepe perspiciatis dolorum amet vero, repellendus ad beatae. Enim, repudiandae!
-                        Nam magnam quis atque deserunt iure, vel modi labore voluptatum inventore voluptates, molestiae neque accusantium. Dolores est asperiores ducimus optio? Cumque praesentium molestiae vel, natus cupiditate reiciendis deleniti quia ad?</p>
+                       {{ section.settings.tab-text-3 }}
                     {% endif %}
                 </div>
             </div>
@@ -284,39 +271,6 @@
             },
             {
                 "type": "text",
-                "id": "tab-title-2",
-                "default": "About the producer",
-                "label": "2nd tab title"
-            },
-            {
-                "type": "richtext",
-                "id": "tab-text-2",
-                "label": "2nd tab text"
-            "id": "tab-text-1",
-                "label": "1st tab text content"
-            },
-            {
-                "type": "text",
-                "id": "tab-title-2",
-                "default": "About the producer",
-                "label": "2nd tab title"
-     "type": "text",
-                "id": "tab-title-2",
-                "default": "About the producer",
-                "label": "2nd tab title"
-     "type": "text",
-                "id": "tab-title-2",
-                "default": "About the producer",
-                "label": "2nd tab title"
-     "type": "text",
-                "id": "tab-title-2",
-                "default": "About the producer",
-                "label": "2nd tab title"
-     "type": "text",
-                "id": "tab-title-2",
-                "default": "About the producer",
-                "label": "2nd tab title"
-       "type": "text",
                 "id": "tab-title-2",
                 "default": "About the producer",
                 "label": "2nd tab title"
