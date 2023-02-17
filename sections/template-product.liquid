@@ -118,7 +118,9 @@
                 </ul>
                 <div class="product__tabs-content product__tabs-content-1 active" id="tab-1">
                     {% if product.metafields.tab.first_tab_common_text != blank %}
-                                <p>While we've made huge leaps in sourcing and roasting coffee over the years, minimalist brandi                        {{ section.settings.tab-text-1 }}
+                        <p>{{ product.metafields.tab.first_tab_common_text | newline_to_br }}</p>
+                    {% else %}
+                       {{ section.settings.tab-text-1 }}
                     {% endif %}
                 </div>
                 <div class="product__tabs-content product__tabs-content-2" id="tab-2">
