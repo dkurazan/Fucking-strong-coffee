@@ -268,7 +268,7 @@ div.product__variant-img{
     cursor: pointer;
 }
 
-.product__description p{
+.product__description, .product__description p{
     font-family: 'Hind Vadodara';
     font-style: normal;
     font-weight: 400;
