@@ -250,7 +250,7 @@ if(window.location.href.includes('?customer_posted=true#Contact_footer')){
 
 //product variants
 const productRadio = document.querySelectorAll('.product_variants input');
-  const productSelect = document.querySelector('#productSelect');
+const productSelect = document.querySelector('#productSelect');
 
 function selectProductVariant(btns) {
   btns.forEach(item => {
@@ -264,3 +264,11 @@ if(productRadio){
   selectProductVariant(productRadio);
   productRadio[0].checked = true;
 }
+
+productRadio.forEach(radio => {
+  const variantImg = document.getElementsByName(`${radio.value}`)[0];
+  radio.nextElementSibling.addEventListener('click', () => {
+    productBigImage.setAttribute("src", `${variantImg.getAttribute('src')}`);
+  })
+  
+})

@@ -26,11 +26,11 @@
 
 .product__image>div{
      overflow: hidden;
-     height: 393px;
+     height: 644px;
 }
 
 .product__image img{
-    max-width: 547px;
+    max-width: 656px;
     width: 100%;
     transition: 1s all ease-in-out;
     display: block;
@@ -42,6 +42,11 @@
     display: flex;
     justify-content: center;
     gap: 21px;
+}
+
+.product__small-images>div{
+    display: flex;
+    align-items: center;
 }
 
 .product__small-images img{
@@ -168,11 +173,69 @@
 
 .product_variants{
     display: flex;
-    justify-content: center;
     margin-bottom: 48px;
+    height: 28px;
+    margin-left: 10px;
 }
 
 .product select{
+    display: none;
+}
+
+.product__variant-option{
+    display: none;
+}
+
+.product_variants label{
+    display: flex;
+    align-items: center;
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 110%;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #333333;
+    height: 100%;
+    width: 120px;
+    background-position: right center;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+.product_variants label:nth-child(2){
+    margin-right: 20px;
+}
+
+.product_variants label::before{
+    content: '';
+    display: flex;
+    width: 18px;
+    height: 18px;
+    background-color: #2D2B27;
+    border-radius: 50%;
+    margin-right: 15px;
+    border: 2px solid #fff;
+    outline-color: #2D2B27;
+}
+
+.product_variants label:hover{
+    cursor: pointer;
+}
+
+.product_variants label:nth-child(2)::before{
+    background-color: #EB2240;
+    outline-color: #EB2240;
+}
+
+.product__variant-option:checked + ::before{
+    outline: 1px solid;
+}
+
+div.product__variant-img{
     display: none;
 }
 

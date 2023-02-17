@@ -18,7 +18,12 @@
                     <div class="product__small-images">
                         {% for image in product.images %}
                             <div>
-                                <img src="{{ image | img_url: 'master' }}" alt="#" class="product__image-sm" id="{{ variant.id }}">
+                                <img src="{{ image | img_url: 'master' }}" alt="#" class="product__image-sm">
+                            </div>
+                        {% endfor %}
+                        {% for variant in product.variants %}
+                            <div class="product__variant-img">
+                                <img src="{{ variant.image | img_url: 'master' }}" alt="#" class="product__image-sm" name="{{ variant.id }}">
                             </div>
                         {% endfor %}
                     </div>
@@ -61,12 +66,14 @@
                             <div class="product_variants">
                                 {% for variant in product.variants %}
                                     {% if variant.available %}
-                                        <input type="radio" value="{{ variant.id }}" id="{{ variant.id }}" name="product_variant">
+                                        <input type="radio" value="{{ variant.id }}" id="{{ variant.id }}" name="product_variant" class="product__variant-option">
                                         <label for="{{ variant.id }}">{{ variant.title }}</label>
                                     {% else %}
-                                        <option disabled="disabled">
-                                        {{ variant.title }} - sold out
-                                        </option>
+                                        {% style %}
+                                            .product_variants{
+                                                display: none;
+                                            }
+                                        {% endstyle %}
                                     {% endif %}
                                 {% endfor %}
                             </div>
