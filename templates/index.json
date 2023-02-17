@@ -26,7 +26,7 @@
     "featured-collection": {
       "type": "featured-collection",
       "settings": {
-        "featured-collection": "all-products",
+        "featured-collection": "bestsellers",
         "title": "",
         "number_of_products_to_show": 3
       }
