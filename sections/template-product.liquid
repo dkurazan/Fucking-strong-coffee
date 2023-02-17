@@ -34,8 +34,13 @@
                 </div>
                 <div class="product__info">
                     <div class="product__info-inner">
-                        <h4 class="product__title-sm">So fucking strong coffee from...</h4>
-                        <h3 class="product__title-xl">{{ product.title | upcase | remove: 'FUCKING STRONG COFFEE FROM'  }}</h3>
+                        {% if product.title contains 'Fucking Strong Coffee from ' %}
+                            <h4 class="product__title-sm">So fucking strong coffee from...</h4>
+                            <h3 class="product__title-xl">{{ product.title | upcase | remove: 'FUCKING STRONG COFFEE FROM '  }}</h3>
+                        {% else %}
+                            <h3 class="product__title-xl">{{ product.title | upcase }}</h3>
+                        {% endif %}
+                        
                         <div class="product__price">{{ product.price | money }}</div>
                         <div class="product__tax">Tax included</div>
                         <div class="product__usp">
