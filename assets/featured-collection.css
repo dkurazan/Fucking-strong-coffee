@@ -7,6 +7,10 @@
     flex-wrap: wrap;
 }
 
+.product-template-page .featured-collection_row{
+    padding-bottom: 44px;
+}
+
 .default_product_image{
     max-width: 386.5px;
     max-height: 393.35px;
