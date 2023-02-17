@@ -45,7 +45,7 @@
                         <div class="product__tax">Tax included</div>
                         <div class="product__usp">
                             <ul>
-                                {% if product.metafields.usp.label_1 != blank or product.metafields.usp.label_2 != blank or product.metafields.usp.label_3 != blank or product.metafields.usp.label_4 != blank %}
+                                {% if product.metafields.usp.label_1 != blank and product.metafields.usp.label_2 != blank and product.metafields.usp.label_3 != blank and product.metafields.usp.label_4 != blank %}
                                     <li style="background-image: url({{  section.blocks[0].settings.image | img_url: 'mmaster' }})">
                                         {{ product.metafields.usp.label_1 }}
                                     </li>
@@ -57,6 +57,27 @@
                                     </li>
                                     <li style="background-image: url({{ section.blocks[3].settings.image | img_url: 'mmaster' }})">
                                         {{ product.metafields.usp.label_4 }}
+                                    </li>
+                                {% elsif product.metafields.usp.label_1 != blank and product.metafields.usp.label_2 != blank and product.metafields.usp.label_3 != blank %}
+                                    <li style="background-image: url({{  section.blocks[0].settings.image | img_url: 'mmaster' }})">
+                                        {{ product.metafields.usp.label_1 }}
+                                    </li>
+                                    <li style="background-image: url({{ section.blocks[1].settings.image | img_url: 'mmaster' }})">
+                                        {{ product.metafields.usp.label_2 }}
+                                    </li>
+                                    <li style="background-image: url({{ section.blocks[2].settings.image | img_url: 'mmaster' }})">
+                                        {{ product.metafields.usp.label_3 }}
+                                    </li>
+                                {% elsif product.metafields.usp.label_1 != blank and product.metafields.usp.label_2 != blank %}
+                                    <li style="background-image: url({{  section.blocks[0].settings.image | img_url: 'mmaster' }})">
+                                        {{ product.metafields.usp.label_1 }}
+                                    </li>
+                                    <li style="background-image: url({{ section.blocks[1].settings.image | img_url: 'mmaster' }})">
+                                        {{ product.metafields.usp.label_2 }}
+                                    </li>
+                                {% elsif product.metafields.usp.label_1 != blank %}
+                                    <li style="background-image: url({{  section.blocks[0].settings.image | img_url: 'mmaster' }})">
+                                        {{ product.metafields.usp.label_1 }}
                                     </li>
                                 {% else %}
                                     {% for block in section.blocks %}

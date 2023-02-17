@@ -15,17 +15,37 @@
                     </a>
                     <div class="new-product__info">
                         <div class="new-product__info-inner">
-                            <h4 class="new-product__title-sm">So fucking strong coffee from...</h4>
-                            <h3 class="new-product__title-xl">{{ product.title | upcase | remove: 'FUCKING STRONG COFFEE FROM'  }}</h3>
+                            {% if product.title contains 'Fucking Strong Coffee from ' %}
+                                <h4 class="new-product__title-sm">So fucking strong coffee from...</h4>
+                                <h3 class="new-product__title-xl">{{ product.title | upcase | remove: 'FUCKING STRONG COFFEE FROM'  }}</h3>
+                            {% else %}
+                                <h3 class="new-product__title-xl">{{ product.title | upcase }}</h3>
+                            {% endif %}
+                            
                             <div class="new-product__price">{{ product.price | money }}</div>
                             <div class="new-product__tax">Tax included</div>
                             <div class="new-product__usp">
                                 <ul>
-                                    {% for block in section.blocks %}
-                                        <li style="background-image: url({{ block.settings.image | img_url: 'mmaster' }})">
-                                            {{ block.settings.title }}
+                                    {% if product.metafields.usp.label_1 != blank or product.metafields.usp.label_2 != blank or product.metafields.usp.label_3 != blank or product.metafields.usp.label_4 != blank %}
+                                        <li style="background-image: url({{  section.blocks[0].settings.image | img_url: 'mmaster' }})">
+                                            {{ product.metafields.usp.label_1 }}
                                         </li>
-                                    {% endfor %}
+                                        <li style="background-image: url({{ section.blocks[1].settings.image | img_url: 'mmaster' }})">
+                                            {{ product.metafields.usp.label_2 }}
+                                        </li>
+                                        <li style="background-image: url({{ section.blocks[2].settings.image | img_url: 'mmaster' }})">
+                                            {{ product.metafields.usp.label_3 }}
+                                        </li>
+                                        <li style="background-image: url({{ section.blocks[3].settings.image | img_url: 'mmaster' }})">
+                                            {{ product.metafields.usp.label_4 }}
+                                        </li>
+                                    {% else %}
+                                        {% for block in section.blocks %}
+                                            <li style="background-image: url({{ block.settings.image | img_url: 'mmaster' }})">
+                                                {{ block.settings.title }}
+                                            </li>
+                                        {% endfor %}
+                                    {% endif %}
                                 </ul>
                             </div>
                             <a href="{{ product.url }}" class="new-product__button">view product</a>
