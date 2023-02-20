@@ -56,15 +56,15 @@
           "settings": {
             "image": "shopify:\/\/shop_images\/benefits-item-icon-2.png",
             "title": "ROASTIN'",
-            "subtitle": "This is where it all started. We visited our partners at Twongerekawa Coko back in 2018."
+            "subtitle": "Our beans are specialty roasted in small batches in Amsterdam, so they’re always bright, flavorful, and smoother than a soul song."
           }
         },
         "415acff4-3e08-499f-b474-8459da35f84d": {
           "type": "block",
           "settings": {
             "image": "shopify:\/\/shop_images\/benefits-item-icon-3.png",
-            "title": "lorem ipsum",
-            "subtitle": "This is where it all started. We visited our partners at Twongerekawa Coko back in 2018."
+            "title": "SERVIN'",
+            "subtitle": "Ordering coffee should be a walk-in-the-park… we’ve built a following of friends n’ strangers by being approachable and reliable from click to cup."
           }
         }
       },
