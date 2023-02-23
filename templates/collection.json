@@ -5,14 +5,14 @@
       "settings": {
         "background-image": "shopify:\/\/shop_images\/Rectangle_3.png",
         "video_link": "",
-        "title-xl": "OUR FUCKING COFFEE"
+        "title-xl": "coffee"
       }
     },
     "template": {
       "type": "template-collection",
       "settings": {
         "hide-product-subtitle": false,
-        "icnons-and-labels": 3
+        "icnons-and-labels": 2
       }
     },
     "image-section": {
