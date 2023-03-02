@@ -221,7 +221,7 @@
     margin-right: 20px;
 } */
 
-.product_variants label::before{
+.product_variants label>div{
     content: '';
     display: flex;
     width: 18px;
@@ -237,12 +237,12 @@
     cursor: pointer;
 }
 
-.product_variants label:nth-of-type(odd)::before{
+.product_variants label:nth-of-type(odd)>div{
     background-color: #EB2240;
     outline-color: #EB2240;
 }
 
-.product__variant-option:checked + ::before{
+.product__variant-option:checked + label>div{
     outline: 1px solid;
 }
 

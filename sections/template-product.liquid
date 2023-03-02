@@ -111,11 +111,15 @@
                             <div class="product_variants">
                                 {% for variant in product.variants %}
                                     {% if variant.available %}
-                                        <input type="radio" value="{{ variant.id }}" id="{{ variant.id }}" name="product_variant" class="product__variant-option">
-                                        <label for="{{ variant.id }}" class="product__variants-label">{{ variant.title }}</label>
+                                            <input type="radio" value="{{ variant.id }}" id="{{ variant.id }}" name="product_variant" class="product__variant-option">
+                                            <label for="{{ variant.id }}" class="product__variants-label" >
+                                                <div style="background-color: {{ variant.options[0] }}; color: {{ variant.options[0] }};"></div>
+                                                {{ variant.title }}
+                                            </label>
                                     {% endif %}
                                 {% endfor %}
                             </div>
+
                             <select name="id" id="productSelect">
                                 {% for variant in product.variants %}
                                 {% if variant.available %}
