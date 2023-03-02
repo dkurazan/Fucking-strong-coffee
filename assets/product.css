@@ -237,7 +237,7 @@
     cursor: pointer;
 }
 
-.product_variants label:nth-child(2)::before{
+.product_variants label:nth-of-type(odd)::before{
     background-color: #EB2240;
     outline-color: #EB2240;
 }
