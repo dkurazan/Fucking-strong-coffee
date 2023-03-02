@@ -116,6 +116,14 @@
     color: #FFFFFF;
 }
 
+.product__price span{
+    display: none;
+}
+
+.product__price span.active{
+    display: inline !important;
+}
+
 .product__tax{
     font-family: 'Inter';
     font-style: normal;

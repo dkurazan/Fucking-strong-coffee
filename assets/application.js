@@ -251,6 +251,7 @@ if(window.location.href.includes('?customer_posted=true#Contact_footer')){
 //product variants
 const productRadio = document.querySelectorAll('.product_variants input');
 const productSelect = document.querySelector('#productSelect');
+const variantPrice = document.querySelectorAll('.product__price span');
 
 function selectProductVariant(btns) {
   btns.forEach(item => {
@@ -267,8 +268,29 @@ if(productRadio){
 
 productRadio.forEach(radio => {
   const variantImg = document.getElementsByName(`${radio.value}`)[0];
+
+  if(radio.checked){
+      variantPrice.forEach(price => {
+        const priceId = price.getAttribute('variant-price');
+        
+        if(priceId == radio.value){
+          price.classList.add('active')
+        }
+      });
+  }
+
   radio.nextElementSibling.addEventListener('click', () => {
     productBigImage.setAttribute("src", `${variantImg.getAttribute('src')}`);
+
+    variantPrice.forEach( price => {
+      const priceId = price.getAttribute('variant-price');
+      
+      if( priceId == radio.value ){
+        price.classList.add('active')
+      } else{
+        price.classList.remove('active')
+      }
+    })
   })
   
 })

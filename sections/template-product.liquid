@@ -50,7 +50,15 @@
                             <h3 class="product__title-xl">{{ product.title | upcase }}</h3>
                         {% endif %}
                         
-                        <div class="product__price">{{ product.price | money }}</div>
+                        <div class="product__price">
+                            {% for variant in product.variants %}
+                                {% if variant.available %}
+                                    <span variant-price="{{ variant.id }}">{{ variant.price | money }}</span>
+                                {% else %}
+                                    {{ product.price | money }}
+                                {% endif %}
+                            {% endfor %}
+                        </div>
                         <div class="product__tax">Tax included</div>
                         {% if product.metafields.product.hide-usp != true %}
                             <div class="product__usp">
