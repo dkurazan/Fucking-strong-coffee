@@ -132,15 +132,14 @@
     margin-bottom: 48px;
     background: url(new-product-bg.png);
     background-repeat:no-repeat;
-    background-size:contain;
-    max-width: 490px;
+    background-size: cover;
 }
 
 .product__usp ul{
     display: flex;
     flex-direction: column;
     gap: 24px;
-    padding: 45px 0 45px 40px;
+    padding: 45px 40px 45px 40px;
 }
 
 .product__usp li{
@@ -175,6 +174,9 @@
     margin-bottom: 48px;
     height: 28px;
     margin-left: 10px;
+    flex-wrap: wrap;
+    height: fit-content;
+    gap: 20px;
 }
 
 .product select{
@@ -203,11 +205,13 @@
     background-position: right center;
     background-repeat: no-repeat;
     background-size: contain;
+    width: fit-content;
+    /* margin-right: 20px; */
 }
 
-.product_variants label:nth-child(2){
+/* .product_variants label:nth-child(2){
     margin-right: 20px;
-}
+} */
 
 .product_variants label::before{
     content: '';

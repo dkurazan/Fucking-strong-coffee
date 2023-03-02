@@ -1,4 +1,13 @@
 {{ 'product.css' | asset_url | stylesheet_tag }}
+{% for variant in product.variants %}
+    {% unless variant.available %}
+        {% style %}
+            .product_variants{
+                display: none;
+            }
+        {% endstyle %}
+    {% endunless %}
+{% endfor %}
 <div class="product-template">
     <div class="container">
     {%  form 'product', product %} 
@@ -43,63 +52,59 @@
                         
                         <div class="product__price">{{ product.price | money }}</div>
                         <div class="product__tax">Tax included</div>
-                        <div class="product__usp">
-                            <ul>
-                                {% if product.metafields.usp.label_1 != blank and product.metafields.usp.label_2 != blank and product.metafields.usp.label_3 != blank and product.metafields.usp.label_4 != blank %}
-                                    <li style="background-image: url({{  section.blocks[0].settings.image | img_url: 'mmaster' }})">
-                                        {{ product.metafields.usp.label_1 }}
-                                    </li>
-                                    <li style="background-image: url({{ section.blocks[1].settings.image | img_url: 'mmaster' }})">
-                                        {{ product.metafields.usp.label_2 }}
-                                    </li>
-                                    <li style="background-image: url({{ section.blocks[2].settings.image | img_url: 'mmaster' }})">
-                                        {{ product.metafields.usp.label_3 }}
-                                    </li>
-                                    <li style="background-image: url({{ section.blocks[3].settings.image | img_url: 'mmaster' }})">
-                                        {{ product.metafields.usp.label_4 }}
-                                    </li>
-                                {% elsif product.metafields.usp.label_1 != blank and product.metafields.usp.label_2 != blank and product.metafields.usp.label_3 != blank %}
-                                    <li style="background-image: url({{  section.blocks[0].settings.image | img_url: 'mmaster' }})">
-                                        {{ product.metafields.usp.label_1 }}
-                                    </li>
-                                    <li style="background-image: url({{ section.blocks[1].settings.image | img_url: 'mmaster' }})">
-                                        {{ product.metafields.usp.label_2 }}
-                                    </li>
-                                    <li style="background-image: url({{ section.blocks[2].settings.image | img_url: 'mmaster' }})">
-                                        {{ product.metafields.usp.label_3 }}
-                                    </li>
-                                {% elsif product.metafields.usp.label_1 != blank and product.metafields.usp.label_2 != blank %}
-                                    <li style="background-image: url({{  section.blocks[0].settings.image | img_url: 'mmaster' }})">
-                                        {{ product.metafields.usp.label_1 }}
-                                    </li>
-                                    <li style="background-image: url({{ section.blocks[1].settings.image | img_url: 'mmaster' }})">
-                                        {{ product.metafields.usp.label_2 }}
-                                    </li>
-                                {% elsif product.metafields.usp.label_1 != blank %}
-                                    <li style="background-image: url({{  section.blocks[0].settings.image | img_url: 'mmaster' }})">
-                                        {{ product.metafields.usp.label_1 }}
-                                    </li>
-                                {% else %}
-                                    {% for block in section.blocks %}
-                                        <li style="background-image: url({{ block.settings.image | img_url: 'mmaster' }})">
-                                            {{ block.settings.title }}
+                        {% if product.metafields.product.hide-usp %}
+                            <div class="product__usp">
+                                <ul>
+                                    {% if product.metafields.usp.label_1 != blank and product.metafields.usp.label_2 != blank and product.metafields.usp.label_3 != blank and product.metafields.usp.label_4 != blank %}
+                                        <li style="background-image: url({{  section.blocks[0].settings.image | img_url: 'mmaster' }})">
+                                            {{ product.metafields.usp.label_1 }}
                                         </li>
-                                    {% endfor %}
-                                {% endif %}
-                            </ul>
-                        </div>
+                                        <li style="background-image: url({{ section.blocks[1].settings.image | img_url: 'mmaster' }})">
+                                            {{ product.metafields.usp.label_2 }}
+                                        </li>
+                                        <li style="background-image: url({{ section.blocks[2].settings.image | img_url: 'mmaster' }})">
+                                            {{ product.metafields.usp.label_3 }}
+                                        </li>
+                                        <li style="background-image: url({{ section.blocks[3].settings.image | img_url: 'mmaster' }})">
+                                            {{ product.metafields.usp.label_4 }}
+                                        </li>
+                                    {% elsif product.metafields.usp.label_1 != blank and product.metafields.usp.label_2 != blank and product.metafields.usp.label_3 != blank %}
+                                        <li style="background-image: url({{  section.blocks[0].settings.image | img_url: 'mmaster' }})">
+                                            {{ product.metafields.usp.label_1 }}
+                                        </li>
+                                        <li style="background-image: url({{ section.blocks[1].settings.image | img_url: 'mmaster' }})">
+                                            {{ product.metafields.usp.label_2 }}
+                                        </li>
+                                        <li style="background-image: url({{ section.blocks[2].settings.image | img_url: 'mmaster' }})">
+                                            {{ product.metafields.usp.label_3 }}
+                                        </li>
+                                    {% elsif product.metafields.usp.label_1 != blank and product.metafields.usp.label_2 != blank %}
+                                        <li style="background-image: url({{  section.blocks[0].settings.image | img_url: 'mmaster' }})">
+                                            {{ product.metafields.usp.label_1 }}
+                                        </li>
+                                        <li style="background-image: url({{ section.blocks[1].settings.image | img_url: 'mmaster' }})">
+                                            {{ product.metafields.usp.label_2 }}
+                                        </li>
+                                    {% elsif product.metafields.usp.label_1 != blank %}
+                                        <li style="background-image: url({{  section.blocks[0].settings.image | img_url: 'mmaster' }})">
+                                            {{ product.metafields.usp.label_1 }}
+                                        </li>
+                                    {% else %}
+                                        {% for block in section.blocks %}
+                                            <li style="background-image: url({{ block.settings.image | img_url: 'mmaster' }})">
+                                                {{ block.settings.title }}
+                                            </li>
+                                        {% endfor %}
+                                    {% endif %}
+                                </ul>
+                            </div>
+                        {% endif %}
                         <form action="{{ routes.cart_add_url }}" method="post" id="AddToCart">
                             <div class="product_variants">
                                 {% for variant in product.variants %}
                                     {% if variant.available %}
                                         <input type="radio" value="{{ variant.id }}" id="{{ variant.id }}" name="product_variant" class="product__variant-option">
                                         <label for="{{ variant.id }}">{{ variant.title }}</label>
-                                    {% else %}
-                                        {% style %}
-                                            .product_variants{
-                                                display: none;
-                                            }
-                                        {% endstyle %}
                                     {% endif %}
                                 {% endfor %}
                             </div>
