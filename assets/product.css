@@ -237,10 +237,6 @@
     cursor: pointer;
 }
 
-.product_variants label:nth-of-type(odd)>div{
-    background-color: #EB2240;
-    outline-color: #EB2240;
-}
 
 .product__variant-option:checked + label>div{
     outline: 1px solid;
