@@ -93,15 +93,14 @@
     margin-bottom: 48px;
     background: url(new-product-bg.png);
     background-repeat:no-repeat;
-    background-size:contain;
-    max-width: 490px;
+    background-size: cover;
 }
 
 .new-product__usp ul{
     display: flex;
     flex-direction: column;
     gap: 24px;
-    padding: 45px 0 45px 40px;
+    padding: 45px 40px 45px 40px;
 }
 
 .new-product__usp li{
