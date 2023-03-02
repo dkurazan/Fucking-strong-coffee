@@ -52,7 +52,7 @@
                         
                         <div class="product__price">{{ product.price | money }}</div>
                         <div class="product__tax">Tax included</div>
-                        {% if product.metafields.product.hide-usp %}
+                        {% if product.metafields.product.hide-usp != true %}
                             <div class="product__usp">
                                 <ul>
                                     {% if product.metafields.usp.label_1 != blank and product.metafields.usp.label_2 != blank and product.metafields.usp.label_3 != blank and product.metafields.usp.label_4 != blank %}
