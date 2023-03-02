@@ -136,142 +136,144 @@
                     </div>
                 </div>
             </div>
-            <div class="product__tabs">
-                <ul class="product__tabs-titles">
-                    <li class="product-tab-1 product-tab-active" data-title="tab-1">{{ section.settings.tab-title-1 }}</li>
-                    <li class="product-tab-2" data-title="tab-2">{{ section.settings.tab-title-2 }}</li>
-                    <li class="product-tab-3" data-title="tab-3">{{ section.settings.tab-title-3 }}</li>
-                </ul>
-                <div class="product__tabs-content product__tabs-content-1 active" id="tab-1">
-                    {% if product.metafields.tab.first_tab_common_text != blank %}
-                        <p>{{ product.metafields.tab.first_tab_common_text | newline_to_br }}</p>
-                    {% else %}
-                       {{ section.settings.tab-text-1 }}
-                    {% endif %}
-                </div>
-                <div class="product__tabs-content product__tabs-content-2" id="tab-2">
-                    <div class="tabs__welcome-block">
-                        <div class="tabs__welcome-image">
-                            <div class="tabs__welcome-image-bg">
-                                {% if section.settings.scarp-booky %}
-                                    <style>
-                                        .tabs__welcome-block{
-                                            max-width: 100%;
-                                            width: 100%;
-                                        }
-
-                                        .tabs__welcome-image-bg{
-                                            background-image: none;
-                                            max-width: 593px;
-                                            height: 100%;
-                                        }
-
-                                        .tabs__welcome-image-bg>img{
-                                            padding: 0;
-                                        }
-                                    </style>
-                                    {% if product.metafields.tab.second_tab_first_image != blank %}
-                                        {{ product.metafields.tab.second_tab_first_image | img_url: 'master' | img_tag }}
-                                    {% else %}
-                                        {{ section.settings.tab-2-img-1 | img_url: 'master' | img_tag }}
-                                    {% endif %}
-                                {% else %}
-                                    {% if product.metafields.tab.second_tab_first_image != blank %}
-                                        {{ product.metafields.tab.second_tab_first_image | img_url: 'master' | img_tag }}
-                                    {% else %}
-                                        {{ section.settings.tab-2-img-1 | img_url: 'master' | img_tag }}
-                                    {% endif %}
-                                    <div>
-                                        {{ 'patch-icon.png' | asset_url | img_tag }}
-                                    </div>
-                                {% endif %}
-                            </div>
-                        </div>
-                        <div class="tabs__welcome-text">
-                            <h3>
-                                {% if product.metafields.tab.second_tab_first_title %}
-                                    {{ product.metafields.tab.second_tab_first_title }}
-                                {% else %}
-                                    {{ section.settings.tab-2-title-1 }}
-                                {% endif %}
-                            </h3>
-                            {% if product.metafields.tab.second_tab_first_text != blank %}
-                                <p>{{ product.metafields.tab.second_tab_first_text | newline_to_br }}</p>
-                            {% else %}
-                                {{ section.settings.tab-2-text-1 }}
-                            {% endif %}
-                        </div>
-                    </div>
-                    <div class="tabs__video">
-                        <video poster="https://cdn.shopify.com/s/files/1/0701/1755/6519/files/Rectangle_9.png?v=1674119199">
-                        {% if product.metafields.tab.second_tab_video != blank %}
-                            <source src="{{ product.metafields.tab.second_tab_video | file_url }}" type="video/mp4">
+            {% if product.metafields.product.hide-tabs != true %}
+                <div class="product__tabs">
+                    <ul class="product__tabs-titles">
+                        <li class="product-tab-1 product-tab-active" data-title="tab-1">{{ section.settings.tab-title-1 }}</li>
+                        <li class="product-tab-2" data-title="tab-2">{{ section.settings.tab-title-2 }}</li>
+                        <li class="product-tab-3" data-title="tab-3">{{ section.settings.tab-title-3 }}</li>
+                    </ul>
+                    <div class="product__tabs-content product__tabs-content-1 active" id="tab-1">
+                        {% if product.metafields.tab.first_tab_common_text != blank %}
+                            <p>{{ product.metafields.tab.first_tab_common_text | newline_to_br }}</p>
                         {% else %}
-                            <source src="{{ section.settings.video-link }}" type="video/mp4">
-                        {% endif %}
-                            
-                        </video>
-                        <div class="video-play-button">
-                            {% render 'video-play-button-icon' %}
-                        </div>
-                        <div class="video-pause-button" style="display: none;">
-                            {% render 'video-pause-button-icon' %}
-                        </div>
-                        {% unless section.settings.scarp-booky %}
-                            <div class="video-patch-1">
-                                {{ 'patch-icon-2.png' | asset_url | img_tag }}
-                            </div>
-                            <div class="video-patch-2">
-                                {{ 'patch-icon-2.png' | asset_url | img_tag }}
-                            </div>
-                        {% endunless %}
-                    </div>
-                    <div class="tabs__info-block">
-                        <div class="tabs__info-text">
-                            <h3>
-                                {% if product.metafields.tab.second_tab_second_title %}
-                                    {{ product.metafields.tab.second_tab_second_title }}
-                                {% else %}
-                                    {{ section.settings.tab-2-title-2 }}
-                                {% endif %}
-                            </h3>
-                            {% if product.metafields.tab.second_tab_second_text != blank %}
-                                <p>{{ product.metafields.tab.second_tab_second_text | newline_to_br }}</p>
-                            {% else %}
-                                {{ section.settings.tab-2-text-2 }}
-                            {% endif %}
-                        </div>
-                        <div class="tabs__welcome-image">
-                            {% if product.metafields.tab.tab.second_tab_second_image != blank %}
-                                {{ product.metafields.tab.tab.second_tab_second_image | img_url: 'master' | img_tag }}
-                            {% else %}
-                                {{ section.settings.tab-2-img-2 | img_url: 'master' | img_tag }}
-                            {% endif %}
-                        </div>
-                    </div>
-                    <div class="tabs__map">
-                        <h4>
-                            {% if product.metafields.tab.second_tab_map_title %}
-                                {{ product.metafields.tab.second_tab_map_title }}
-                            {% else %}
-                                {{ section.settings.map-title }}
-                            {% endif %}
-                        </h4>
-                        {% if product.metafields.tab.second_tab_map_iframe %}
-                            {{ product.metafields.tab.second_tab_map_iframe }}
-                        {% else %}
-                            <iframe width="100%" height="493" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=493&amp;hl=en&amp;q=NewYork+(My%20Business%20Name)&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                        {{ section.settings.tab-text-1 }}
                         {% endif %}
                     </div>
+                    <div class="product__tabs-content product__tabs-content-2" id="tab-2">
+                        <div class="tabs__welcome-block">
+                            <div class="tabs__welcome-image">
+                                <div class="tabs__welcome-image-bg">
+                                    {% if section.settings.scarp-booky %}
+                                        <style>
+                                            .tabs__welcome-block{
+                                                max-width: 100%;
+                                                width: 100%;
+                                            }
+
+                                            .tabs__welcome-image-bg{
+                                                background-image: none;
+                                                max-width: 593px;
+                                                height: 100%;
+                                            }
+
+                                            .tabs__welcome-image-bg>img{
+                                                padding: 0;
+                                            }
+                                        </style>
+                                        {% if product.metafields.tab.second_tab_first_image != blank %}
+                                            {{ product.metafields.tab.second_tab_first_image | img_url: 'master' | img_tag }}
+                                        {% else %}
+                                            {{ section.settings.tab-2-img-1 | img_url: 'master' | img_tag }}
+                                        {% endif %}
+                                    {% else %}
+                                        {% if product.metafields.tab.second_tab_first_image != blank %}
+                                            {{ product.metafields.tab.second_tab_first_image | img_url: 'master' | img_tag }}
+                                        {% else %}
+                                            {{ section.settings.tab-2-img-1 | img_url: 'master' | img_tag }}
+                                        {% endif %}
+                                        <div>
+                                            {{ 'patch-icon.png' | asset_url | img_tag }}
+                                        </div>
+                                    {% endif %}
+                                </div>
+                            </div>
+                            <div class="tabs__welcome-text">
+                                <h3>
+                                    {% if product.metafields.tab.second_tab_first_title %}
+                                        {{ product.metafields.tab.second_tab_first_title }}
+                                    {% else %}
+                                        {{ section.settings.tab-2-title-1 }}
+                                    {% endif %}
+                                </h3>
+                                {% if product.metafields.tab.second_tab_first_text != blank %}
+                                    <p>{{ product.metafields.tab.second_tab_first_text | newline_to_br }}</p>
+                                {% else %}
+                                    {{ section.settings.tab-2-text-1 }}
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="tabs__video">
+                            <video poster="https://cdn.shopify.com/s/files/1/0701/1755/6519/files/Rectangle_9.png?v=1674119199">
+                            {% if product.metafields.tab.second_tab_video != blank %}
+                                <source src="{{ product.metafields.tab.second_tab_video | file_url }}" type="video/mp4">
+                            {% else %}
+                                <source src="{{ section.settings.video-link }}" type="video/mp4">
+                            {% endif %}
+                                
+                            </video>
+                            <div class="video-play-button">
+                                {% render 'video-play-button-icon' %}
+                            </div>
+                            <div class="video-pause-button" style="display: none;">
+                                {% render 'video-pause-button-icon' %}
+                            </div>
+                            {% unless section.settings.scarp-booky %}
+                                <div class="video-patch-1">
+                                    {{ 'patch-icon-2.png' | asset_url | img_tag }}
+                                </div>
+                                <div class="video-patch-2">
+                                    {{ 'patch-icon-2.png' | asset_url | img_tag }}
+                                </div>
+                            {% endunless %}
+                        </div>
+                        <div class="tabs__info-block">
+                            <div class="tabs__info-text">
+                                <h3>
+                                    {% if product.metafields.tab.second_tab_second_title %}
+                                        {{ product.metafields.tab.second_tab_second_title }}
+                                    {% else %}
+                                        {{ section.settings.tab-2-title-2 }}
+                                    {% endif %}
+                                </h3>
+                                {% if product.metafields.tab.second_tab_second_text != blank %}
+                                    <p>{{ product.metafields.tab.second_tab_second_text | newline_to_br }}</p>
+                                {% else %}
+                                    {{ section.settings.tab-2-text-2 }}
+                                {% endif %}
+                            </div>
+                            <div class="tabs__welcome-image">
+                                {% if product.metafields.tab.tab.second_tab_second_image != blank %}
+                                    {{ product.metafields.tab.tab.second_tab_second_image | img_url: 'master' | img_tag }}
+                                {% else %}
+                                    {{ section.settings.tab-2-img-2 | img_url: 'master' | img_tag }}
+                                {% endif %}
+                            </div>
+                        </div>
+                        <div class="tabs__map">
+                            <h4>
+                                {% if product.metafields.tab.second_tab_map_title %}
+                                    {{ product.metafields.tab.second_tab_map_title }}
+                                {% else %}
+                                    {{ section.settings.map-title }}
+                                {% endif %}
+                            </h4>
+                            {% if product.metafields.tab.second_tab_map_iframe %}
+                                {{ product.metafields.tab.second_tab_map_iframe }}
+                            {% else %}
+                                <iframe width="100%" height="493" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=100%25&amp;height=493&amp;hl=en&amp;q=NewYork+(My%20Business%20Name)&amp;t=&amp;z=13&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+                            {% endif %}
+                        </div>
+                    </div>
+                    <div class="product__tabs-content product__tabs-content-3" id="tab-3">
+                        {% if product.metafields.tab.third_tab_common_text != blank %}
+                            <p>{{ product.metafields.tab.third_tab_common_text | newline_to_br }}</p>
+                        {% else %}
+                        {{ section.settings.tab-text-3 }}
+                        {% endif %}
+                    </div>
                 </div>
-                <div class="product__tabs-content product__tabs-content-3" id="tab-3">
-                    {% if product.metafields.tab.third_tab_common_text != blank %}
-                        <p>{{ product.metafields.tab.third_tab_common_text | newline_to_br }}</p>
-                    {% else %}
-                       {{ section.settings.tab-text-3 }}
-                    {% endif %}
-                </div>
-            </div>
+            {% endif %}
         </div>
     {% endform %}
             
