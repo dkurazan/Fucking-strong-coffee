@@ -64,6 +64,14 @@
     color: #000000;
 }
 
+.cart__product-blocks td:nth-child(2) p{
+    padding-bottom: 9px;
+    font-family: 'Hind Vadodara';
+    font-style: normal;
+    font-size: 13px;
+    line-height: 20px;
+}
+
 /*  */
 
 .cart__product-blocks td:nth-child(3){

@@ -187,15 +187,15 @@
     gap: 20px;
 }
 
-.product select{
+/* .product select{
     display: none;
-}
+} */
 
 .product__variant-option{
     display: none;
 }
 
-.product_variants label{
+.product__variants-label{
     display: flex;
     align-items: center;
     font-family: 'Hind Vadodara';
@@ -221,7 +221,7 @@
     margin-right: 20px;
 } */
 
-.product_variants label>div{
+.product__variants-label>div{
     content: '';
     display: flex;
     width: 18px;
@@ -233,7 +233,7 @@
     outline-color: #2D2B27;
 }
 
-.product_variants label:hover{
+.product__variants-label:hover{
     cursor: pointer;
 }
 

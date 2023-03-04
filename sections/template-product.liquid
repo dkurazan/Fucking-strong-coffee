@@ -1,23 +1,15 @@
 {{ 'product.css' | asset_url | stylesheet_tag }}
-{% for variant in product.variants %}
-    {% unless variant.available %}
-        {% style %}
-            .product_variants{
-                display: none;
-            }
-        {% endstyle %}
-    {% endunless %}
-{% endfor %}
+{% assign selected_variant = prouct.selected_or_first_available_variant %}
 <div class="product-template">
     <div class="container">
-    {%  form 'product', product %} 
-        <input type="hiidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+    {% form 'product', product, id: 'product-form', novalidate: 'novalidate' %} 
+        <input type="hidden" name="id" value="{{ product.selected_variant.id }}">
         <div class="product">
             <div class="row">
                 <div class="product__images">
                     <div class="product__image">
                         <div>
-                             {% if product.featured_image %}
+                            {% if product.featured_image %}
                                 <img src="{{ product.featured_image | img_url: 'master' }}" alt="#" class="product__image-big">
                             {% else %}
                                 {{ 'product-1' | placeholder_svg_tag }}
@@ -108,7 +100,53 @@
                             </div>
                         {% endif %}
                         <form action="{{ routes.cart_add_url }}" method="post" id="AddToCart">
-                            <div class="product_variants">
+                            <div class="product__variants">
+                                {% unless product.has_only_default_variant %}
+                                    <variant-selector data-url="{{ product.url }}" data-section="{{ section.id }}" style="padding-bottom: 50px;">
+                                        {% for option in product.options_with_values %}
+                                            <div >
+                                                <label for="Option-{{ section.id }}-{{ forloop.index0 }}">{{ option.name }}</label>
+                                                <div data-option-block>
+                                                    {% for value in option.values %}
+                                                        <input 
+                                                            type="radio" 
+                                                            value="{{ value }}" 
+                                                            name="product_variant" 
+                                                            class="product__variant-option"
+                                                        >
+                                                            <label for="{{ value }}" class="product__variants-label" >
+                                                                <div style="background-color: {{ value }}; color: {{ value }};"></div>
+                                                                {{ value }}
+                                                            </label>
+                                                    {% endfor %}
+                                                    <select 
+                                                        name="options[{{ option.name | escape }}]" 
+                                                        id="Option-{{ section.id }}-{{ forloop.index0 }}"
+                                                    >
+                                                        {% for value in option.values %}
+                                                            <option 
+                                                                value="{{ value | escape }}"
+                                                                {% if option.selected_value == value %}
+                                                                    selected="selected"
+                                                                {% endif %}
+                                                            >
+                                                                {{ value }}
+                                                            </option>
+                                                        {% endfor %}
+                                                    </select>
+                                                </div>
+                                                <script type="application/json">
+                                                    {{ product.variants | json }}
+                                                </script>
+                                            </div>
+                                        {% endfor %}
+                                    </variant-selector>
+                                {% endunless %}
+                            </div>
+                            {% comment %} <div class="product_variants">
+                                
+
+
                                 {% for variant in product.variants %}
                                     {% if variant.available %}
                                             <input type="radio" value="{{ variant.id }}" id="{{ variant.id }}" name="product_variant" class="product__variant-option">
@@ -132,7 +170,7 @@
                                     </option>
                                 {% endif %}
                                 {% endfor %}
-                            </select>
+                            </select> {% endcomment %}
                             <button type="submit" name="add" class="product__button" id="AddToCart">add to cart</button>
                         </form>
                         <div class="product__description">

@@ -282,9 +282,9 @@ strong{
     transition: .2s all ease-in-out;
 }
 
-.shopify-product-form>input{
+/* .shopify-product-form>input{
     display: none;
-}
+} */
 
 .page-404, .cart__empty{
     max-width: 1440px;

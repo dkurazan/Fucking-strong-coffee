@@ -249,48 +249,128 @@ if(window.location.href.includes('?customer_posted=true#Contact_footer')){
 }
 
 //product variants
-const productRadio = document.querySelectorAll('.product_variants input');
 const productSelect = document.querySelector('#productSelect');
 const variantPrice = document.querySelectorAll('.product__price span');
 
+
+// if(productRadio){
+//   selectProductVariant(productRadio);
+//   productRadio[0].checked = true;
+// }
+
+// productRadio.forEach(radio => {
+//   const variantImg = document.getElementsByName(`${radio.value}`)[0];
+
+//   if(radio.checked){
+//       variantPrice.forEach(price => {
+//         const priceId = price.getAttribute('variant-price');
+        
+//         if(priceId == radio.value){
+//           price.classList.add('active')
+//         }
+//       });
+//   }
+
+//   radio.nextElementSibling.addEventListener('click', () => {
+//     productBigImage.setAttribute("src", `${variantImg.getAttribute('src')}`);
+
+//     variantPrice.forEach( price => {
+//       const priceId = price.getAttribute('variant-price');
+      
+//       if( priceId == radio.value ){
+//         price.classList.add('active')
+//       } else{
+//         price.classList.remove('active')
+//       }
+//     })
+//   })
+  
+// })
+
+// variant selector
+
+class VariantSelector extends HTMLElement {
+  constructor() {
+    super();
+    this.addEventListener( 'change', this.onVariantChange)
+  }
+
+  onVariantChange() {
+    this.getSelectedOptions();
+    this.getSelectedVariant();
+
+    if(this.currentVariant){
+        this.updateURL();
+        this.updateFormID();
+    }
+  }
+
+  getSelectedOptions() {
+    this.options = Array.from(this.querySelectorAll('select'), (select) => select.value);
+    console.log(this.options)
+  }
+
+  getVariantJSON() {
+    this.variantData = this.variantData || JSON.parse(this.querySelector('[type="application/json"]').textContent);
+    return this.variantData
+  }
+
+  getSelectedVariant() {
+    this.currentVariant = this.getVariantJSON().find(
+      (variant) => {
+        const findings = !variant.options.map(
+            (option, index) => {
+                return this.options[index] === option;
+            }
+        ).includes(false);
+
+        if(findings) return variant;
+      }
+    )
+  }
+
+  updateURL() {
+    if(!this.currentVariant) return;
+    window.history.replaceState({}, '', `${this.dataset.url}?variant=${this.currentVariant.id}`)
+  }
+
+  updateFormID() {
+    const form_input = document.querySelector('#product-form').querySelector('input[name="id"]');
+    form_input.value = this.currentVariant.id;
+  }
+}
+
+customElements.define("variant-selector", VariantSelector);
+
+const productOptionBlock = document.querySelectorAll('[data-option-block]')
+
+
+productOptionBlock.forEach( block => {
+    inputs = block.querySelectorAll('input');
+    inputs.forEach(input => { 
+    
+        input.nextElementSibling.addEventListener('click', () => {
+            select = block.querySelector('select').querySelectorAll('option');
+            // select.value = input.value
+            select.forEach(option => {
+                if(option.value == input.value){
+                    option.selected="true";
+                    option.setAttribute('selected', 'selected');
+                }
+                else{
+                    option.removeAttribute('selected')
+                }
+            });
+        })
+      })
+
+})
+
+
 function selectProductVariant(btns) {
-  btns.forEach(item => {
+  btns.forEach(item => { 
     item.addEventListener('click', () => {
       productSelect.value = item.value
     })
   })
 }
-
-if(productRadio){
-  selectProductVariant(productRadio);
-  productRadio[0].checked = true;
-}
-
-productRadio.forEach(radio => {
-  const variantImg = document.getElementsByName(`${radio.value}`)[0];
-
-  if(radio.checked){
-      variantPrice.forEach(price => {
-        const priceId = price.getAttribute('variant-price');
-        
-        if(priceId == radio.value){
-          price.classList.add('active')
-        }
-      });
-  }
-
-  radio.nextElementSibling.addEventListener('click', () => {
-    productBigImage.setAttribute("src", `${variantImg.getAttribute('src')}`);
-
-    variantPrice.forEach( price => {
-      const priceId = price.getAttribute('variant-price');
-      
-      if( priceId == radio.value ){
-        price.classList.add('active')
-      } else{
-        price.classList.remove('active')
-      }
-    })
-  })
-  
-})
