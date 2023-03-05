@@ -1,5 +1,5 @@
 {{ 'product.css' | asset_url | stylesheet_tag }}
-{% assign selected_variant = prouct.selected_or_first_available_variant %}
+{% assign selected_variant = product.selected_or_first_available_variant %}
 <div class="product-template">
     <div class="container">
     {% form 'product', product, id: 'product-form', novalidate: 'novalidate' %} 
@@ -24,7 +24,7 @@
                         {% endfor %}
                         {% for variant in product.variants %}
                             <div class="product__variant-img">
-                                <img src="{{ variant.image | img_url: 'master' }}" alt="#" class="product__image-sm" name="{{ variant.id }}">
+                                <img src="{{ variant.image | img_url: 'master' }}" alt="#" class="product__image-sm" name="{{ variant.id }}" value="{{ variant.id }}">
                             </div>
                         {% endfor %}
                     </div>
@@ -42,14 +42,9 @@
                             <h3 class="product__title-xl">{{ product.title | upcase }}</h3>
                         {% endif %}
                         
-                        <div class="product__price">
-                            {% for variant in product.variants %}
-                                {% if variant.available %}
-                                    <span variant-price="{{ variant.id }}">{{ variant.price | money }}</span>
-                                {% else %}
-                                    {{ product.price | money }}
-                                {% endif %}
-                            {% endfor %}
+                        <div class="product__price" id="price-{{ section.id }}">
+                            <span>{{ selected_variant.compare_at_price | money }}</span>
+                            <span>{{ selected_variant.price | money }}</span>
                         </div>
                         <div class="product__tax">Tax included</div>
                         {% if product.metafields.product.hide-usp != true %}
@@ -102,12 +97,12 @@
                         <form action="{{ routes.cart_add_url }}" method="post" id="AddToCart">
                             <div class="product__variants">
                                 {% unless product.has_only_default_variant %}
-                                    <variant-selector data-url="{{ product.url }}" data-section="{{ section.id }}" style="padding-bottom: 50px;">
+                                    <variant-selector data-url="{{ product.url }}" data-section="{{ section.id }}">
                                         {% for option in product.options_with_values %}
-                                            <div >
-                                                <label for="Option-{{ section.id }}-{{ forloop.index0 }}">{{ option.name }}</label>
+                                            <div class="product__option-block" >
+                                                <label class="product__option-label" for="Option-{{ section.id }}-{{ forloop.index0 }}">{{ option.name }}:</label>
                                                 <div data-option-block>
-                                                    {% for value in option.values %}
+                                                    {% comment %} {% for value in option.values %}
                                                         <input 
                                                             type="radio" 
                                                             value="{{ value }}" 
@@ -118,7 +113,7 @@
                                                                 <div style="background-color: {{ value }}; color: {{ value }};"></div>
                                                                 {{ value }}
                                                             </label>
-                                                    {% endfor %}
+                                                    {% endfor %} {% endcomment %}
                                                     <select 
                                                         name="options[{{ option.name | escape }}]" 
                                                         id="Option-{{ section.id }}-{{ forloop.index0 }}"

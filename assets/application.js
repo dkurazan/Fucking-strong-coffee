@@ -248,45 +248,6 @@ if(window.location.href.includes('?customer_posted=true#Contact_footer')){
   footerInput.classList.add('active');
 }
 
-//product variants
-const productSelect = document.querySelector('#productSelect');
-const variantPrice = document.querySelectorAll('.product__price span');
-
-
-// if(productRadio){
-//   selectProductVariant(productRadio);
-//   productRadio[0].checked = true;
-// }
-
-// productRadio.forEach(radio => {
-//   const variantImg = document.getElementsByName(`${radio.value}`)[0];
-
-//   if(radio.checked){
-//       variantPrice.forEach(price => {
-//         const priceId = price.getAttribute('variant-price');
-        
-//         if(priceId == radio.value){
-//           price.classList.add('active')
-//         }
-//       });
-//   }
-
-//   radio.nextElementSibling.addEventListener('click', () => {
-//     productBigImage.setAttribute("src", `${variantImg.getAttribute('src')}`);
-
-//     variantPrice.forEach( price => {
-//       const priceId = price.getAttribute('variant-price');
-      
-//       if( priceId == radio.value ){
-//         price.classList.add('active')
-//       } else{
-//         price.classList.remove('active')
-//       }
-//     })
-//   })
-  
-// })
-
 // variant selector
 
 class VariantSelector extends HTMLElement {
@@ -302,12 +263,12 @@ class VariantSelector extends HTMLElement {
     if(this.currentVariant){
         this.updateURL();
         this.updateFormID();
+        this.updatePrice();
     }
   }
 
   getSelectedOptions() {
     this.options = Array.from(this.querySelectorAll('select'), (select) => select.value);
-    console.log(this.options)
   }
 
   getVariantJSON() {
@@ -337,40 +298,56 @@ class VariantSelector extends HTMLElement {
   updateFormID() {
     const form_input = document.querySelector('#product-form').querySelector('input[name="id"]');
     form_input.value = this.currentVariant.id;
+    productBigImage.setAttribute("src", `${document.getElementsByName(this.currentVariant.id)[0].getAttribute('src')}`);
+  }
+
+  updatePrice() {
+    fetch(`${this.dataset.url}?variant=${this.currentVariant.id}&section_id=${this.dataset.section}`)
+    .then((response) => response.text())
+    .then((responseText) => {
+        const id = `price-${this.dataset.section}`;
+        const html = new DOMParser().parseFromString(responseText, 'text/html');
+
+        const oldPrice = document.getElementById(id);
+        const newPrice = html.getElementById(id);
+
+        if(oldPrice && newPrice) oldPrice.innerHTML = newPrice.innerHTML;
+    })
   }
 }
 
 customElements.define("variant-selector", VariantSelector);
 
-const productOptionBlock = document.querySelectorAll('[data-option-block]')
 
 
-productOptionBlock.forEach( block => {
-    inputs = block.querySelectorAll('input');
-    inputs.forEach(input => { 
+// const productOptionBlock = document.querySelectorAll('[data-option-block]')
+
+// productOptionBlock.forEach( block => {
+//     inputs = block.querySelectorAll('input');
+//     inputs.forEach(input => { 
     
-        input.nextElementSibling.addEventListener('click', () => {
-            select = block.querySelector('select').querySelectorAll('option');
-            // select.value = input.value
-            select.forEach(option => {
-                if(option.value == input.value){
-                    option.selected="true";
-                    option.setAttribute('selected', 'selected');
-                }
-                else{
-                    option.removeAttribute('selected')
-                }
-            });
-        })
-      })
+//         input.nextElementSibling.addEventListener('click', () => {
+//             select = block.querySelector('select').querySelectorAll('option');
+//             // select.value = input.value
+//             select.forEach(option => {
+//                 if(option.value == input.value){
+//                     option.selected="true";
+//                     option.setAttribute('selected', 'selected');
+//                 }
+//                 else{
+//                     option.removeAttribute('selected')
+//                 }
+//             });
+//         })
+//       })
 
-})
+// })
 
 
-function selectProductVariant(btns) {
-  btns.forEach(item => { 
-    item.addEventListener('click', () => {
-      productSelect.value = item.value
-    })
-  })
-}
+// function selectProductVariant(btns) {
+//   btns.forEach(item => { 
+//     item.addEventListener('click', () => {
+//       productSelect.value = item.value
+//     })
+//   })
+// }
