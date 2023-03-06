@@ -100,20 +100,21 @@
                                     <variant-selector data-url="{{ product.url }}" data-section="{{ section.id }}">
                                         {% for option in product.options_with_values %}
                                             <div class="product__option-block" >
-                                                <label class="product__option-label" for="Option-{{ section.id }}-{{ forloop.index0 }}">{{ option.name }}:</label>
+                                                <label class="product__option-label" for="Option-{{ section.id }}-{{ forloop.index0 }}">{{ option.name }}</label>
                                                 <div data-option-block>
-                                                    {% comment %} {% for value in option.values %}
+                                                    {% for value in option.values %}
                                                         <input 
                                                             type="radio" 
                                                             value="{{ value }}" 
-                                                            name="product_variant" 
+                                                            name="product_variant-{{ option.name }}" 
+                                                            id="radio-{{ value }}"
                                                             class="product__variant-option"
                                                         >
-                                                            <label for="{{ value }}" class="product__variants-label" >
-                                                                <div style="background-color: {{ value }}; color: {{ value }};"></div>
-                                                                {{ value }}
-                                                            </label>
-                                                    {% endfor %} {% endcomment %}
+                                                        <label for="radio-{{ value }}" class="product__variants-label" >
+                                                            <div style="background-color: {{ value }}; color: {{ value }};"></div>
+                                                            {{ value }}
+                                                        </label>
+                                                    {% endfor %}
                                                     <select 
                                                         name="options[{{ option.name | escape }}]" 
                                                         id="Option-{{ section.id }}-{{ forloop.index0 }}"

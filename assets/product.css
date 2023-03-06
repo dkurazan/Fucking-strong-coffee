@@ -205,7 +205,7 @@
     margin-bottom: 30px;
 }
 
-.product__option-label{
+.product__option-label, .product__variants-label{
     display: flex;
     align-items: center;
     font-family: 'Hind Vadodara';
@@ -232,6 +232,7 @@
     border:  none;
     border-bottom: 2px solid #333;
     border-top: 2px solid #333;
+    display: none;
 }
 
 .product__option-block select:hover{
@@ -247,7 +248,7 @@
 }
 
 
-/* .product__variants-label>div{
+.product__variants-label>div{
     content: '';
     display: flex;
     width: 18px;
@@ -266,7 +267,7 @@
 
 .product__variant-option:checked + label>div{
     outline: 1px solid;
-} */
+}
 
 div.product__variant-img{
     display: none;
