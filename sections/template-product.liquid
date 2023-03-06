@@ -100,8 +100,8 @@
                                     <variant-selector data-url="{{ product.url }}" data-section="{{ section.id }}">
                                         {% for option in product.options_with_values %}
                                             <div class="product__option-block" >
-                                                <label class="product__option-label" for="Option-{{ section.id }}-{{ forloop.index0 }}">{{ option.name }}</label>
-                                                <div data-option-block>
+                                                <label class="product__option-label" for="Option-{{ section.id }}-{{ forloop.index0 }}">{{ option.name }}:</label>
+                                                <div data-option-block class="product__option-block__inner">
                                                     {% for value in option.values %}
                                                         <input 
                                                             type="radio" 
@@ -110,10 +110,22 @@
                                                             id="radio-{{ value }}"
                                                             class="product__variant-option"
                                                         >
-                                                        <label for="radio-{{ value }}" class="product__variants-label" >
-                                                            <div style="background-color: {{ value }}; color: {{ value }};"></div>
-                                                            {{ value }}
-                                                        </label>
+                                                        {% if option.name == "Color" %}
+                                                            <label for="radio-{{ value }}" class="product__variants-label img-option">
+                                                            
+                                                                {% for variant in product.variants %}
+                                                                    {% if variant.title contains value %}
+                                                                        {{ variant.image | img_url: 'small' | img_tag }}
+                                                                        {% break %}
+                                                                    {% endif %}
+                                                                {% endfor %}
+                                                             
+                                                            </label>
+                                                        {%  else %} 
+                                                            <label for="radio-{{ value }}" class="product__variants-label">
+                                                                {{ value }}
+                                                            </label>
+                                                        {% endif %}   
                                                     {% endfor %}
                                                     <select 
                                                         name="options[{{ option.name | escape }}]" 

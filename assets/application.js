@@ -305,7 +305,7 @@ class VariantSelector extends HTMLElement {
   getSelectedOptions() {
     this.options = Array.from(this.querySelectorAll('select'), (select) => select.value);
     // this.radio = Array.from(this.querySelectorAll('input[type="radio"]'), (radio) => radio.checked.value);
-    // console.log(this.radio)
+    console.log(this.options)
   }
 
   getVariantJSON() {
