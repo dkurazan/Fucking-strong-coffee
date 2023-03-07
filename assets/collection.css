@@ -190,7 +190,11 @@
     line-height: 120%;
     color: #353535;
     width: 7rem;
-    -webkit-appearance: none;
+    padding-right: 13px;
+    background: url('icon-dropdown-arrow.svg') no-repeat right center;
+    -moz-appearance: none; 
+    -webkit-appearance: none; 
+    appearance: none;
 }
 
 .product-sort__inner select:focus{
