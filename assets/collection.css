@@ -190,6 +190,7 @@
     line-height: 120%;
     color: #353535;
     width: 7rem;
+    -webkit-appearance: none;
 }
 
 .product-sort__inner select:focus{

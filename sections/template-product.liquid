@@ -3,7 +3,7 @@
 <div class="product-template">
     <div class="container">
     {% form 'product', product, id: 'product-form', novalidate: 'novalidate' %} 
-        <input type="hidden" name="id" value="{{ product.selected_variant.id }}">
+        <input type="hidden" name="id" value="{{ selected_variant.id }}">
         <div class="product">
             <div class="row">
                 <div class="product__images">

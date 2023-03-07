@@ -250,40 +250,6 @@ if(window.location.href.includes('?customer_posted=true#Contact_footer')){
 
 // variant selector
 
-const productOptionBlock = document.querySelectorAll('[data-option-block]');
-
-productOptionBlock.forEach( block => {
-  inputs = block.querySelectorAll('input');
-  inputs[0].checked='true';
-  inputs.forEach(input => { 
-  
-      input.nextElementSibling.addEventListener('click', () => {
-          select = block.querySelector('select').querySelectorAll('option');
-          // select.value = input.value
-          select.forEach(option => {
-              if(option.value == input.value){
-                  option.selected="true";
-                  option.setAttribute('selected', 'selected');
-              }
-              else{
-                  option.removeAttribute('selected')
-              }
-          });
-      })
-    })
-
-})
-
-
-function selectProductVariant(btns) {
-btns.forEach(item => { 
-  item.addEventListener('click', () => {
-    productSelect.value = item.value
-  })
-})
-}
-
-
 class VariantSelector extends HTMLElement {
   constructor() {
     super();
@@ -304,8 +270,6 @@ class VariantSelector extends HTMLElement {
 
   getSelectedOptions() {
     this.options = Array.from(this.querySelectorAll('select'), (select) => select.value);
-    // this.radio = Array.from(this.querySelectorAll('input[type="radio"]'), (radio) => radio.checked.value);
-    console.log(this.options)
   }
 
   getVariantJSON() {
@@ -355,3 +319,25 @@ class VariantSelector extends HTMLElement {
 
 customElements.define("variant-selector", VariantSelector);
 
+const productOptionBlock = document.querySelectorAll('[data-option-block]');
+
+productOptionBlock.forEach( block => {
+  inputs = block.querySelectorAll('input');
+  inputs[0].checked='true';
+  inputs.forEach(input => { 
+  
+      input.nextElementSibling.addEventListener('click', () => {
+          select = block.querySelector('select').querySelectorAll('option');
+          select.forEach(option => {
+              if(option.value == input.value){
+                  option.selected="true";
+                  option.setAttribute('selected', 'selected');
+              }
+              else{
+                  option.removeAttribute('selected')
+              }
+          });
+      })
+    })
+
+})
