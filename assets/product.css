@@ -51,6 +51,7 @@
 
 .product__small-images img{
     max-width: 116px;
+    width: 100%;
 }
 
 .product__small-images img:hover{
