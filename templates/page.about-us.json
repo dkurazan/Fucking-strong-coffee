@@ -16,6 +16,7 @@
             "producer-title": "Simon Albers",
             "producer-subtitle": "We aim to connect food producers and consumers in the same geographic region, to develop more self-reliant and resilient food networks; improve local economies; or to affect the health, environment, community.",
             "producer-btn": "Go to Simon’s coffee",
+            "producer-url": "shopify:\/\/collections",
             "collection": "all-products"
           }
         },
@@ -26,6 +27,7 @@
             "producer-title": "Chaia van de Gronden",
             "producer-subtitle": "We aim to connect food producers and consumers in the same geographic region, to develop more self-reliant and resilient food networks; improve local economies; or to affect the health, environment, community.",
             "producer-btn": "Go to Simon’s coffee",
+            "producer-url": "shopify:\/\/collections",
             "collection": "all-products"
           }
         },
@@ -35,6 +37,7 @@
             "producer-title": "Marien Viehoff",
             "producer-subtitle": "We aim to connect food producers and consumers in the same geographic region, to develop more self-reliant and resilient food networks; improve local economies; or to affect the health, environment, community!",
             "producer-btn": "Go to Simon’s coffee",
+            "producer-url": "shopify:\/\/collections",
             "collection": "all-products"
           }
         }
