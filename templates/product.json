@@ -8,14 +8,14 @@
           "type": "block",
           "settings": {
             "image": "shopify:\/\/shop_images\/mountains_1.png",
-            "title": "WHOLE BEANS"
+            "title": "ORIGIN"
           }
         },
         "b41d4e0f-4660-4ccf-af1a-0b84b4a30122": {
           "type": "block",
           "settings": {
             "image": "shopify:\/\/shop_images\/benefits-item-icon-3.png",
-            "title": "GRIND FOR ESPRESSO"
+            "title": "BREW STYLE"
           }
         },
         "afdaf59a-e72f-4031-8204-a5b99215695f": {
@@ -30,7 +30,7 @@
           "type": "block",
           "settings": {
             "image": "shopify:\/\/shop_images\/tasty_1.png",
-            "title": "GRIND FOR FILTER"
+            "title": "TASTING NOTES"
           }
         }
       },
