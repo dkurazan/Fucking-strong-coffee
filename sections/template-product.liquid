@@ -10,7 +10,7 @@
                     <div class="product__image">
                         <div>
                             {% if product.featured_image %}
-                                <img src="{{ product.featured_image | img_url: 'master' }}" alt="#" class="product__image-big">
+                                <img src="{{ product.featured_image | img_url: 'master' }}" alt="{{ product.featured_image.src }}" class="product__image-big" loading="lazy" width="{{ product.featured_image.width }}" height="{{ product.featured_image.height }}" >
                             {% else %}
                                 {{ 'product-1' | placeholder_svg_tag }}
                             {% endif %}
@@ -102,6 +102,7 @@
                                             <div class="product__option-block" >
                                                 <label class="product__option-label" for="Option-{{ section.id }}-{{ forloop.index0 }}">{{ option.name }}:</label>
                                                 <div data-option-block class="product__option-block__inner">
+                                                    
                                                     {% for value in option.values %}
                                                         <input 
                                                             type="radio" 
@@ -110,22 +111,31 @@
                                                             id="radio-{{ value }}"
                                                             class="product__variant-option"
                                                         >
-                                                        {% if option.name == "Color" %}
+                                                        {% if product.options.size == 1 %}
                                                             <label for="radio-{{ value }}" class="product__variants-label img-option">
-                                                            
                                                                 {% for variant in product.variants %}
                                                                     {% if variant.title contains value %}
                                                                         {{ variant.image | img_url: 'small' | img_tag }}
                                                                         {% break %}
                                                                     {% endif %}
                                                                 {% endfor %}
-                                                             
                                                             </label>
-                                                        {%  else %} 
-                                                            <label for="radio-{{ value }}" class="product__variants-label">
-                                                                {{ value }}
-                                                            </label>
-                                                        {% endif %}   
+                                                        {% else %}
+                                                            {% if option.name == "Color" %}
+                                                                <label for="radio-{{ value }}" class="product__variants-label img-option">
+                                                                    {% for variant in product.variants %}
+                                                                        {% if variant.title contains value %}
+                                                                            {{ variant.image | img_url: 'small' | img_tag }}
+                                                                            {% break %}
+                                                                        {% endif %}
+                                                                    {% endfor %}
+                                                                </label>
+                                                            {% else %} 
+                                                                <label for="radio-{{ value }}" class="product__variants-label">
+                                                                    {{ value }}
+                                                                </label>
+                                                            {% endif %}  
+                                                        {% endif %}
                                                     {% endfor %}
                                                     <select 
                                                         name="options[{{ option.name | escape }}]" 
